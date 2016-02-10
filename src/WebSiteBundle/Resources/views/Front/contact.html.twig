@@ -1,0 +1,82 @@
+{% extends 'WebSiteBundle:Front:base.html.twig' %}
+    {% block title %}
+        Accueil
+    {% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Contact
+                    <strong>OC'AVENTURES</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-md-8">
+                <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d368878.9142554212!2d3.84058!3d43.7548686!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b40239cb28308b%3A0xd2c89522cf4dac40!2sOc+Aventures+-+Accrobranche!5e0!3m2!1sen!2sfr!4v1438606971056"></iframe>
+            </div>
+            <div class="col-md-4">
+                <p>Téléphone:
+                    <strong>06.19.89.53.86</strong>
+                </p>
+                <p>Email:
+                    <strong class="text-yellow">info@oc-aventures.com</strong>
+                </p>
+                <p>Adresse: Lieu Dit le Boulidou,
+                    <br></b><strong> 34270 Saint Jean De Cuculles</strong>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">
+                   <strong> Contact / Renseignements / Reservations</strong>
+                </h2>
+                <hr>
+                {% form_theme form 'bootstrap_3_layout.html.twig' %}
+                {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
+                <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label>Nom</label>
+                            {{ form_widget(form.nom) }}
+                            <span class="text-yellow">
+                                {{ form_errors(form.nom) }}
+                            </span>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Adresse mail</label>
+                            {{ form_widget(form.mail) }}
+                            <span class="text-yellow">
+                            {{ form_errors(form.mail) }}
+                            </span>
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Numéro de téléphone</label>
+                            {{ form_widget(form.numTel) }}
+                            <span class="text-yellow">
+                            {{ form_errors(form.numTel) }}
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label>Message</label>
+                            {{ form_widget(form.message, {'attr': {'rows': 6 }}) }}
+                            <span class="text-yellow">
+                            {{ form_errors(form.message) }}
+                            </span>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <button type="submit" class="btn btn-default">Envoyer</button>
+                        </div>
+                    </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

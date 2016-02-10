@@ -1,0 +1,36 @@
+{% extends 'WebSiteBundle:Front:base.html.twig' %}
+    {% block title %}
+        Ouvertures
+    {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="box">
+        <div class="text-center text-yellow">
+            <h1>HORAIRES ET PERIODES D'OUVERTURE 2015</h1>
+            <br>
+        </div>
+        <div class="col-lg-12">
+            <p>
+                OUVERT DU SAMEDI {{ date.ouverture |date('d m Y') }} AU DIMANCHE {{ date.fermeture |date('d m Y') }}. <br>
+                LE PARC OUVRE A PARTIR DU SAMEDI {{ date.ouverture |date('d m Y') }} TOUS LES JOURS PENDANT LES VACANCES SCOLAIRES DE PAQUES (Zone académie Montpellier) UNIQUEMENT L'APRES-MIDI DE 14 H A 19H 30.<br>
+                DERNIER DEPART 16H00.
+            </p>
+            <hr>
+            <h3 class="text-center text-yellow">AVRIL, MAI, JUIN, SEPTEMBRE, OCTOBRE, NOVEMBRE</h3>
+            <p>
+                Tous les week-end, jours feriés et vacances scolaires de 14 H à 19H30. Dernier départ à 16H00.
+            </p>
+            <hr>
+            <h3 class="text-center text-yellow">JUILLET, AOUT</h3>
+            <p>
+                Tous les jours de 10 H à 13 H et de 14 H à 19 H.<br>
+                Départ le matin de 10 H à 10 H 45. Après 10 H 45, les prochains départs sont l'après-midi à partir de 14 H et le dernier départ à 17H.
+            </p>
+            <hr>
+            <p>
+                En dehors de ces périodes, nous ouvrons sur rendez-vous en semaine pour les groupes de plus de 20 personnes, collectivités scolaires, centres aérés.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

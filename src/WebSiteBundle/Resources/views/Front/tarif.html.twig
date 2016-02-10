@@ -1,0 +1,95 @@
+{% extends 'WebSiteBundle:Front:base.html.twig' %}
+    {% block title %}
+        Tarif
+    {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="box">
+        <div class="text-center text-yellow">
+            <h1>Tarif 2015</h1>
+            <br>
+        </div>
+        <div class="col-lg-12">
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img1 text-center">
+                        10 €
+                    </label>
+                    <span class="text-yellow text-header">
+                        Forfait n°1
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        4 ans
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    Astrigagne et Choucas pour les enfants de 4 ans.
+                </p>
+            </div>
+
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img1 text-center">
+                        12.5 €
+                    </label>
+                    <span class="text-yellow text-header">
+                        Forfait n°2
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        5 ans
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    Forfait 5 Parcours*<br>
+                    Astrigagn, Choucas, l'Écureuil, l'Aiglon et Rate penade pour les enfants à partir de 5 ans et dont la taille est inférieure à 1m30
+                </p>
+            </div>
+
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img1 text-center">
+                        17 €
+                    </label>
+                    <span class="text-yellow text-header">
+                        Forfait n°3
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        8 ans
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    Forfait 5 parcours* <br>
+                    Gringole, Céga, Fourmi, Perdigal et Capricorne pour adultes, ados et enfants dont la taille est supérieur à 1m30 et 8 ans minimum.
+                </p>
+            </div>
+
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img1 text-center">
+                        23 €
+                    </label>
+                    <span class="text-yellow text-header">
+                        Forfait n°4
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        +40kg
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    Forfait 7 parcours* <br>
+                    Gringole, Céga, Fourmi, Perdigal, Capricorne et Sanga Sensation plus les trois tyroliennes géantes (245m, 230m et 200m) réservé aux plus de 40kg et moins de 100kg
+                </p>
+            </div>
+            <label>*3h d'activité environ</label>
+            <div class="block">
+                <h3 class="text-yellow">*Mode de paiements*</h3>
+                <p>Chèques, espèces, Chèques Vacances</p>
+                <div class="block">
+                    <img class="" src="{{ asset('./front/images/logo_ancv.png') }}" alt="">
+                    <img class="" src="{{ asset('./front/images/noCB.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

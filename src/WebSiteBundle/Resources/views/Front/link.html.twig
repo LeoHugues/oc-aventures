@@ -1,0 +1,19 @@
+{% extends 'WebSiteBundle:Front:base.html.twig' %}
+    {% block title %}
+        Liens
+    {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="box">
+        <div class="text-center text-yellow">
+            <h1>Les Liens</h1>
+            <br>
+        </div>
+        <div class="col-lg-12">
+            {% for partenaire in partenaires %}
+                <a href="http://{{ partenaire.address }}" target="_blank"><h4 class="souligner col-lg-offset-1">{{ partenaire.address }}</h4></a> <label class="col-lg-offset-1"> {{ partenaire.desc }}</label> <br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
