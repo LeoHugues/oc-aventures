@@ -1,0 +1,12 @@
+html {
+    background: #e58f08;
+}
+
+div.well {
+    background-color: rgba(124,0,0,0.9);
+    border-color: rgba(124,0,0,0.9);
+}
+
+div.content {
+    padding-top: 80px;
+}

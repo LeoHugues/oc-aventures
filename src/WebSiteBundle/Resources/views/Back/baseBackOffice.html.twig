@@ -1,24 +1,14 @@
 {% extends "::base.html.twig" %}
 {% block head %}
-    <link type="text/css" rel="stylesheet" href = {{ asset("./themeBootstrap.css") }}/>
+    <link type="text/css" rel="stylesheet" href = {{ asset("front/css/theme.css") }}/>
+    <link type="text/css" rel="stylesheet" href = {{ asset("back/css/customise-back.css") }}/>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 {% endblock %}
 {% block body %}
-    {% if app.user is empty or app.user == null %}
-        <div class="panel panel-danger">
-            <div class="panel-heading">
-                <h3 class="panel-title">Connection obligatoire</h3>
-            </div>
-            <div class="panel-body">
-                <p>Vous devez vous autentifier pour pouvoir accéder à cette page.</p>
-                <label><a class="btn btn-primary btn-lg" href="{{ path("fos_user_security_login") }}" role="button">Se connecter</a></label>
-            </div>
-        </div>
-    {% else %}
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header pull-left">
-                    <a href="{{ path("oc_epi_index") }}" target="_top" class="navbar-brand">OC'Aventures - Web Application pour les EPI</a>
+                    <a href="{{ path("admin_index") }}" target="_top" class="navbar-brand">OC'Aventures - Web Application pour les EPI</a>
                 </div>
 
                 <ul class="nav navbar-nav pull-right">
@@ -26,18 +16,23 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">Gestion des liens <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="download">
-                            <li><a href="{{ path("oc_epi_insert_equipement") }}">Ajouter un lien</a></li>
+                            <li><a href="#">Ajouter un lien</a></li>
                             <li><a href="#">Gérer les liens</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <p class="btn-logout"><a href="{{ path("fos_user_security_logout") }}" class="btn btn-default btn-md" role="button">Déconnection</a></p>
+                        <p class="btn-logout"><a href="#" class="btn btn-default btn-md" role="button">Déconnection</a></p>
                     </li>
                 </ul>
             </div>
         </div>
+    <div class="content">
+        {% for flash_message in app.session.flashbag.get('notice') %}
+            <div class="flash-notice">
+                {{ flash_message }}
+            </div>
+        {% endfor %}
         {% block content %}{% endblock %}
-        <script src="{{ asset("./jquery-1.11.3.min.js") }}"></script>
-        <script src="{{ asset("./bootstrap/js/bootstrap.js") }}"></script>
-    {% endif %}
+    </div>
+        <script src="{{ asset("bootstrap/js/bootstrap.js") }}"></script>
 {% endblock body %}

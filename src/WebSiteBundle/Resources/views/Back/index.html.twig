@@ -1,5 +1,6 @@
 {% extends 'WebSiteBundle:Back:baseBackOffice.html.twig' %}
 {% block content %}
+    {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
     <div class="well">
         <h1>Date d'ouverture et de fermeture du parc :</h1> <br>
         {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
