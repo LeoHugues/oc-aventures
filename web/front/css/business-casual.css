@@ -293,3 +293,10 @@ span.text-image {
         position: relative;
     }
 }
+
+/*==== Custome CSS ====*/
+
+img.small-img {
+    width: 80px;
+    margin-right: 10px;
+}

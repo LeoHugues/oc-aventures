@@ -10,3 +10,20 @@ div.well {
 div.content {
     padding-top: 80px;
 }
+
+div.slide-croppic {
+}
+
+div.croppic {
+    background: url('../img/placeholder.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 843px;
+    height: 403px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+div.cropImgWrapper {
+    top: 0px;
+}

@@ -1,0 +1,80 @@
+{% extends 'WebSiteBundle:Back:baseBackOffice.html.twig' %}
+{% block title %}
+    Images
+{% endblock %}
+{% block content %}
+    <div class="well">
+        <h1>Administrer les images du site :</h1> <br>
+        <div class="bs-component live-less-editor-hovercontainer" data-relatedvars="caret-width-base,dropdown-bg,dropdown-fallback-border,dropdown-border,dropdown-divider-bg,dropdown-link-color,dropdown-link-hover-color,dropdown-link-hover-bg,dropdown-link-active-color,dropdown-link-active-bg,dropdown-link-disabled-color,dropdown-header-color,nav-link-padding,nav-link-hover-bg,nav-disabled-link-color,nav-disabled-link-hover-color,link-color,nav-tabs-border-color,nav-tabs-link-hover-border-color,nav-tabs-active-link-hover-color,nav-tabs-active-link-hover-bg,nav-tabs-active-link-hover-border-color">
+                <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                    <li class="active"><a href="#accueil" data-toggle="tab" aria-expanded="true">Changer les images d'accueil</a></li>
+                    <li class=""><a href="#enfant" data-toggle="tab" aria-expanded="false">Changer les images des pacours enfant</a></li>
+                    <li class=""><a href="#adulte" data-toggle="tab" aria-expanded="false">Changer les images des parcours adulte</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="accueil">
+                        <div class="box">
+                            <label>Changer la première slide : </label>
+                            <div class="croppic" id="slide1"></div>
+                        </div>
+                        <br>
+                        <div class="box">
+                            <label>Changer la seconde slide : </label>
+                            <div class="croppic" id="slide2"></div>
+                        </div>
+                        <br>
+                        <div class="box">
+                            <label>Changer la troisième slide : </label>
+                            <div class="croppic" id="slide3"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade active in" id="enfant">
+                    </div>
+                    <div class="tab-pane fade active in" id="adulte">
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset("back/croppic/croppic.js") }}"></script>
+    <script>
+        var croppedOptions1 = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal:false,
+            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData:{"slideName": 'slide-1', "imgName": "img-slide-1"},
+            uploadData: {"imgName": "img-slide-1"}
+        };
+        var cropperBox1 = new Croppic('slide1', croppedOptions1);
+
+        var croppedOptions2 = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal:false,
+            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData:{
+                "slideName": 'slide-2',
+                "imgName": "img-slide-2"
+            },
+            uploadData: {"imgName": "img-slide-2"}
+
+        };
+        var cropperBox2 = new Croppic('slide2', croppedOptions2);
+
+        var croppedOptions3 = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal: false,
+            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData: {
+                "slideName": 'slide-3',
+                "imgName": "img-slide-3"
+            },
+            uploadData: {"imgName": "img-slide-3"}
+        };
+        var cropperBox3 = new Croppic('slide3', croppedOptions3);
+    </script>
+{% endblock %}

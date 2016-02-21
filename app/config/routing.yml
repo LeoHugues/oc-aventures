@@ -3,3 +3,5 @@ web_site:
     type:     annotation
     prefix:   /
 
+logout:
+    path: /logout

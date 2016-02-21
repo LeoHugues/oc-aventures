@@ -1,16 +1,16 @@
 {% extends "::base.html.twig" %}
 {% block head %}
-    <link type="text/css" rel="stylesheet" href = {{ asset("front/css/theme.css") }}/>
-    <link type="text/css" rel="stylesheet" href = {{ asset("back/css/customise-back.css") }}/>
+    <link type="text/css" rel="stylesheet" href = "{{ asset("front/css/theme.css") }}"/>
+    <link type="text/css" rel="stylesheet" href = "{{ asset("back/css/customise-back.css") }}"/>
+    <link type="text/css" rel="stylesheet" href = "{{ asset("back/croppic/croppic.css") }}"/>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 {% endblock %}
 {% block body %}
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header pull-left">
-                    <a href="{{ path("admin_index") }}" target="_top" class="navbar-brand">OC'Aventures - Web Application pour les EPI</a>
+                    <a href="{{ path("admin_index") }}" target="_top" class="navbar-brand">OC'Aventures - Back Office</a>
                 </div>
-
                 <ul class="nav navbar-nav pull-right">
                     <li><a href="#">Modifier les dates d'ouvertures</a></li>
                     <li class="dropdown">
@@ -21,18 +21,21 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <p class="btn-logout"><a href="#" class="btn btn-default btn-md" role="button">Déconnection</a></p>
+                        <p class="btn-logout"><a href="{{ logout_path() }}" class="btn btn-default btn-md" role="button">Déconnection</a></p>
                     </li>
                 </ul>
             </div>
         </div>
     <div class="content">
         {% for flash_message in app.session.flashbag.get('notice') %}
-            <div class="flash-notice">
+            <div class="alert alert-dismissable alert-info">
                 {{ flash_message }}
             </div>
         {% endfor %}
         {% block content %}{% endblock %}
     </div>
-        <script src="{{ asset("bootstrap/js/bootstrap.js") }}"></script>
 {% endblock body %}
+{% block baseJs %}
+    <script src="{{ asset("front/js/jquery.js") }}"></script>
+    <script src="{{ asset("bootstrap/js/bootstrap.js") }}"></script>
+{% endblock %}
