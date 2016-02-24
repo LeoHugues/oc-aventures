@@ -120,11 +120,11 @@ class BackController extends Controller
             } else {
                 $filename = $_FILES["img"]["tmp_name"];
                 list($width, $height) = getimagesize( $filename );
-                $path = $imagePath . $_POST['imgName'] . '.' . $extension;
+                $path = $imagePath . $_POST['imgName'] . '.jpeg';
                 move_uploaded_file($filename, $path);
                 $response = array(
                     "status" => 'success',
-                    "url" => $imagePath . $_POST['imgName'] . '.' . $extension,
+                    "url" => $imagePath . $_POST['imgName'] . '.jpeg',
                     "width" => $width,
                     "height" => $height
                 );
@@ -213,10 +213,10 @@ $output_filename = dirname($imgUrl). "/" . $_POST['slideName'];
             // finally output png image
             //imagepng($final_image, $output_filename.$type, $png_quality);
 
-            imagejpeg($final_image, $output_filename . $type, $jpeg_quality);
+            imagejpeg($final_image, $output_filename . '.jpeg', $jpeg_quality);
             $response = Array(
                 "status" => 'success',
-                "url" => '../'. $output_filename . $type
+                "url" => '../'. $output_filename .'.jpeg'
             );
             if(file_exists($imgUrl)) unlink($imgUrl);
         }

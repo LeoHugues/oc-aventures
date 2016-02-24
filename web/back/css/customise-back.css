@@ -12,14 +12,24 @@ div.content {
 }
 
 div.slide-croppic {
+    width: 843px;
+    height: 403px;
+}
+
+div.nos-parcours-croppic {
+    width: 550px;
+    height: 367px;
+}
+
+div.confort-accueil-croppic {
+    width: 300px;
+    height: 225px;
 }
 
 div.croppic {
     background: url('../img/placeholder.png');
     background-repeat: no-repeat;
     background-position: center;
-    width: 843px;
-    height: 403px;
     position: relative;
     border: 1px solid #ccc;
 }
