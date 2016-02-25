@@ -10,6 +10,7 @@
                     <li class="active"><a href="#accueil" data-toggle="tab" aria-expanded="true">Changer les images d'accueil</a></li>
                     <li class=""><a href="#adulte" data-toggle="tab" aria-expanded="false">Changer les images des pacours adulte</a></li>
                     <li class=""><a href="#enfant" data-toggle="tab" aria-expanded="false">Changer les images des parcours enfant</a></li>
+                    <li class=""><a href="#plan" data-toggle="tab" aria-expanded="false">Changer le plan du parc</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="accueil">
@@ -40,6 +41,11 @@
                     </div>
                     <div class="tab-pane fade" id="adulte">
                         <div class="box">
+                            <label>Changer l'image parcours adulte : </label>
+                            <div class="croppic nos-parcours-croppic" id="parcours-adulte"></div>
+                        </div>
+                        <br>
+                        <div class="box">
                             <label>Changer la première slide : </label>
                             <div class="croppic slide-croppic" id="adulte-slide1"></div>
                         </div>
@@ -56,6 +62,11 @@
                     </div>
                     <div class="tab-pane fade" id="enfant">
                         <div class="box">
+                            <label>Changer l'image parcours enfant : </label>
+                            <div class="croppic nos-parcours-croppic" id="parcours-enfant"></div>
+                        </div>
+                        <br>
+                        <div class="box">
                             <label>Changer la première slide : </label>
                             <div class="croppic slide-croppic" id="enfant-slide1"></div>
                         </div>
@@ -68,6 +79,12 @@
                         <div class="box">
                             <label>Changer la troisième slide : </label>
                             <div class="croppic slide-croppic" id="enfant-slide3"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="plan">
+                        <div class="box">
+                            <label>Changer l'image du plan :</label>
+                            <div class="croppic cro-plan" id="cro-plan"></div>
                         </div>
                     </div>
                 </div>
@@ -127,7 +144,7 @@
                 "slideName": 'accueil-nos-parcours',
                 "imgName": "img-accueil-nos-parcours"
             },
-            uploadData: {"imgName": "img-accueil-slide-3"}
+            uploadData: {"imgName": "img-accueil-nos-parcours"}
         };
         var cropperAccueilParcours = new Croppic('nos-parcours', croppedOptionsAccueilParcours);
 
@@ -140,13 +157,23 @@
                 "slideName": 'accueil-confort',
                 "imgName": "img-accueil-confort"
             },
-            uploadData: {"imgName": "img-accueil-slide-3"}
+            uploadData: {"imgName": "img-accueil-confort"}
         };
-        var cropperAccueilConfort = new Croppic('confort-accueil', croppedOptionsAccueilParcours);
+        var cropperAccueilConfort = new Croppic('confort-accueil', croppedOptionsAccueilConfort);
 
         /*
          <================ Initialisation cropper parcours adulte ==================>
          */
+        var croppedOptionsParcoursAdulte = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal:false,
+            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData:{"slideName": 'parcours-adulte', "imgName": "img-parcours-adulte"},
+            uploadData: {"imgName": "img-parcours-adulte"}
+        };
+        var cropperParcoursAdulte = new Croppic('parcours-adulte', croppedOptionsParcoursAdulte);
+
         var croppedOptionsAdulte1 = {
             uploadUrl: '{{ path('save_to_file') }}',
             cropUrl: '{{ path('crop_to_file') }}',
@@ -187,6 +214,17 @@
         /*
          <================ Initialisation cropper parcours enfant ==================>
          */
+
+        var croppedOptionsParcoursEnfant = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal:false,
+            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData:{"slideName": 'parcours-enfant', "imgName": "img-parcours-enfant"},
+            uploadData: {"imgName": "img-parcours-Enfant"}
+        };
+        var cropperParcoursEnfant = new Croppic('parcours-enfant', croppedOptionsParcoursEnfant);
+
         var croppedOptionsEnfant1 = {
             uploadUrl: '{{ path('save_to_file') }}',
             cropUrl: '{{ path('crop_to_file') }}',
@@ -223,5 +261,18 @@
             uploadData: {"imgName": "img-enfant-slide-3"}
         };
         var cropperEnfant3 = new Croppic('enfant-slide3', croppedOptionsEnfant3);
+
+        /*
+         <================ Initialisation cropper parcours enfant ==================>
+         */
+
+        var croppedOptionsPlan = {
+            uploadUrl: '{{ path('save_to_file') }}',
+           // cropUrl: '{{ path('crop_to_file') }}',
+           // cropData:{"slideName": 'plan', "imgName": "plan"},
+            uploadData: {"imgName": "plan"}
+        };
+        var cropperPlan = new Croppic('cro-plan', croppedOptionsPlan);
+
     </script>
 {% endblock %}
