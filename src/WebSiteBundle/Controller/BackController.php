@@ -111,7 +111,7 @@ class BackController extends Controller
             return Response::create(json_encode($response), 200);
         }
 
-        if ( in_array($extension, $allowedExts)) {
+        if (in_array($extension, $allowedExts)) {
             if ($_FILES["img"]["error"] > 0) {
                 $response = array(
                     "status" => 'error',
@@ -122,6 +122,7 @@ class BackController extends Controller
                 list($width, $height) = getimagesize( $filename );
                 $path = $imagePath . $_POST['imgName'] . '.jpeg';
                 move_uploaded_file($filename, $path);
+                chmod($path, 0777);
                 $response = array(
                     "status" => 'success',
                     "url" => $imagePath . $_POST['imgName'] . '.jpeg',
@@ -143,28 +144,25 @@ class BackController extends Controller
      * @Route("/cropImg", name="crop_to_file")
      */
     public function cropToFileAction() {
-        /*
-*	!!! THIS IS JUST AN EXAMPLE !!!, PLEASE USE ImageMagick or some other quality image processing libraries
-*/
+
         $imgUrl = $_POST['imgUrl'];
-// original sizes
+        // original sizes
         $imgInitW = $_POST['imgInitW'];
         $imgInitH = $_POST['imgInitH'];
-// resized sizes
+        // resized sizes
         $imgW = $_POST['imgW'];
         $imgH = $_POST['imgH'];
-// offsets
+        // offsets
         $imgY1 = $_POST['imgY1'];
         $imgX1 = $_POST['imgX1'];
-// crop box
+        // crop box
         $cropW = $_POST['cropW'];
         $cropH = $_POST['cropH'];
-// rotation angle
+        // rotation angle
         $angle = $_POST['rotation'];
         $jpeg_quality = 100;
-      //  $output_filename = "front/images/slide-1";
-// uncomment line below to save the cropped image in the same location as the original image.
-$output_filename = dirname($imgUrl). "/" . $_POST['slideName'];
+
+        $output_filename = dirname($imgUrl). "/" . $_POST['slideName'];
         $what = getimagesize($imgUrl);
         switch(strtolower($what['mime'])) {
             case 'image/png':
@@ -214,6 +212,7 @@ $output_filename = dirname($imgUrl). "/" . $_POST['slideName'];
             //imagepng($final_image, $output_filename.$type, $png_quality);
 
             imagejpeg($final_image, $output_filename . '.jpeg', $jpeg_quality);
+            chmod($output_filename . '.jpeg', 0777);
             $response = Array(
                 "status" => 'success',
                 "url" => '../'. $output_filename .'.jpeg'
