@@ -189,7 +189,10 @@ class BackController extends Controller
                 "status" => 'error',
                 "message" => 'Can`t write cropped File'
             );
-        }else{           // resize the original image to size of editor
+        } elseif (file_exists($output_filename . 'jpeg')) {
+            unlink($output_filename . 'jpeg');
+        }
+        else{           // resize the original image to size of editor
             $resizedImage = imagecreatetruecolor($imgW, $imgH);
             imagecopyresampled($resizedImage, $source_image, 0, 0, 0, 0, $imgW, $imgH, $imgInitW, $imgInitH);
             // rotate the rezized image
@@ -217,7 +220,9 @@ class BackController extends Controller
                 "status" => 'success',
                 "url" => '../'. $output_filename .'.jpeg'
             );
-            if(file_exists($imgUrl)) unlink($imgUrl);
+            if(file_exists($imgUrl)) {
+                unlink($imgUrl);
+            }
         }
 
         return Response::create(json_encode($response),200);
