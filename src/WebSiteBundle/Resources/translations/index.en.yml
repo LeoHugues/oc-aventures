@@ -1,12 +1,1 @@
-oc_bienvenue: OC AVENTURES and the team welcome you
-oc_hauteur: LIVE THE HIGH LIFE
-nos_parcours: OUR <strong> obstacles courses </strong>
-ouverture_fermeture: Open from Saturday %dateOuverture% to Sunday %dateFermeture%
-accroche_nos_parcours: Way above the ground and well out of your comfort zones, high on adrenaline, discover new sensations and abilities you never suspected. Immersed in the scent of pine trees, the chanting of the crickets, and within sight of the imposing Pic Saint Loup.
-parcours.adulte: 7 adult obstacle
-parcours_adulte_desc: Courses with three giant zip lines of 245m, 230m and 200m, (approximate duration 3 hours).
-parcours_enfant: 5 childsize obstacle
-parcours_enfant_desc: Courses (up from 4 or 5 years old) with a 135m zip line (approximate duration 3 hours).
-confort_title: And for your <strong>comfort:</strong>
-confort_terrasse: Refreshments area with a covered terrace and cooling atomizers.
-confort_pique_nique: A picnic area.
+{ oc_bienvenue: 'OC AVENTURES and the team welcome you', oc_hauteur: 'LIVE THE HIGH LIFE' }

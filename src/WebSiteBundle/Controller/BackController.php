@@ -14,6 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Yaml\Dumper;
 use WebSiteBundle\Form\DateOuvertureType;
 use Symfony\Component\Yaml\Parser;
 use Symfony\Component\Serializer\Serializer;
@@ -99,9 +100,9 @@ class BackController extends Controller
     {
         $yaml = new Parser();
 
-        $header = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/header.fr.yml'));
-        $index = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/index.fr.yml'));
-        $parcours = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/parcours.fr.yml'));
+        $header = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/header.' . $lang . '.yml'));
+        $index = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/index.' . $lang . '.yml'));
+        $parcours = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/parcours.' . $lang . '.yml'));
 
         $form = $this->createForm(
             new TextFormType(),
@@ -112,9 +113,51 @@ class BackController extends Controller
 
         if ($form->isValid()) {
 
+            $traductions = $form->getData();
+
+            $progression = 'menu';
+            $traduction_transfert = array();
+
+            foreach($traductions as $clef => $traduction) {
+                if ($clef == 'oc_bienvenue') {
+                    $progression = 'accueil';
+                } elseif ($clef == 'nos_parcours') {
+                    $progression = 'parcours';
+                }
+
+                if ($progression == 'menu') {
+                    $traduction_transfert['menu'][$clef] = $traduction;
+                } elseif ($progression == 'accueil') {
+                    $traduction_transfert['accueil'][$clef] = $traduction;
+                } elseif ($progression == 'parcours') {
+                    $traduction_transfert['parcours'][$clef] = $traduction;
+                }
+            }
+
+            $dumper = new Dumper();
+
+            file_put_contents(
+                '../src/WebSiteBundle/Resources/translations/header.' . $lang . '.yml',
+                $dumper->dump($traduction_transfert['menu'])
+            );
+            file_put_contents(
+                '../src/WebSiteBundle/Resources/translations/index.' . $lang . '.yml',
+                $dumper->dump($traduction_transfert['accueil'])
+            );
+            file_put_contents(
+                '../src/WebSiteBundle/Resources/translations/pacours.' . $lang . '.yml',
+                $dumper->dump($traduction_transfert['parcours'])
+            );
+
+            $this->addFlash(
+                'notice',
+                'Les nouveaux textes ont bien étaient enregistrées !'
+            );
+
+            return $this->render('WebSiteBundle:Back:index.html.twig');
         }
 
-            return $this->render('WebSiteBundle:Back:text.html.twig', array('form' => $form->createView()));
+        return $this->render('WebSiteBundle:Back:text.html.twig', array('form' => $form->createView(), 'lang' => $lang));
     }
 
     /**
