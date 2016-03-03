@@ -1,0 +1,86 @@
+{% extends 'WebSiteBundle:Back:baseBackOffice.html.twig' %}
+{% block title %}
+    Administration
+{% endblock %}
+{% block content %}
+    <div class="well">
+        <h1>Administrer les textes en </h1> <br>
+        {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+        {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
+        <div class="bs-component live-less-editor-hovercontainer" data-relatedvars="caret-width-base,dropdown-bg,dropdown-fallback-border,dropdown-border,dropdown-divider-bg,dropdown-link-color,dropdown-link-hover-color,dropdown-link-hover-bg,dropdown-link-active-color,dropdown-link-active-bg,dropdown-link-disabled-color,dropdown-header-color,nav-link-padding,nav-link-hover-bg,nav-disabled-link-color,nav-disabled-link-hover-color,link-color,nav-tabs-border-color,nav-tabs-link-hover-border-color,nav-tabs-active-link-hover-color,nav-tabs-active-link-hover-bg,nav-tabs-active-link-hover-border-color">
+            <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                <li class="active"><a href="#header" data-toggle="tab" aria-expanded="true">Textes menu</a></li>
+                <li class=""><a href="#index" data-toggle="tab" aria-expanded="false">Textes accueil</a></li>
+                <li class=""><a href="#parcours" data-toggle="tab" aria-expanded="false">Textes parcours</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="header">
+                    <div class="col-lg-10">
+                        {{ form_row(form.accueil) }}
+                        {{ form_row(form.parcours) }}
+                        {{ form_row(form.horaires_dates) }}
+                        {{ form_row(form.tarifs) }}
+                        {{ form_row(form.contact) }}
+                        {{ form_row(form.liens) }}
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="index">
+                    <div class="col-lg-10">
+                        {{ form_row(form.oc_bienvenue) }}
+                        {{ form_row(form.oc_hauteur) }}
+                        {{ form_row(form.nos_parcours_accrobranche) }}
+                        {{ form_row(form.ouverture_fermeture) }}
+                        {{ form_row(form.accroche_nos_parcours) }}
+                        {{ form_row(form.parcours_adulte) }}
+                        {{ form_row(form.parcours_adulte_desc) }}
+                        {{ form_row(form.parcours_enfant) }}
+                        {{ form_row(form.parcours_enfant_desc) }}
+                        {{ form_row(form.confort_title) }}
+                        {{ form_row(form.confort_terrasse) }}
+                        {{ form_row(form.confort_pique_nique) }}
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="parcours">
+                    <div class="col-lg-10">
+                        <h4 class="col-lg-offset-2 ">
+                            Changer le titre de la page
+                        </h4><br>
+                        {{ form_row(form.nos_parcours) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Changer l'intitulé des onglets
+                        </h4><br>
+                        {{ form_row(form.parcours_grand_bouton) }}
+                        {{ form_row(form.parcours_enfant_button) }}
+                        {{ form_row(form.plan_bouton) }}
+
+                        <h4 class="col-lg-offset-2 ">
+                            Changer l'intitulé des titres des onglets
+                        </h4><br>
+                        {{ form_row(form.nos_parcours_grands) }}
+                        {{ form_row(form.parcours_pour_grands) }}
+                        {{ form_row(form.plan_du_parc) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Changer les textes de l'onglets "parcours adulte"
+                        </h4><br>
+                        {{ form_row(form.desc_grands_parcours) }}
+                        {{ form_row(form.desc_tyro) }}
+                        {{ form_row(form.desc_details_parcours) }}
+                        {{ form_row(form.fin_grands_parcours) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Changer les textes de l'onglets "parcours enfant"
+                        </h4><br>
+                        {{ form_row(form.nos_parcours_enfant) }}
+                        {{ form_row(form.parcours_pour_enfant) }}
+                        {{ form_row(form.desc_parcours_enfant) }}
+                        {{ form_row(form.les_parcours) }}
+                        {{ form_row(form.desc_details_enfant) }}
+                        {{ form_row(form.desc_accroche_enfant) }}
+                        {{ form_row(form.fin_parcours_enfant) }}
+                    </div>
+                </div>
+            </div>
+            {{ form_row(form.valider) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

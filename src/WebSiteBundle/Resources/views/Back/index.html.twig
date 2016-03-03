@@ -5,8 +5,14 @@
 {% block content %}
     <div class="well">
         <h1>Administrer les images du site :</h1> <br>
-        <p>Modifier les images du slider de la page d'accueil : </p>
+        <p>Modifier les images du site. </p>
         <a class="btn-default btn" href="{{ path('admin_images') }}">Modifier les images</a>
+    </div>
+
+    <div class="well">
+        <h1>Administrer les textes du site :</h1> <br>
+        <p>Modifier les textes en français. </p>
+        <a class="btn-default btn" href="{{ path('admin_text', {'lang' : 'fr'}) }}">Modifier les textes</a>
     </div>
 
     <div class="well">

@@ -20,6 +20,7 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use WebSiteBundle\Form\TextFormType;
 
 /**
  * @Route("/admin")
@@ -89,6 +90,31 @@ class BackController extends Controller
     public function imagesAction(Request $request)
     {
         return $this->render('WebSiteBundle:Back:images.html.twig');
+    }
+
+    /**
+     * @Route("/textes/{lang}", name="admin_text")
+     */
+    public function textAction(Request $request, $lang)
+    {
+        $yaml = new Parser();
+
+        $header = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/header.fr.yml'));
+        $index = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/index.fr.yml'));
+        $parcours = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/parcours.fr.yml'));
+
+        $form = $this->createForm(
+            new TextFormType(),
+            $header + $index + $parcours
+        );
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+
+        }
+
+            return $this->render('WebSiteBundle:Back:text.html.twig', array('form' => $form->createView()));
     }
 
     /**
