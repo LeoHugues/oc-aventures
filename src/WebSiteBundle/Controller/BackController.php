@@ -21,6 +21,7 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use WebSiteBundle\Form\PartenairesType;
 use WebSiteBundle\Form\TextFormType;
 
 /**
@@ -91,6 +92,30 @@ class BackController extends Controller
     public function imagesAction(Request $request)
     {
         return $this->render('WebSiteBundle:Back:images.html.twig');
+    }
+
+        /**
+     * @Route("/partenaires", name="admin_partenaires")
+     */
+    public function partenairesAction(Request $request)
+    {
+        $partenaires = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Partenaires.json'), true);
+        $form = $this->createForm(new PartenairesType(), array('partenaires' => $partenaires));
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $jsonContent = json_encode(array_values($form->getData()['partenaires']));
+            file_put_contents('../src/WebSiteBundle/Resources/JsonData/Partenaires.json', $jsonContent);
+            $this->addFlash(
+                'notice',
+                'Les liens des partenaires ont bien étaient enregistrées !'
+            );
+
+            return $this->render('WebSiteBundle:Back:index.html.twig');
+        }
+
+        return $this->render('WebSiteBundle:Back:partenaires.html.twig', array('form' => $form->createView()));
     }
 
     /**

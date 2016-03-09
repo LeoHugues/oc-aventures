@@ -3,33 +3,64 @@
     Administration
 {% endblock %}
 {% block content %}
-    <div class="well">
-        <h1>Administrer les images du site :</h1> <br>
-        <p>Modifier les images du site. </p>
-        <a class="btn-default btn" href="{{ path('admin_images') }}">Modifier les images</a>
-    </div>
-
-    <div class="well">
-
-        <h1>Administrer les textes du site :</h1> <br>
-
-        <div>
-            <label>Modifier les textes en français. </label><br>
-            <a class="btn-default btn" href="{{ path('admin_text', {'lang' : 'fr'}) }}">Modifier les textes</a>
+    <form class="form-horizontal">
+        <div class="well">
+            <h1>Administrer les images du site :</h1> <br>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Toutes les images</label>
+                <div class="col-sm-3">
+                    <a class="btn-default btn form-control" href="{{ path('admin_images') }}">Modifier les images</a>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Modifier les textes en anglais. </label><br>
-            <a class="btn-default btn" href="{{ path('admin_text', {'lang' : 'en'}) }}">Modifier les textes</a>
+        <div class="well">
+            <h1>Administrer les liens des partenaires :</h1> <br>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Toutes les liens</label>
+                <div class="col-sm-3">
+                    <a class="btn-default btn form-control" href="{{ path('admin_partenaires') }}">Modifier les liens</a>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Modifier les textes en allemend. </label><br>
-            <a class="btn-default btn" href="{{ path('admin_text', {'lang' : 'de'}) }}">Modifier les textes</a>
+        <div class="well">
+            <h1>Administrer les tarifs :</h1> <br>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Les tarifs</label>
+                <div class="col-sm-3">
+                    <a class="btn-default btn form-control" href="{{ path('admin_images') }}">Modifier les tarifs</a>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="well">
+            <h1>Administrer les textes du site :</h1> <br>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Français</label>
+                    <div class="col-sm-3">
+                        <a class="btn-default btn form-control" href="{{ path('admin_text', {'lang' : 'fr'}) }}">Modifier les textes</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Anglais</label>
+                    <div class="col-sm-3">
+                        <a class="btn-default btn form-control" href="{{ path('admin_text', {'lang' : 'en'}) }}">Modifier les textes</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Allemend</label>
+                    <div class="col-sm-3">
+                        <a class="btn-default btn form-control" href="{{ path('admin_text', {'lang' : 'de'}) }}">Modifier les textes</a>
+                    </div>
+                </div>
+        </div>
 
-    <div class="well">
-        <h1>Date d'ouverture et de fermeture du site :</h1> <br>
-        <p>Modifier les dates d'ouvertures du site : </p>
-        <a class="btn-default btn" href="{{ path('admin_date_ouvertures') }}">Modifier les dates</a>
-    </div>
+        <div class="well">
+            <h1>Date d'ouverture et de fermeture du site :</h1> <br>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Les dates</label>
+                <div class="col-sm-3">
+                    <a class="btn-default btn form-control" href="{{ path('admin_date_ouvertures') }}">Modifier les dates</a>
+                </div>
+            </div>
+        </div>
+    </form>
 {% endblock %}

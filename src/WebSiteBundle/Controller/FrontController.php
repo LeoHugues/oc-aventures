@@ -101,22 +101,7 @@ class FrontController extends Controller {
      */
     public function lienAction() {
 
-        $data = array(
-            array(
-                'address'=> 'www.canoe-cevennes.com',
-                'desc'=> 'Canoë Montana, Saint Bauzille de Putois'
-            ),
-            array(
-                'address'=> 'www.labellevigne.com',
-                'desc'=> 'Cave à vin... Et à manger'
-            ),
-
-        );
-
-        file_put_contents('../src/WebSiteBundle/Resources/JsonData/Partenaires.json', json_encode($data));
-
-        $link = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Partenaires.json'));
-
-        return $this->render('WebSiteBundle:Front:link.html.twig', array('partenaires' => $link));
+        $partenaires = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Partenaires.json'), true);
+        return $this->render('WebSiteBundle:Front:link.html.twig', array('partenaires' => $partenaires));
     }
 }
