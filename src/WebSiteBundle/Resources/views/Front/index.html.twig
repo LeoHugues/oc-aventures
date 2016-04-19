@@ -6,8 +6,8 @@
     {% trans_default_domain "index" %}
     <div class="row" xmlns="http://www.w3.org/1999/html">
             <div class="box">
-                <div class="col-lg-12 text-center">
-                    <h1 class="brand-name">{{ 'oc.hauteur'|trans }} !</h1>
+                <div class="col-lg-12 text-center text-yellow">
+                    <h1 class="brand-name">{{ 'oc_hauteur'|trans }} !</h1>
                     <br>
                     <div id="carousel-example-generic" class="carousel slide">
                         <!-- Indicators -->
@@ -39,7 +39,7 @@
                         </a>
                     </div>
                     <h2 class="text-center">
-                                {{ 'oc.bienvenue'|trans }}
+                                {{ 'oc_bienvenue'|trans }}
                     </h2>
                     <hr class="tagline-divider">
                     <h2>
@@ -56,21 +56,21 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">
-                        {{ 'nos.parcours'|trans|raw }}
+                        {{ 'nos_parcours_accrobranche'|trans|raw }}
                     </h2>
                     <hr>
                         <img class="img-responsive img-border img-left" src="{{ asset('./front/images/accueil-nos-parcours.jpeg') }}" alt="">
                     <hr class="visible-xs">
                     <div class="row">
-                        <h4  class="text-yellow">{{ "ouverture.fermeture"|trans({'%dateOuverture%': date.ouverture |date('d/m/Y'), '%dateFermeture%': date.fermeture |date('d/m/Y')}) }}</h4>
-                        <p> <strong>{{ 'accroche.nos.parcours'|trans }}</strong></p>
-                        <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}"><h4 class="souligner">{{ 'parcours.adulte'|trans }}</h4></a>
+                        <h4  class="text-yellow">{{ "ouverture_fermeture"|trans({'%dateOuverture%': date.ouverture |date('d/m/Y'), '%dateFermeture%': date.fermeture |date('d/m/Y')}) }}</h4>
+                        <p> <strong>{{ 'accroche_nos_parcours'|trans }}</strong></p>
+                        <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}"><h4 class="souligner">{{ 'parcours_adulte'|trans }}</h4></a>
                         <p>
-                        {{ 'parcours.adulte.desc'|trans }}
+                        {{ 'parcours_adulte_desc'|trans }}
                         </p>
-                        <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}"><h4 class="souligner">{{ 'parcours.enfant'|trans }}</h4></a>
+                        <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}"><h4 class="souligner">{{ 'parcours_enfant'|trans }}</h4></a>
                         <p>
-                            {{ 'parcours.enfant.desc'|trans }}
+                            {{ 'parcours_enfant_desc'|trans }}
                         </p>
                     </div>
                 </div>
@@ -82,13 +82,13 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">
-                        {{ 'confort.title'|trans|raw }}
+                        {{ 'confort_title'|trans|raw }}
                     </h2>
                     <hr>
                     <img class="img-responsive img-border img-left" src="{{ asset('./front/images/accueil-confort.jpeg') }}" alt="">
                     <div class="row">
-                        <p>- {{ 'confort.terrasse'|trans }}</p>
-                        <p>- {{ 'confort.pique.nique'|trans }}</p>
+                        <p>- {{ 'confort_terrasse'|trans }}</p>
+                        <p>- {{ 'confort_pique_nique'|trans }}</p>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,12 @@
-oc.bienvenue: OC AVENTURES und das ganze Team heisst Sie herzlich willkommen
-oc.hauteur: ES GEHT HOCH HINAUF
-nos.parcours: <strong> Unsere Parcours </strong>
-ouverture.fermeture: Geoffnet von Samstag %dateOuverture% bis Sonntag %dateFermeture%
-accroche.nos.parcours: Mitten im Wald auf der Höhe der Baumkronen spüren Sie Adrenalin pur und erleben sich neu, wenn Sie auf unseren Parcours Ihre Komfortzone verlassen, umgeben vom Duft der Pinien, den „Gesängen“ der Zikaden und mit Blick auf den nahe gelegenen Berg Pic St. Loup.
-parcours.adulte: 7 Parcours fur Erwachsene
-parcours.adulte.desc: Mit drei extra langen Seilbahnen (245m, 230m und 200m Länge), mit einer Gesamtdauer von 3h.
-parcours.enfant: 5 Parcours fur Kinder (ab 4 oder 5 Jahren)
-parcours.enfant.desc: Mit einer langen Seilbahn von 135m Länge. Insgesamt 3h Abenteuer, bei dem das sichere Erleben im Vordergrund steht.
-confort.title: Fur Ihr <strong>Wohlbefinden bieten wir Ihnen im Hochseilgarten an:</strong>
-confort.terrasse: Ein Kiosk mit schattiger Terrasse und erfrischenden Wasserzerstäubern.
-confort.pique.nique: Picknick-Plätze.
+oc_bienvenue: OC AVENTURES und das ganze Team heisst Sie herzlich willkommen
+oc_hauteur: ES GEHT HOCH HINAUF
+nos_parcours: <strong> Unsere Parcours </strong>
+ouverture_fermeture: Geoffnet von Samstag %dateOuverture% bis Sonntag %dateFermeture%
+accroche_nos_parcours: Mitten im Wald auf der Höhe der Baumkronen spüren Sie Adrenalin pur und erleben sich neu, wenn Sie auf unseren Parcours Ihre Komfortzone verlassen, umgeben vom Duft der Pinien, den „Gesängen“ der Zikaden und mit Blick auf den nahe gelegenen Berg Pic St. Loup.
+parcours_adulte: 7 Parcours fur Erwachsene
+parcours_adulte_desc: Mit drei extra langen Seilbahnen (245m, 230m und 200m Länge), mit einer Gesamtdauer von 3h.
+parcours_enfant: 5 Parcours fur Kinder (ab 4 oder 5 Jahren)
+parcours_enfant_desc: Mit einer langen Seilbahn von 135m Länge. Insgesamt 3h Abenteuer, bei dem das sichere Erleben im Vordergrund steht.
+confort_title: Fur Ihr <strong>Wohlbefinden bieten wir Ihnen im Hochseilgarten an:</strong>
+confort_terrasse: Ein Kiosk mit schattiger Terrasse und erfrischenden Wasserzerstäubern.
+confort_pique_nique: Picknick-Plätze.

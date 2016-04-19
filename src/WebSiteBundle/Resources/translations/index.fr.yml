@@ -1,12 +1,1 @@
-oc.bienvenue: OC'AVENTURES Et Toute Son Equipe Vous Souhaite La Bienvenue
-oc.hauteur: PRENEZ DE LA HAUTEUR
-nos.parcours: NOS <strong> PARCOURS ACCROBRANCHE </strong>
-ouverture.fermeture: OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %dateFermeture%
-accroche.nos.parcours: A travers nos parcours accrobranche, découvrez de nouvelles sensations, des émotions oubliées, les odeurs de la pinède et le chant des cigales au pied du Pic Saint Loup.
-parcours.adulte: 7 PARCOURS ADULTES
-parcours.adulte.desc: Enchainement de 3 Tyroliennes Géantes 200m, 230m et 245m. Parcours ludiques et sportifs, pour 3h d'activité.
-parcours.enfant: 5 PARCOURS ENFANTS (DES 4 OU 5 ANS)
-parcours.enfant.desc: Avec une tyrolienne de 80, 100 et 135 m, pour 3h00 d'aventure en toute sécurité.
-confort.title: Et pour le <strong>confort de votre accueil</strong>
-confort.terrasse: Une buvette avec sa terrasse couverte et brumisée.
-confort.pique.nique: Une aire de pique-nique.
+{ oc_bienvenue: 'OC''AVENTURES Et Toute Son Equipe Vous Souhaite La Bienvenue', oc_hauteur: 'PRENEZ DE LA HAUTEUR', nos_parcours_accrobranche: 'NOS <strong> PARCOURS ACCROBRANCHE </strong>', ouverture_fermeture: 'OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %dateFermeture%', accroche_nos_parcours: 'A travers nos parcours accrobranche, découvrez de nouvelles sensations, des émotions oubliées, les odeurs de la pinède et le chant des cigales au pied du Pic Saint Loup.', parcours_adulte: '7 PARCOURS ADULTES', parcours_adulte_desc: 'Enchainement de 3 Tyroliennes Géantes 200m, 230m et 245m. Parcours ludiques et sportifs, pour 3h d''activité.', parcours_enfant: '5 PARCOURS ENFANTS (DES 4 OU 5 ANS)', parcours_enfant_desc: 'Avec une tyrolienne de 80, 100 et 135 m, pour 3h00 d''aventure en toute sécurité.', confort_title: 'Et pour le <strong>confort de votre accueil</strong>', confort_terrasse: 'Une buvette avec sa terrasse couverte et brumisée.', confort_pique_nique: 'Une aire de pique-nique.' }

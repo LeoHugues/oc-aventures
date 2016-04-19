@@ -3,87 +3,127 @@
         Tarif
     {% endblock %}
 {% block content %}
-<div class="row">
+    {% trans_default_domain "tarifs" %}
+    <div class="row">
     <div class="box">
         <div class="text-center text-yellow">
-            <h1>Tarif 2015</h1>
+            <h1> {{ 'Titre'|trans|raw }}</h1>
             <br>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-6">
+            <h3 class="text-center text-yellow">
+                <span>Tarifs Accrobranche</span>
+            </h3><br>
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        10 €
+                        {{ tarifs.F1Prix }} €
                     </label>
                     <span class="text-yellow text-header">
-                        Forfait n°1
+                        {{ 'forfait1'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        4 ans
+                        {{ tarifs.F1Age }} {{ 'age'|trans|raw }}
                     </label>
                 </div>
                 <p class="text-forfait">
-                    Astrigagne et Choucas pour les enfants de 4 ans.
+                    {{ 'parcours1'|trans({'%age%': tarifs.F1Age })|raw }}
                 </p>
             </div>
 
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        12.5 €
+                        {{ tarifs.F2Prix }} €
                     </label>
                     <span class="text-yellow text-header">
-                        Forfait n°2
+                        {{ 'forfait2'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        5 ans
+                        {{ tarifs.F2Age }} {{ 'age'|trans|raw }}
                     </label>
                 </div>
                 <p class="text-forfait">
-                    Forfait 5 Parcours*<br>
-                    Astrigagn, Choucas, l'Écureuil, l'Aiglon et Rate penade pour les enfants à partir de 5 ans et dont la taille est inférieure à 1m30
+                    {{ 'parcours2'|trans({'%age%': tarifs.F2Age })|raw }}
                 </p>
             </div>
 
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        17 €
+                        {{ tarifs.F3Prix }} €
                     </label>
                     <span class="text-yellow text-header">
-                        Forfait n°3
+                        {{ 'forfait3'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        8 ans
+                        {{ tarifs.F3Prix }} {{ 'age'|trans|raw }}
                     </label>
                 </div>
                 <p class="text-forfait">
-                    Forfait 5 parcours* <br>
-                    Gringole, Céga, Fourmi, Perdigal et Capricorne pour adultes, ados et enfants dont la taille est supérieur à 1m30 et 8 ans minimum.
+                    {{ 'parcours3'|trans({'%age%': tarifs.F3Age })|raw }}
                 </p>
             </div>
 
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        23 €
+                        {{ tarifs.F4Prix }} €
                     </label>
                     <span class="text-yellow text-header">
-                        Forfait n°4
+                         {{ 'forfait4'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        +40kg
+                        +{{ tarifs.F4Poids }}kg
                     </label>
                 </div>
                 <p class="text-forfait">
-                    Forfait 7 parcours* <br>
-                    Gringole, Céga, Fourmi, Perdigal, Capricorne et Sanga Sensation plus les trois tyroliennes géantes (245m, 230m et 200m) réservé aux plus de 40kg et moins de 100kg
+                    {{ 'parcours4'|trans({'%poids%': tarifs.F4Poids })|raw }}
                 </p>
             </div>
-            <label>*3h d'activité environ</label>
+        </div>
+        <div class="col-lg-6">
+            <h3 class="text-center text-yellow">
+                <span>Tarifs Laser Game</span>
+            </h3><br>
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img-viseur text-center">
+                        {{ tarifs.FLaser1 }} €
+                    </label>
+                    <span class="text-yellow text-header">
+                        {{ 'forfait_laser_1'|trans|raw }}
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        {{ tarifs.FLaserAge }} {{ 'age'|trans|raw }}
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    {{ 'parcours1'|trans({'%age%': tarifs.F1Age })|raw }}
+                </p>
+            </div>
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img-viseur text-center">
+                        {{ tarifs.FLaser2 }} €
+                    </label>
+                    <span class="text-yellow text-header">
+                        {{ 'forfait_laser_2'|trans|raw }}
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        {{ tarifs.FLaserAge }} {{ 'age'|trans|raw }}
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    {{ 'parcours1'|trans({'%age%': tarifs.F1Age })|raw }}
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center">
+            <label>{{ 'temps_activite'|trans|raw }}</label>
             <div class="block">
-                <h3 class="text-yellow">*Mode de paiements*</h3>
-                <p>Chèques, espèces, Chèques Vacances</p>
+                <h3 class="text-yellow">{{ 'titre_paiement'|trans|raw }}</h3>
+                <p>{{ 'mode_paiement'|trans|raw }}</p>
                 <div class="block">
                     <img class="small-img" src="{{ asset('front/images/noCB.png') }}" alt="">
                     <img class="" src="{{ asset('front/images/logo_ancv.png') }}" alt="">
