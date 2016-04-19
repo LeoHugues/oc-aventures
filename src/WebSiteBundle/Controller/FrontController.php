@@ -68,7 +68,9 @@ class FrontController extends Controller {
      * @Route("/tarif", defaults={"_locale"="fr"}, requirements = {"_locale" = "fr|en|de"})
      */
     public function tarifAction() {
-        return $this->render('WebSiteBundle:Front:tarif.html.twig', array());
+        $tarifs = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Tarifs.json'), true);
+
+        return $this->render('WebSiteBundle:Front:tarif.html.twig', array('tarifs' => $tarifs));
     }
 
     /**
@@ -85,13 +87,15 @@ class FrontController extends Controller {
 
             $contact = $form->getData();
 
-            $headers  = 'MIME-Version: 1.0' . "\r\n";
-            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-            $headers .= 'Pour: Oc-Aventures info@oc-aventures.com' . "\r\n";
-            $headers .= 'From: '.$contact['nom'].' <'.$contact['mail'].'> ' . "\r\n";
-
-            mail("info@oc-aventures.com","Demande information",$contact['message'], $headers);
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Hello Email')
+                ->setFrom($contact['mail'])
+                ->setTo('leo.hugues@hotmail.fr')
+                ->setBody($contact['message'])
+            ;
+            $this->get('mailer')->send($message);
         }
+
         return $this->render('WebSiteBundle:Front:contact.html.twig', array('form' => $form->createView()));
     }
 

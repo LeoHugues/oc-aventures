@@ -29,5 +29,4 @@ class PartenaireType extends AbstractType
     {
         return 'website_partenaire';
     }
-
 }

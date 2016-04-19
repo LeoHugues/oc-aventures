@@ -22,6 +22,7 @@ use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use WebSiteBundle\Form\PartenairesType;
+use WebSiteBundle\Form\TarifsType;
 use WebSiteBundle\Form\TextFormType;
 
 /**
@@ -94,7 +95,7 @@ class BackController extends Controller
         return $this->render('WebSiteBundle:Back:images.html.twig');
     }
 
-        /**
+    /**
      * @Route("/partenaires", name="admin_partenaires")
      */
     public function partenairesAction(Request $request)
@@ -116,6 +117,30 @@ class BackController extends Controller
         }
 
         return $this->render('WebSiteBundle:Back:partenaires.html.twig', array('form' => $form->createView()));
+    }
+
+    /**
+     * @Route("/tarifs", name="admin_tarifs")
+     */
+    public function tarifsAction(Request $request)
+    {
+        $tarifs = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Tarifs.json'), true);
+        $form = $this->createForm(new TarifsType(), $tarifs);
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $jsonContent = json_encode($form->getData());
+            file_put_contents('../src/WebSiteBundle/Resources/JsonData/Tarifs.json', $jsonContent);
+            $this->addFlash(
+                'notice',
+                'Les nouveaux des tarifs ont bien étaient enregistrées !'
+            );
+
+            return $this->render('WebSiteBundle:Back:index.html.twig');
+        }
+
+        return $this->render('WebSiteBundle:Back:tarifs.html.twig', array('form' => $form->createView()));
     }
 
     /**

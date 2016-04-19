@@ -1,0 +1,49 @@
+{% extends 'WebSiteBundle:Back:baseBackOffice.html.twig' %}
+{% block title %}
+    Admin - tarifs
+{% endblock %}
+{% block content %}
+    <div class="well">
+        <h1>Administrer les tarifs </h1> <br>
+        {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+        {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
+        <div class="col-sm-10">
+            <h3> Forfait 1</h3>
+            <div>
+                {{ form_row(form.F1Prix) }}
+                {{ form_row(form.F1Age) }}
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <h3>Forfait 2 </h3>
+            <div>
+                {{ form_row(form.F2Prix) }}
+                {{ form_row(form.F2Age) }}
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <h3>Forfait 3 </h3>
+            <div>
+                {{ form_row(form.F3Prix) }}
+                {{ form_row(form.F3Age) }}
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <h3>Forfait 4 </h3>
+            <div>
+                {{ form_row(form.F4Prix) }}
+                {{ form_row(form.F4Poids) }}
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <h3>Forfait Laser Game</h3>
+            <div>
+                {{ form_row(form.FLaserAge) }}
+                {{ form_row(form.FLaser1) }}
+                {{ form_row(form.FLaser2) }}
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock content %}

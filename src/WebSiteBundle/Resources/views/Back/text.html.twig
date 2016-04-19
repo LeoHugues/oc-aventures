@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
     <div class="well">
-        <h1>Administrer les textes en </h1> <br>
+        <h1>Administrer les textes en {% if lang == 'fr' %}français{% elseif lang == 'en' %}anglais{% else %}allemand{% endif %}</h1> <br>
         {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
         {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
         <div class="bs-component live-less-editor-hovercontainer" data-relatedvars="caret-width-base,dropdown-bg,dropdown-fallback-border,dropdown-border,dropdown-divider-bg,dropdown-link-color,dropdown-link-hover-color,dropdown-link-hover-bg,dropdown-link-active-color,dropdown-link-active-bg,dropdown-link-disabled-color,dropdown-header-color,nav-link-padding,nav-link-hover-bg,nav-disabled-link-color,nav-disabled-link-hover-color,link-color,nav-tabs-border-color,nav-tabs-link-hover-border-color,nav-tabs-active-link-hover-color,nav-tabs-active-link-hover-bg,nav-tabs-active-link-hover-border-color">

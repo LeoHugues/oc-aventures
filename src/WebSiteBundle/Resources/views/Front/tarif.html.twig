@@ -10,74 +10,116 @@
             <h1> {{ 'Titre'|trans|raw }}</h1>
             <br>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-6">
+            <h3 class="text-center text-yellow">
+                <span>Tarifs Accrobranche</span>
+            </h3><br>
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        10 €
+                        {{ tarifs.F1Prix }} €
                     </label>
                     <span class="text-yellow text-header">
                         {{ 'forfait1'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        {{ 'age1'|trans|raw }}
+                        {{ tarifs.F1Age }} {{ 'age'|trans|raw }}
                     </label>
                 </div>
                 <p class="text-forfait">
-                    {{ 'parcours1'|trans|raw }}
+                    {{ 'parcours1'|trans({'%age%': tarifs.F1Age })|raw }}
                 </p>
             </div>
 
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        12.5 €
+                        {{ tarifs.F2Prix }} €
                     </label>
                     <span class="text-yellow text-header">
                         {{ 'forfait2'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        {{ 'age2'|trans|raw }}
+                        {{ tarifs.F2Age }} {{ 'age'|trans|raw }}
                     </label>
                 </div>
                 <p class="text-forfait">
-                    {{ 'parcours2'|trans|raw }}
+                    {{ 'parcours2'|trans({'%age%': tarifs.F2Age })|raw }}
                 </p>
             </div>
 
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        17 €
+                        {{ tarifs.F3Prix }} €
                     </label>
                     <span class="text-yellow text-header">
                         {{ 'forfait3'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        {{ 'age3'|trans|raw }}
+                        {{ tarifs.F3Prix }} {{ 'age'|trans|raw }}
                     </label>
                 </div>
                 <p class="text-forfait">
-                    {{ 'parcours3'|trans|raw }}
+                    {{ 'parcours3'|trans({'%age%': tarifs.F3Age })|raw }}
                 </p>
             </div>
 
             <div class="block block-forfait">
                 <div class="text-yellow">
                     <label class="label-img1 text-center">
-                        23 €
+                        {{ tarifs.F4Prix }} €
                     </label>
                     <span class="text-yellow text-header">
                          {{ 'forfait4'|trans|raw }}
                     </span>
                     <label class="label-img5 text-center label-age">
-                        +40kg
+                        +{{ tarifs.F4Poids }}kg
                     </label>
                 </div>
                 <p class="text-forfait">
-                    {{ 'parcours4'|trans|raw }}
+                    {{ 'parcours4'|trans({'%poids%': tarifs.F4Poids })|raw }}
                 </p>
             </div>
+        </div>
+        <div class="col-lg-6">
+            <h3 class="text-center text-yellow">
+                <span>Tarifs Laser Game</span>
+            </h3><br>
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img-viseur text-center">
+                        {{ tarifs.FLaser1 }} €
+                    </label>
+                    <span class="text-yellow text-header">
+                        {{ 'forfait_laser_1'|trans|raw }}
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        {{ tarifs.FLaserAge }} {{ 'age'|trans|raw }}
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    {{ 'parcours1'|trans({'%age%': tarifs.F1Age })|raw }}
+                </p>
+            </div>
+            <div class="block block-forfait">
+                <div class="text-yellow">
+                    <label class="label-img-viseur text-center">
+                        {{ tarifs.FLaser2 }} €
+                    </label>
+                    <span class="text-yellow text-header">
+                        {{ 'forfait_laser_2'|trans|raw }}
+                    </span>
+                    <label class="label-img5 text-center label-age">
+                        {{ tarifs.FLaserAge }} {{ 'age'|trans|raw }}
+                    </label>
+                </div>
+                <p class="text-forfait">
+                    {{ 'parcours1'|trans({'%age%': tarifs.F1Age })|raw }}
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center">
             <label>{{ 'temps_activite'|trans|raw }}</label>
             <div class="block">
                 <h3 class="text-yellow">{{ 'titre_paiement'|trans|raw }}</h3>
