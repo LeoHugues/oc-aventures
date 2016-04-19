@@ -19,6 +19,8 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
+/src/WebSiteBundle/Resources/JsonData/*
+/web/image/*
 
 # Assets managed by Bower
 /web/assets/vendor/
@@ -35,3 +37,18 @@
 
 #Phpstorm
 /.idea
+
+web/front/images/enfant-slide-2.jpeg
+web/front/images/accueil-slide-3.jpeg
+web/front/images/accueil-confort.jpeg
+src/WebSiteBundle/Resources/JsonData/Ouvertures.json
+src/WebSiteBundle/Resources/JsonData/Partenaires.json
+web/front/images/accueil-slide-2.jpeg
+web/front/images/adulte-slide-1.jpeg
+web/front/images/adulte-slide-2.jpeg
+web/front/images/adulte-slide-3.jpeg
+web/front/images/enfant-slide-1.jpeg
+web/front/images/enfant-slide-3.jpeg
+web/front/images/parcours-adulte.jpeg
+web/front/images/parcours-enfant.jpeg
+web/front/images/accueil-slide-1.jpeg
