@@ -12,4 +12,4 @@ forfait_laser_1: Forfait 30 minutes
 forfait_laser_2: Forfait 2 fois 30 minutes
 temps_activite: "*3h d'activité environ"
 titre_paiement: "*Mode de paiements*"
-mode_paiement: Chèques, espèces, Chèques Vacances
+mode_paiement: Chèques, espèces, Chèques Vacances : UNIQUEMENT
