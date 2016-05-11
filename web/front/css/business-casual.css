@@ -191,6 +191,18 @@ p.text-forfait {
     right: 8px;
 }
 
+.label-img-viseur {
+    background-image: url("../../front/images/viseur.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    height: 47px;
+    width: 102px;
+    padding-top: 10px;
+    font-size: 19px;
+    font-family: Berlin;
+}
+
 h2.text-image {
     font-family: Berlin;
     color: #1c2919;
@@ -299,4 +311,9 @@ span.text-image {
 img.small-img {
     width: 80px;
     margin-right: 10px;
+}
+
+h3.cb-message {
+    border: solid;
+    border-radius: 8px;
 }
