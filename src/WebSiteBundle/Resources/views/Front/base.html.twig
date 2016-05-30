@@ -28,13 +28,33 @@
             -o-background-size: cover;
             background-size: cover;
         }
+
+        div.accrobranche-title {
+            vertical-align: top;
+            max-width: 62%;
+            display: inline-block;
+        }
+
+        .img-accrobranche {
+            margin-top: 24px;
+        }
+
+        .accrobranche-logo {
+            display: inline-block;
+            max-width: 21%;
+        }
     </style>
 {% endblock %}
 
 {% block body %}
     {% trans_default_domain "header" %}
     <div class="brand image">
-        <img class="img-responsive center-block" src="{{ asset('front/images/font-accrobranche.png') }}" alt="">
+        <div class="img-responsive accrobranche-title">
+            <img class="img-responsive center-block img-accrobranche" src="{{ asset('front/images/font-accrobranche.png') }}" alt="">
+        </div>
+        <div class="img-responsive accrobranche-logo">
+            <img class="img-responsive center-block" src="{{ asset('front/images/oc-logo.png') }}" alt="">
+        </div>
         <h2 class="text-image text-right"><span>Montpellier Nord</span></h2>
     </div>
     <!-- Navigation -->

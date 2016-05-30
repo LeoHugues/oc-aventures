@@ -207,9 +207,9 @@ h2.text-image {
     font-family: Berlin;
     color: #1c2919;
     font-size: 22px;
+    top: 156px;
+    width: 42%;
     position: absolute;
-    top: 130px;
-    width: 58%;
 }
 
 span.text-image {
