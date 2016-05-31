@@ -36,18 +36,18 @@
         }
 
         .img-accrobranche {
-            margin-top: 24px;
+            margin-top: 51px;
         }
 
         .accrobranche-logo {
             display: inline-block;
-            max-width: 21%;
+            max-width: 26%;
         }
     </style>
 {% endblock %}
 
 {% block body %}
-    {% trans_default_domain "header" %}
+    {% trans_default_domain "traduction" %}
     <div class="brand image">
         <div class="img-responsive accrobranche-title">
             <img class="img-responsive center-block img-accrobranche" src="{{ asset('front/images/font-accrobranche.png') }}" alt="">
@@ -75,22 +75,25 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="{{ path('website_index', {'_locale': app.request.getLocale() }) }}">{{ 'accueil'|trans }}</a>
+                        <a href="{{ path('website_index', {'_locale': app.request.getLocale() }) }}">{{ 'header.accueil'|trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}">{{ 'parcours'|trans }}</a>
+                        <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}">{{ 'header.parcours'|trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('website_horaires', {'_locale': app.request.getLocale() }) }}">{{ 'horaires_dates'|trans }}</a>
+                        <a href="{{ path('website_laser', {'_locale': app.request.getLocale() }) }}">{{ 'header.laser_game'|trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('website_tarif', {'_locale': app.request.getLocale() }) }}">{{ 'tarifs'|trans }}</a>
+                        <a href="{{ path('website_horaires', {'_locale': app.request.getLocale() }) }}">{{ 'header.horaires_dates'|trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('website_contact', {'_locale': app.request.getLocale() }) }}">{{ 'contact'|trans }}</a>
+                        <a href="{{ path('website_tarif', {'_locale': app.request.getLocale() }) }}">{{ 'header.tarifs'|trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('website_lien', {'_locale': app.request.getLocale() }) }}">{{ 'liens'|trans }}</a>
+                        <a href="{{ path('website_contact', {'_locale': app.request.getLocale() }) }}">{{ 'header.contact'|trans }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('website_lien', {'_locale': app.request.getLocale() }) }}">{{ 'header.liens'|trans }}</a>
                     </li>
                 </ul>
             </div>

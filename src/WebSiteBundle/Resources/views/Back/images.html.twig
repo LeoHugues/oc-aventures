@@ -7,10 +7,11 @@
         <h1>Administrer les images du site :</h1> <br>
         <div class="bs-component live-less-editor-hovercontainer" data-relatedvars="caret-width-base,dropdown-bg,dropdown-fallback-border,dropdown-border,dropdown-divider-bg,dropdown-link-color,dropdown-link-hover-color,dropdown-link-hover-bg,dropdown-link-active-color,dropdown-link-active-bg,dropdown-link-disabled-color,dropdown-header-color,nav-link-padding,nav-link-hover-bg,nav-disabled-link-color,nav-disabled-link-hover-color,link-color,nav-tabs-border-color,nav-tabs-link-hover-border-color,nav-tabs-active-link-hover-color,nav-tabs-active-link-hover-bg,nav-tabs-active-link-hover-border-color">
                 <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                    <li class="active"><a href="#accueil" data-toggle="tab" aria-expanded="true">Changer les images d'accueil</a></li>
-                    <li class=""><a href="#adulte" data-toggle="tab" aria-expanded="false">Changer les images des pacours adulte</a></li>
-                    <li class=""><a href="#enfant" data-toggle="tab" aria-expanded="false">Changer les images des parcours enfant</a></li>
-                    <li class=""><a href="#plan" data-toggle="tab" aria-expanded="false">Changer le plan du parc</a></li>
+                    <li class="active"><a href="#accueil" data-toggle="tab" aria-expanded="true">Images d'accueil</a></li>
+                    <li class=""><a href="#adulte" data-toggle="tab" aria-expanded="false">Parcours adulte</a></li>
+                    <li class=""><a href="#enfant" data-toggle="tab" aria-expanded="false">Parcours enfant</a></li>
+                    <li class=""><a href="#laser" data-toggle="tab" aria-expanded="false">Laser game</a></li>
+                    <li class=""><a href="#plan" data-toggle="tab" aria-expanded="false">Plan du parc</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in bt" id="accueil">
@@ -79,6 +80,27 @@
                         <div class="box">
                             <label>Changer la troisième slide : </label>
                             <div class="croppic slide-croppic" id="enfant-slide3"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="laser">
+                        <div class="box">
+                            <label>Changer l'image parcours adulte : </label>
+                            <div class="croppic nos-parcours-croppic" id="laser"></div>
+                        </div>
+                        <br>
+                        <div class="box">
+                            <label>Changer la première slide : </label>
+                            <div class="croppic slide-croppic" id="laser-slide1"></div>
+                        </div>
+                        <br>
+                        <div class="box">
+                            <label>Changer la seconde slide : </label>
+                            <div class="croppic slide-croppic" id="laser-slide2"></div>
+                        </div>
+                        <br>
+                        <div class="box">
+                            <label>Changer la troisième slide : </label>
+                            <div class="croppic slide-croppic" id="laser-slide3"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="plan">
@@ -263,7 +285,57 @@
         var cropperEnfant3 = new Croppic('enfant-slide3', croppedOptionsEnfant3);
 
         /*
-         <================ Initialisation cropper parcours enfant ==================>
+         <================ Initialisation cropper laser game ==================>
+         */
+        var croppedOptionsLaser = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal:false,
+            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData:{"slideName": 'laser', "imgName": "img-laser"},
+            uploadData: {"imgName": "img-laser"}
+        };
+        var cropperLaser = new Croppic('laser', croppedOptionsLaser);
+
+        var croppedOptionsLaser1 = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal:false,
+            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData:{"slideName": 'laser-slide-1', "imgName": "img-laser-slide-1"},
+            uploadData: {"imgName": "img-laser-slide-1"}
+        };
+        var cropperLaser1 = new Croppic('laser-slide1', croppedOptionsLaser1);
+
+        var croppedOptionsLaser2 = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal:false,
+            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData:{
+                "slideName": 'laser-slide-2',
+                "imgName": "img-laser-slide-2"
+            },
+            uploadData: {"imgName": "img-laser-slide-2"}
+
+        };
+        var cropperLaser2 = new Croppic('laser-slide2', croppedOptionsLaser2);
+
+        var croppedOptionsLaser3 = {
+            uploadUrl: '{{ path('save_to_file') }}',
+            cropUrl: '{{ path('crop_to_file') }}',
+            modal: false,
+            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+            cropData: {
+                "slideName": 'adulte-laser-3',
+                "imgName": "img-adulte-laser-3"
+            },
+            uploadData: {"imgName": "img-laser-slide-3"}
+        };
+        var cropperLaser3 = new Croppic('laser-slide3', croppedOptionsLaser3);
+
+        /*
+         <================ Initialisation cropper plan du parc ==================>
          */
 
         var croppedOptionsPlan = {

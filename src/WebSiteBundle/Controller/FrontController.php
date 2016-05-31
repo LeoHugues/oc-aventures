@@ -76,6 +76,8 @@ class FrontController extends Controller {
     /**
      * @Route("/{_locale}/contact", name="website_contact")
      * @Route("/contact", defaults={"_locale"="fr"}, requirements = {"_locale" = "fr|en|de"})
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function contactAction(Request $request) {
 
@@ -107,5 +109,14 @@ class FrontController extends Controller {
 
         $partenaires = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Partenaires.json'), true);
         return $this->render('WebSiteBundle:Front:link.html.twig', array('partenaires' => $partenaires));
+    }
+
+    /**
+     * @Route("{_locale}/laser-game", name="website_laser")
+     * @Route("/laser-game", defaults={"_locale"="fr"}, requirements = {"_locale" = "fr|en|de"})
+     * @param Request $request
+     */
+    public function laserAction(Request $request) {
+        return $this->render('WebSiteBundle:Front:laser.html.twig');
     }
 }

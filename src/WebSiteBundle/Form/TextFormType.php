@@ -10,8 +10,13 @@ namespace WebSiteBundle\Form;
 
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use WebSiteBundle\Form\Text\HeaderTextType;
+use WebSiteBundle\Form\Text\IndexTextType;
+use WebSiteBundle\Form\Text\LaserTextType;
+use WebSiteBundle\Form\Text\OuverturesTextType;
+use WebSiteBundle\Form\Text\ParcoursTextType;
+use WebSiteBundle\Form\Text\TarifsTextType;
 
 class TextFormType extends AbstractType
 {
@@ -22,47 +27,12 @@ class TextFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         // Input menu
-        $builder->add('accueil')
-            ->add('parcours')
-            ->add('horaires_dates')
-            ->add('tarifs')
-            ->add('contact')
-            ->add('liens')
-
-            // input accueil (index)
-            ->add('oc_bienvenue')
-            ->add('oc_hauteur')
-            ->add('nos_parcours_accrobranche')
-            ->add('ouverture_fermeture')
-            ->add('accroche_nos_parcours', 'textarea')
-            ->add('parcours_adulte')
-            ->add('parcours_adulte_desc')
-            ->add('parcours_enfant')
-            ->add('parcours_enfant_desc')
-            ->add('confort_title')
-            ->add('confort_terrasse')
-            ->add('confort_pique_nique')
-
-            //input nos parcours
-            ->add('nos_parcours')
-            ->add('parcours_grand_bouton')
-            ->add('parcours_enfant_button')
-            ->add('plan_bouton')
-            ->add('nos_parcours_grands')
-            ->add('parcours_pour_grands')
-            ->add('desc_grands_parcours')
-            ->add('desc_tyro', 'textarea')
-            ->add('desc_details_parcours', 'textarea')
-            ->add('fin_grands_parcours')
-            ->add('nos_parcours_enfant')
-            ->add('parcours_pour_enfant')
-            ->add('desc_parcours_enfant', 'textarea')
-            ->add('les_parcours')
-            ->add('desc_details_enfant', 'textarea')
-            ->add('desc_accroche_enfant', 'textarea')
-            ->add('fin_parcours_enfant')
-            ->add('plan_du_parc')
-
+        $builder->add('header', new HeaderTextType($options['header']))
+            ->add('index', new IndexTextType($options['index']))
+            ->add('parcours', new ParcoursTextType($options['parcours']))
+            ->add('laser', new LaserTextType($options['laser']))
+            ->add('ouvertures', new OuverturesTextType($options['ouvertures']))
+            ->add('tarifs', new TarifsTextType($options['tarifs']))
             ->add('valider', 'submit')
         ;
     }

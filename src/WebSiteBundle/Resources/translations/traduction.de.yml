@@ -1,0 +1,79 @@
+header:
+  accueil: home
+  parcours: unsere parcours
+  laser_game: laser game
+  horaires_dates: öffnungszeiten
+  tarifs: preise
+  plan: anreise
+  contact: kontakt
+  liens: links
+
+index:
+  oc_bienvenue: OC AVENTURES und das ganze Team heisst Sie herzlich willkommen
+  oc_hauteur: ES GEHT HOCH HINAUF
+  nos_parcours: <strong> Unsere Parcours </strong>
+  ouverture_fermeture: Geoffnet von Samstag %dateOuverture% bis Sonntag %dateFermeture%
+  accroche_nos_parcours: Mitten im Wald auf der Höhe der Baumkronen spüren Sie Adrenalin pur und erleben sich neu, wenn Sie auf unseren Parcours Ihre Komfortzone verlassen, umgeben vom Duft der Pinien, den „Gesängen“ der Zikaden und mit Blick auf den nahe gelegenen Berg Pic St. Loup.
+  parcours_adulte: 7 Parcours fur Erwachsene
+  parcours_adulte_desc: Mit drei extra langen Seilbahnen (245m, 230m und 200m Länge), mit einer Gesamtdauer von 3h.
+  parcours_enfant: 5 Parcours fur Kinder (ab 4 oder 5 Jahren)
+  parcours_enfant_desc: Mit einer langen Seilbahn von 135m Länge. Insgesamt 3h Abenteuer, bei dem das sichere Erleben im Vordergrund steht.
+  confort_title: Fur Ihr <strong>Wohlbefinden bieten wir Ihnen im Hochseilgarten an:</strong>
+  confort_terrasse: Ein Kiosk mit schattiger Terrasse und erfrischenden Wasserzerstäubern.
+  confort_pique_nique: Picknick-Plätze.
+
+laser:
+  laser_game: Laser Game
+  titre_intro: Nouvelle activitee a decouvrir de toute urgence
+  titre_laser_game: Le laser game chez Oncle Aventures
+  desc_laser_game: Le but de Laser Adventures est de faire partager les sensations du laser game à toujours plus de passionnés (homme, femme, et enfant). Il ne s'agit pas de faire la promotion de la guerre. Il s'agit simplement de proposer une activité d'adresse de plein air ludique et sportive.
+  desc_laser_game_2: Le laser game n'est pas un sport de contact. C'est un sport d’équipe dans lequel on retrouve la communication, l'entente et la stratégie. Au contraire des lanceurs Paintball et armes airsoft, les fusils ne tirent pas de projectiles mais un rayon infrarouge aussi inoffensif que votre télécommande de téléviseur. Les fusils sont équipés d’une lunette de visée red dot (point rouge).
+  desc_details_laser_game: 100% Fun : Parties de 20 min, en équipe, chaque participant est équipé d'un fusil et d'un bandeau récepteur de tir.
+  message_fin: Faite l'amour pas la guerre !
+
+ouvertures:
+  titre_ouvertures: ÖFFNUNGSZEITEN
+  texte_ouvertures: Geöffnet von Samstag %dateouverture% 2015 bis Sonntag %datefermeture% 2015 <br> Der Hochseilgarten ist ab Samstag dem %dateouverture% 2015 jeden Tag während der Osterferien (in Montpellier) nachmittags zwischen 14h und 19h30 geöffnet.
+  titre_hors_saison: APRIL, MAI, JUNI, SEPTEMBER, OKTOBER, NOVEMBER
+  texte_hors_saison: Wochenende, französische Feiertage und Schulferien von 14h bis 19h30 <br> Letzte Möglichkeit einen Parcours anzufangen ist um 16h00
+  titre_saison: JULI, AUGUST
+  texte_saison: Jeden Tag von 10h bis 13h und von 14h bis 20h <br> Morgens Empfang und Beginn der Parcours zwischen 10h und 10h45.<br> Nach 10h45 ist der Beginn der Parcours erst wieder am Nachmittag zwischen 14h und 17h möglich.<brDie letzte Möglichkeit einen Parcours anzufangen besteht um 17h.
+  texte_supp: Außerhalb dieser Öffnungszeiten kann der Hochseilgarten auf Anfrage auch an Wochentagen, für Gruppen mit mehr als 15 Personen (Schulklassen, Betriebsausflüge, Junggesellenabschiede, etc...) genutzt werden.
+
+parcours:
+  nos_parcours: Unsere Parcours
+  parcours_grand_bouton: Parcours für Erwachsene und altere Kinder/Jugendliche
+  parcours_enfant_button: Parcours für Kinder
+  plan_bouton: Karte parc
+  nos_parcours_grands: Unsere parcours fur Erwachsene und altere Kinder/Jugendliche
+  parcours_pour_grands: Parcours fur Erwachsene und altere Kinder/Jugendliche
+  desc_grands_parcours: 7 Parcours für Erwachsene, Jugendliche und Kinder ab 8 Jahren (Mindestgröße von 1m30)
+  desc_tyro: Adrenalin pur ist garantiert bei den Drei extra langen Seilbahnen (245m, 230m und 200m Länge), die das Boulidou Tal überqueren.
+  desc_details_parcours: "\"La Gringole\" (die Eidechse), \"La Cega\" (die Zikade) et \"Le Perdigal\" (das Rebhuhn) \"La Fourmi\" (die Ameise) und \"Le Capricorne\" (der Bockkäfer) und \"Sanga Sensation\" bieten mehr als 70 Hindernisse und Übungen – unter anderem einen Tarzansprung – mit einer Gesamtdauer von rund 3 Stunden."
+  fin_grands_parcours: ...und eine wohl verdiente Pause !
+  nos_parcours_enfant: Unsere parcours fur Kinder
+  parcours_pour_enfant: Parcours fur Kinder
+  desc_parcours_enfant: 5 Parcours für Kinder ab 4 oder 5 Jahren. <br> Sobald du deinen Klettergurt angezogen und die Sicherheitshinweise verstanden hast, geht’s auf ins Abenteuer !
+  les_parcours: Die parcours
+  desc_details_enfant: "1 Parcours « L’Astrigagne » (die Spinne) ist bereits zugänglich für Kinder ab 4 Jahren. <br>Die anderen Parcours: L'Aiglon, L'écureuil, “Le Choucas” (die Krähe) und “La Rate penade” (die Fledermaus) bieten Kindern ab 5 Jahren mehr als 30 Hindernisse und Übungen, mit einer Gesamtdauer von rund 3 Stunden."
+  desc_accroche_enfant: Du wirst deine Geschicklichkeit testen und kannst deine Höhenangst spüren und sicher überwinden.<br> Auf einem hängenden Baumstamm balancieren, über einen Steg laufen, an Netzen entlang klettern, Seilbrücken überwinden und als Höhepunkt die Seilbahn erleben. <br>Wie ein Vogel gleitest du am Kabel entlang und landest auf einer weichen Matratze.<br> Es gibt sogar eine Seilbahn die 135 Meter lang ist!
+  fin_parcours_enfant: ...Zögerst du noch oder stürzt du dich schon ins Abenteuer ?
+  plan_du_parc: Die Karte parc
+
+tarifs:
+  Titre: Tarifs 2016
+  forfait1: Forfait n°1
+  age: ans
+  parcours1:  Astrigagne et Choucas pour les enfants de %age% ans.
+  forfait2: Forfait n
+  parcours2: Forfait 5 Parcours*<br> Astrigagn, Choucas, l'Écureuil, l'Aiglon et Rate penade pour les enfants à partir de %age% ans et dont la taille est inférieure à 1m30
+  forfait3: Forfait n°3
+  parcours3: Forfait 5 parcours* <br>Gringole, Céga, Fourmi, Perdigal et Capricorne pour adultes, ados et enfants dont la taille est supérieur à 1m30 et %age% ans minimum.
+  forfait4: Forfait n°4
+  parcours4: Forfait 7 parcours* <br>Gringole, Céga, Fourmi, Perdigal, Capricorne et Sanga Sensation plus les trois tyroliennes géantes (245m, 230m et 200m) réservé aux plus de %poids%kg et moins de 100kg.
+  forfait_laser_1: Forfait 30 minutes
+  forfait_laser_2: Forfait 2 fois 30 minutes
+  temps_activite: "*3h d'activité environ"
+  titre_paiement: "*Mode de paiements*"
+  mode_paiement: Chèques, espèces, Chèques Vacances : UNIQUEMENT
+  pas_cb: Nous acceptons pas la carte bleu

@@ -12,32 +12,35 @@
                 <li class="active"><a href="#header" data-toggle="tab" aria-expanded="true">Textes menu</a></li>
                 <li class=""><a href="#index" data-toggle="tab" aria-expanded="false">Textes accueil</a></li>
                 <li class=""><a href="#parcours" data-toggle="tab" aria-expanded="false">Textes parcours</a></li>
+                <li class=""><a href="#laser" data-toggle="tab" aria-expanded="false">Textes laser game</a></li>
+                <li class=""><a href="#ouvertures" data-toggle="tab" aria-expanded="false">Textes ouvertures</a></li>
+                <li class=""><a href="#tarifs" data-toggle="tab" aria-expanded="false">Textes tarifs</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="header">
                     <div class="col-lg-10">
-                        {{ form_row(form.accueil) }}
-                        {{ form_row(form.parcours) }}
-                        {{ form_row(form.horaires_dates) }}
-                        {{ form_row(form.tarifs) }}
-                        {{ form_row(form.contact) }}
-                        {{ form_row(form.liens) }}
+                        {{ form_row(form.header.accueil) }}
+                        {{ form_row(form.header.parcours) }}
+                        {{ form_row(form.header.horaires_dates) }}
+                        {{ form_row(form.header.tarifs) }}
+                        {{ form_row(form.header.contact) }}
+                        {{ form_row(form.header.liens) }}
                     </div>
                 </div>
                 <div class="tab-pane fade" id="index">
                     <div class="col-lg-10">
-                        {{ form_row(form.oc_bienvenue) }}
-                        {{ form_row(form.oc_hauteur) }}
-                        {{ form_row(form.nos_parcours_accrobranche) }}
-                        {{ form_row(form.ouverture_fermeture) }}
-                        {{ form_row(form.accroche_nos_parcours) }}
-                        {{ form_row(form.parcours_adulte) }}
-                        {{ form_row(form.parcours_adulte_desc) }}
-                        {{ form_row(form.parcours_enfant) }}
-                        {{ form_row(form.parcours_enfant_desc) }}
-                        {{ form_row(form.confort_title) }}
-                        {{ form_row(form.confort_terrasse) }}
-                        {{ form_row(form.confort_pique_nique) }}
+                        {{ form_row(form.index.oc_bienvenue) }}
+                        {{ form_row(form.index.oc_hauteur) }}
+                        {{ form_row(form.index.nos_parcours_accrobranche) }}
+                        {{ form_row(form.index.ouverture_fermeture) }}
+                        {{ form_row(form.index.accroche_nos_parcours) }}
+                        {{ form_row(form.index.parcours_adulte) }}
+                        {{ form_row(form.index.parcours_adulte_desc) }}
+                        {{ form_row(form.index.parcours_enfant) }}
+                        {{ form_row(form.index.parcours_enfant_desc) }}
+                        {{ form_row(form.index.confort_title) }}
+                        {{ form_row(form.index.confort_terrasse) }}
+                        {{ form_row(form.index.confort_pique_nique) }}
                     </div>
                 </div>
                 <div class="tab-pane fade" id="parcours">
@@ -45,37 +48,82 @@
                         <h4 class="col-lg-offset-2 ">
                             Changer le titre de la page
                         </h4><br>
-                        {{ form_row(form.nos_parcours) }}
+                        {{ form_row(form.parcours.nos_parcours) }}
                         <h4 class="col-lg-offset-2 ">
                             Changer l'intitulé des onglets
                         </h4><br>
-                        {{ form_row(form.parcours_grand_bouton) }}
-                        {{ form_row(form.parcours_enfant_button) }}
-                        {{ form_row(form.plan_bouton) }}
+                        {{ form_row(form.parcours.parcours_grand_bouton) }}
+                        {{ form_row(form.parcours.parcours_enfant_button) }}
+                        {{ form_row(form.parcours.plan_bouton) }}
 
                         <h4 class="col-lg-offset-2 ">
                             Changer l'intitulé des titres des onglets
                         </h4><br>
-                        {{ form_row(form.nos_parcours_grands) }}
-                        {{ form_row(form.parcours_pour_grands) }}
-                        {{ form_row(form.plan_du_parc) }}
+                        {{ form_row(form.parcours.nos_parcours_grands) }}
+                        {{ form_row(form.parcours.parcours_pour_grands) }}
+                        {{ form_row(form.parcours.plan_du_parc) }}
                         <h4 class="col-lg-offset-2 ">
                             Changer les textes de l'onglets "parcours adulte"
                         </h4><br>
-                        {{ form_row(form.desc_grands_parcours) }}
-                        {{ form_row(form.desc_tyro) }}
-                        {{ form_row(form.desc_details_parcours) }}
-                        {{ form_row(form.fin_grands_parcours) }}
+                        {{ form_row(form.parcours.desc_grands_parcours) }}
+                        {{ form_row(form.parcours.desc_tyro) }}
+                        {{ form_row(form.parcours.desc_details_parcours) }}
+                        {{ form_row(form.parcours.fin_grands_parcours) }}
                         <h4 class="col-lg-offset-2 ">
                             Changer les textes de l'onglets "parcours enfant"
                         </h4><br>
-                        {{ form_row(form.nos_parcours_enfant) }}
-                        {{ form_row(form.parcours_pour_enfant) }}
-                        {{ form_row(form.desc_parcours_enfant) }}
-                        {{ form_row(form.les_parcours) }}
-                        {{ form_row(form.desc_details_enfant) }}
-                        {{ form_row(form.desc_accroche_enfant) }}
-                        {{ form_row(form.fin_parcours_enfant) }}
+                        {{ form_row(form.parcours.nos_parcours_enfant) }}
+                        {{ form_row(form.parcours.parcours_pour_enfant) }}
+                        {{ form_row(form.parcours.desc_parcours_enfant) }}
+                        {{ form_row(form.parcours.les_parcours) }}
+                        {{ form_row(form.parcours.desc_details_enfant) }}
+                        {{ form_row(form.parcours.desc_accroche_enfant) }}
+                        {{ form_row(form.parcours.fin_parcours_enfant) }}
+                    </div>
+                </div>
+                <div class="tab-pane fade active in" id="laser">
+                    <div class="col-lg-10">
+                        {{ form_row(form.laser.laser_game) }}
+                        {{ form_row(form.laser.titre_intro) }}
+                        {{ form_row(form.laser.titre_laser_game) }}
+                        {{ form_row(form.laser.desc_laser_game) }}
+                        {{ form_row(form.laser.desc_laser_game_2) }}
+                        {{ form_row(form.laser.desc_details_laser_game) }}
+                        {{ form_row(form.laser.message_fin) }}
+
+                    </div>
+                </div>
+                <div class="tab-pane fade active in" id="ouvertures">
+                    <div class="col-lg-10">
+                        {{ form_row(form.ouvertures.titre_ouvertures) }}
+                        {{ form_row(form.ouvertures.texte_ouvertures) }}
+                        {{ form_row(form.ouvertures.titre_hors_saison) }}
+                        {{ form_row(form.ouvertures.texte_hors_saison) }}
+                        {{ form_row(form.ouvertures.titre_saison) }}
+                        {{ form_row(form.ouvertures.texte_saison) }}
+                        {{ form_row(form.ouvertures.texte_supp) }}
+
+                    </div>
+                </div>
+                <div class="tab-pane fade active in" id="tarifs">
+                    <div class="col-lg-10">
+                        {{ form_row(form.tarifs.Titre) }}
+                        {{ form_row(form.tarifs.forfait1) }}
+                        {{ form_row(form.tarifs.age) }}
+                        {{ form_row(form.tarifs.parcours1) }}
+                        {{ form_row(form.tarifs.forfait2) }}
+                        {{ form_row(form.tarifs.parcours2) }}
+                        {{ form_row(form.tarifs.forfait3) }}
+                        {{ form_row(form.tarifs.parcours3) }}
+                        {{ form_row(form.tarifs.forfait4) }}
+                        {{ form_row(form.tarifs.parcours4) }}
+                        {{ form_row(form.tarifs.forfait_laser_1) }}
+                        {{ form_row(form.tarifs.forfait_laser_2) }}
+                        {{ form_row(form.tarifs.temps_activite) }}
+                        {{ form_row(form.tarifs.titre_paiement) }}
+                        {{ form_row(form.tarifs.mode_paiement) }}
+                        {{ form_row(form.tarifs.pas_cb) }}
+
                     </div>
                 </div>
             </div>
