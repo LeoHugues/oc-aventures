@@ -1,0 +1,79 @@
+header:
+  accueil: home
+  parcours: 'obstacles courses'
+  laser_game: laser game
+  horaires_dates: 'opening hours'
+  tarifs: 'admission fees'
+  plan: 'getting there'
+  contact: contact
+  liens: links
+
+index:
+  oc_bienvenue: "OC'AVENTURES and the team welcome you"
+  oc_hauteur: LIVE THE HIGH LIFE
+  nos_parcours_accrobranche: NOS <strong> PARCOURS ACCROBRANCHE </strong>
+  ouverture_fermeture: OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %dateFermeture%
+  accroche_nos_parcours: A travers nos parcours accrobranche, découvrez de nouvelles sensations, des émotions oubliées, les odeurs de la pinède et le chant des cigales au pied du Pic Saint Loup.
+  parcours_adulte: 7 PARCOURS ADULTES
+  parcours_adulte_desc: Enchainement de 3 Tyroliennes Géantes 200m, 230m et 245m. Parcours ludiques et sportifs, pour 3h d''activité.
+  parcours_enfant: 5 PARCOURS ENFANTS (DES 4 OU 5 ANS)
+  parcours_enfant_desc: Avec une tyrolienne de 80, 100 et 135 m, pour 3h00 d''aventure en toute sécurité.
+  confort_title: Et pour le <strong>confort de votre accueil</strong>
+  confort_terrasse: Une buvette avec sa terrasse couverte et brumisée.
+  confort_pique_nique: Une aire de pique-nique.
+
+laser:
+  laser_game: Laser Game
+  titre_intro: Nouvelle activitee a decouvrir de toute urgence
+  titre_laser_game: Le laser game chez Oncle Aventures
+  desc_laser_game: Le but de Laser Adventures est de faire partager les sensations du laser game à toujours plus de passionnés (homme, femme, et enfant). Il ne s'agit pas de faire la promotion de la guerre. Il s'agit simplement de proposer une activité d'adresse de plein air ludique et sportive.
+  desc_laser_game_2: Le laser game n'est pas un sport de contact. C'est un sport d’équipe dans lequel on retrouve la communication, l'entente et la stratégie. Au contraire des lanceurs Paintball et armes airsoft, les fusils ne tirent pas de projectiles mais un rayon infrarouge aussi inoffensif que votre télécommande de téléviseur. Les fusils sont équipés d’une lunette de visée red dot (point rouge).
+  desc_details_laser_game: 100% Fun : Parties de 20 min, en équipe, chaque participant est équipé d'un fusil et d'un bandeau récepteur de tir.
+  message_fin: Faite l'amour pas la guerre !
+
+ouvertures:
+  titre_ouvertures: OPENING TIMES 2015
+  texte_ouvertures: Open from Saturday,%dateouverture%, 2016 to Sunday, %datefermeture%, 2015 <br> The parc opens from Saturday,%dateouverture%, 2016 every day during the Easter holidays only in the afternoon from 2 pm to 7:30pm.
+  titre_hors_saison: APRIL, MAY, JUNE, SEPTEMBER, OCTOBER, NOVEMBER
+  texte_hors_saison: Week-end, National holidays (Montpellier Academy) and school holidays from 2pm to 7:30pm <br> Last admissions at 4:00 pm
+  titre_saison: JULY, AUGUST
+  texte_saison: Every day from 10am to 1pm, and from 2pm to 8pm <br> Admissions from 10am to 10:45am. After 10:45am the next admissions are in the afternoon from 2pm to 5pm. Last admissions at 5pm.
+  texte_supp: Outside these dates, we can open on request during the week, for groups of more than 15 people (company field trips, schools, bachelor and hen parties, etc...)
+
+parcours:
+  nos_parcours: Our obstacle courses
+  parcours_grand_bouton: Obstacle courses for adults
+  parcours_enfant_button: Obstacle courses for the kids
+  plan_bouton: Park map
+  nos_parcours_grands: Our obstacle courses for adults
+  parcours_pour_grands: Obstacle courses for adults
+  desc_grands_parcours: Obstacle courses for adults, teenagers, and children over 8 years old (height over 1m30)
+  desc_tyro: Get your adrenaline pumping with three giant zip lines (245m, 230m and 200m) that cross the Boulidou valley.
+  desc_details_parcours: "\"La Gringole\" (the lizard), \"La Cega\" (the cricket), \"Le Perdigal\" (the young partridge), \"La Fourmi\" (the ant) \"Le Capricorne\" (the Capricorn), and \"Le Sanga Sensation\" offer more than 70 games and obstacles, including a super Tarzan jump, for a total of about 3 hours."
+  fin_grands_parcours: ...and a well-deserved break !
+  nos_parcours_enfant: Our obstacle courses for the kids
+  parcours_pour_enfant: Obstacle courses for the kids
+  desc_parcours_enfant: 5 obstacle courses for children up from 4 years old<br> Once you’ve been equipped with a harness and karabiners,<br> and once you’ve been briefed on the safety measures,<br> you’re ready to go!
+  les_parcours: The obstacle courses
+  desc_details_enfant: 1 of the obstacle courses “L’Astrigagne” (the spider) is accessible to children over 4 years old. <br> The other courses: L'Aiglon, L'écureuil, "Le Choucas" (the crow) and "La Rate penade" (the bat) offer children over 5 years old more than 30 games and obstacles, for a total of about 3 hours.
+  desc_accroche_enfant: You will test your agility, your fear of heights. Walk along a suspended tree trunk, go over a walkway. <br> You will scramble through nets, rope bridges, but the best is the zip line: <br> You will slide down a cable like a bird and land on a soft mattress.<br> There’s even a 135m ZIP LINE !
+  fin_parcours_enfant: ...Concentrating or hesitating ?
+  plan_du_parc: The Park Map
+
+tarifs:
+  Titre: ADMISSION AND FEES 2016
+  forfait1: Forfait n°1
+  age: ans
+  parcours1:  Astrigagne et Choucas pour les enfants de %age% ans.
+  forfait2: Forfait n°2
+  parcours2: Forfait 5 Parcours*<br> Astrigagn, Choucas, l'Écureuil, l'Aiglon et Rate penade pour les enfants à partir de %age% ans et dont la taille est inférieure à 1m30
+  forfait3: Forfait n°3
+  parcours3: Forfait 5 parcours* <br>Gringole, Céga, Fourmi, Perdigal et Capricorne pour adultes, ados et enfants dont la taille est supérieur à 1m30 et %age% ans minimum.
+  forfait4: Forfait n°4
+  parcours4: Forfait 7 parcours* <br>Gringole, Céga, Fourmi, Perdigal, Capricorne et Sanga Sensation plus les trois tyroliennes géantes (245m, 230m et 200m) réservé aux plus de %poids%kg et moins de 100kg.
+  forfait_laser_1: Forfait 30 minutes
+  forfait_laser_2: Forfait 2 fois 30 minutes
+  temps_activite: "*3h d'activité environ"
+  titre_paiement: "*Mode de paiements*"
+  mode_paiement: Chèques, espèces, Chèques Vacances : UNIQUEMENT
+  pas_cb: Nous acceptons pas la carte bleu

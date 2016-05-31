@@ -150,53 +150,24 @@ class BackController extends Controller
     {
         $yaml = new Parser();
 
-        $header = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/header.' . $lang . '.yml'));
-        $index = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/index.' . $lang . '.yml'));
-        $parcours = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/parcours.' . $lang . '.yml'));
+        $traduction = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/traduction.' . $lang . '.yml'));
 
         $form = $this->createForm(
             new TextFormType(),
-            $header + $index + $parcours
+            $traduction
         );
 
         $form->handleRequest($request);
 
         if ($form->isValid()) {
 
-            $traductions = $form->getData();
-
-            $progression = 'menu';
-            $traduction_transfert = array();
-
-            foreach($traductions as $clef => $traduction) {
-                if ($clef == 'oc_bienvenue') {
-                    $progression = 'accueil';
-                } elseif ($clef == 'nos_parcours') {
-                    $progression = 'parcours';
-                }
-
-                if ($progression == 'menu') {
-                    $traduction_transfert['menu'][$clef] = $traduction;
-                } elseif ($progression == 'accueil') {
-                    $traduction_transfert['accueil'][$clef] = $traduction;
-                } elseif ($progression == 'parcours') {
-                    $traduction_transfert['parcours'][$clef] = $traduction;
-                }
-            }
+            $traduction = $form->getData();
 
             $dumper = new Dumper();
 
             file_put_contents(
-                '../src/WebSiteBundle/Resources/translations/header.' . $lang . '.yml',
-                $dumper->dump($traduction_transfert['menu'])
-            );
-            file_put_contents(
-                '../src/WebSiteBundle/Resources/translations/index.' . $lang . '.yml',
-                $dumper->dump($traduction_transfert['accueil'])
-            );
-            file_put_contents(
-                '../src/WebSiteBundle/Resources/translations/pacours.' . $lang . '.yml',
-                $dumper->dump($traduction_transfert['parcours'])
+                '../src/WebSiteBundle/Resources/translations/traduction.' . $lang . '.yml',
+                $dumper->dump($traduction)
             );
 
             $this->addFlash(
