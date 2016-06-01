@@ -43,6 +43,27 @@
             display: inline-block;
             max-width: 26%;
         }
+
+        div.laser-tab {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin-right: 10px;
+            display: inline-block;
+            height: 47px;
+            width: 47px;
+        }
+
+        div.label-laser-tab {
+            display: inline-block;
+            margin-top: 16px;
+        }
+
+        a.laser-tab {
+            padding: 19px 13px 20px 5px !important;
+            padding-top: 18px;
+            text-align: center;
+        }
     </style>
 {% endblock %}
 
@@ -55,7 +76,8 @@
         <div class="img-responsive accrobranche-logo">
             <img class="img-responsive center-block" src="{{ asset('front/images/oc-logo.png') }}" alt="">
         </div>
-        <h2 class="text-image text-right"><span>Montpellier Nord</span></h2>
+        <h2 class="text-image-oc text-image text-right"><span>OC'Aventures</span></h2>
+        <h2 class="text-image-mtp text-image text-right"><span>Montpellier Nord</span></h2>
     </div>
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -81,7 +103,10 @@
                         <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}">{{ 'header.parcours'|trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('website_laser', {'_locale': app.request.getLocale() }) }}">{{ 'header.laser_game'|trans }}</a>
+                        <a class="laser-tab" href="{{ path('website_laser', {'_locale': app.request.getLocale() }) }}">
+                            <div class="laser-tab label-img-viseur"></div>
+                            <div class="label-laser-tab">{{ 'header.laser_game'|trans }}</div>
+                        </a>
                     </li>
                     <li>
                         <a href="{{ path('website_horaires', {'_locale': app.request.getLocale() }) }}">{{ 'header.horaires_dates'|trans }}</a>
