@@ -1,1 +1,90 @@
-{ header: { accueil: accueil, parcours: 'nos parcours', laser_game: 'laser game', horaires_dates: ouvertures, tarifs: 'nos tarifs', contact: contact, liens: liens }, index: { oc_bienvenue: 'OC''''AVENTURES Et Toute Son Equipe Vous Souhaite La Bienvenue', oc_hauteur: 'PRENEZ DE LA HAUTEUR', nos_parcours_accrobranche: 'NOS <strong> PARCOURS ACCROBRANCHE </strong>', ouverture_fermeture: 'OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %dateFermeture%', accroche_nos_parcours: 'A travers nos parcours accrobranche, découvrez de nouvelles sensations, des émotions oubliées, les odeurs de la pinède et le chant des cigales au pied du Pic Saint Loup.', parcours_adulte: '7 PARCOURS ADULTES', parcours_adulte_desc: 'Enchainement de 3 Tyroliennes Géantes 200m, 230m et 245m. Parcours ludiques et sportifs, pour 3h d''''activité.', parcours_enfant: '5 PARCOURS ENFANTS (DES 4 OU 5 ANS)', parcours_enfant_desc: 'Avec une tyrolienne de 80, 100 et 135 m, pour 3h00 d''''aventure en toute sécurité.', le_laser_game: 'LE <strong> LASER GAME </strong>', intro_texte_laser: 'Le laser game chez Oncle Aventures', accroche_laser: 'Le but de Laser Adventures est de faire partager les sensations du laser game à toujours plus de passionnés (homme, femme, et enfant). Il ne s''agit pas de faire la promotion de la guerre. Il s''agit simplement de proposer une activité d''adresse de plein air ludique et sportive.', lien_laser_1: 'Un terain de batail d''exeption specialement amenage !', accroche_laser_2: 'Le laser game n''est pas un sport de contact. C''est un sport d’équipe dans lequel on retrouve la communication, l''entente et la stratégie.', lien_laser_2: 'Dans un cadre ideal, en pleine nature. Tish !', chute_laser: 'Mais avant tout : Faite l''amour pas la guerre !', confort_title: 'Et pour le <strong>confort de votre accueil</strong>', confort_terrasse: 'Une buvette avec sa terrasse couverte et brumisée.', confort_pique_nique: 'Une aire de pique-nique.' }, laser: { laser_game: 'Laser Game', titre_intro: 'Nouvelle activitee a decouvrir de toute urgence', titre_laser_game: 'Le laser game chez Oncle Aventures', desc_laser_game: 'Le but de Laser Adventures est de faire partager les sensations du laser game à toujours plus de passionnés (homme, femme, et enfant). Il ne s''agit pas de faire la promotion de la guerre. Il s''agit simplement de proposer une activité d''adresse de plein air ludique et sportive.', desc_laser_game_2: 'Le laser game n''est pas un sport de contact. C''est un sport d’équipe dans lequel on retrouve la communication, l''entente et la stratégie. Au contraire des lanceurs Paintball et armes airsoft, les fusils ne tirent pas de projectiles mais un rayon infrarouge aussi inoffensif que votre télécommande de téléviseur. Les fusils sont équipés d’une lunette de visée red dot (point rouge).', desc_details_laser_game: '100% Fun : Parties de 20 min, en équipe, chaque participant est équipé d''un fusil et d''un bandeau récepteur de tir.', message_fin: 'Faite l''amour pas la guerre !' }, ouvertures: { titre_ouvertures: 'HORAIRES ET PERIODES D''OUVERTURE 2015', texte_ouvertures: 'OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %datefermeture%. LE PARC OUVRE A PARTIR DU SAMEDI %dateouverture% TOUS LES JOURS PENDANT LES VACANCES SCOLAIRES DE PAQUES (Zone académie Montpellier) UNIQUEMENT L''APRES-MIDI DE 14 H A 19H 30.<br>DERNIER DEPART 16H00.', titre_hors_saison: 'AVRIL, MAI, JUIN, SEPTEMBRE, OCTOBRE, NOVEMBRE', texte_hors_saison: 'Tous les week-end, jours feriés et vacances scolaires de 14 H à 19H30. Dernier départ à 16H00.', titre_saison: 'JUILLET, AOUT', texte_saison: 'Tous les jours de 10 H à 13 H et de 14 H à 19 H.<br>Départ le matin de 10 H à 10 H 45. Après 10 H 45, les prochains départs sont l''après-midi à partir de 14 H et le dernier départ à 17H.', texte_supp: 'En dehors de ces périodes, nous ouvrons sur rendez-vous en semaine pour les groupes de plus de 20 personnes, collectivités scolaires, centres aérés.' }, parcours: { nos_parcours: 'Nos parcours', parcours_grand_bouton: 'Parcours pour les plus grands', parcours_enfant_button: 'Parcours pour les enfants', plan_bouton: 'Plan du parc', nos_parcours_grands: 'Nos parcours pour les plus grands', parcours_pour_grands: 'Parcours pour les plus grands', desc_grands_parcours: '7 parcours aériens pour les adultes, ados, et enfants dès 8 ans (taille sup. à 1m30)', desc_tyro: 'Des sensations fortes avec l''''enchainement de trois tyroliennes géantes (245m, 230m et 200m) qui traversent le vallon du Boulidou.', desc_details_parcours: '"La Gringole" (le lézard), "La Cega" (la cigale) et "Le Perdigal" (le perdreau) la Fourmi, le Capricorne et le Sanga Sensation offrent 70 ateliers dont un super saut de Tarzan, pour un total d''environ 3h d''activité.', fin_grands_parcours: '...et une pause bien méritée !', nos_parcours_enfant: 'Nos parcours pour les enfants', parcours_pour_enfant: 'Parcours pour les enfants', desc_parcours_enfant: '5 parcours et 50 ateliers pour les enfants à partir de 4 et 5 ans. <br> Une fois que tu as ton harnais et que tu as compris les consignes de sécurité, tu es prêt à partir pour l’aventure !', les_parcours: 'Les parcours', desc_details_enfant: '1e parcours "L''Astrigagne" (L''araignée) est accessible aux enfants dès 4 ans.<br> Les autres parcours : L''Aiglon, L''écureuil, "Le Choucas" (la corneille) et "La Rate penade" (la chauve-souris) proposent aux enfants dès 5 ans une trentaine d''ateliers, soit environ 3h d''activité.', desc_accroche_enfant: 'Tu vas tester ton agilité, ta peur du vide. Marcher sur un tronc, franchir une passerelle.<br> Tu vas passer un filet, un pont de singe, un pont tibétain, mais le final c’est la tyrolienne :<br> Tu vas glisser le long d''un câble comme un oiseau et atterrir contre un douillet matelas.<br> Il y a même une TYROLIENNE DE 135 METRES.', fin_parcours_enfant: '...Concentration ou hésitation ?', plan_du_parc: 'Le plan du parc' }, tarifs: { Titre: 'Tarifs 2016', forfait1: 'Forfait n°1', age: ans, parcours1: 'Astrigagne et Choucas pour les enfants de %age% ans.', forfait2: 'Forfait n°2', parcours2: 'Forfait 5 Parcours*<br> Astrigagn, Choucas, l''Écureuil, l''Aiglon et Rate penade pour les enfants à partir de %age% ans et dont la taille est inférieure à 1m30', forfait3: 'Forfait n°3', parcours3: 'Forfait 5 parcours* <br>Gringole, Céga, Fourmi, Perdigal et Capricorne pour adultes, ados et enfants dont la taille est supérieur à 1m30 et %age% ans minimum.', forfait4: 'Forfait n°4', parcours4: 'Forfait 7 parcours* <br>Gringole, Céga, Fourmi, Perdigal, Capricorne et Sanga Sensation plus les trois tyroliennes géantes (245m, 230m et 200m) réservé aux plus de %poids%kg et moins de 100kg.', forfait_laser_1: 'Forfait 30 minutes', forfait_laser_2: 'Forfait 2 fois 30 minutes', temps_activite: '*3h d''activité environ', titre_paiement: '*Mode de paiements*', mode_paiement: 'Chèques, espèces, Chèques Vacances : UNIQUEMENT', pas_cb: null } }
+header:
+  accueil: accueil
+  parcours: nos parcours
+  laser_game: laser game
+  horaires_dates: ouvertures
+  tarifs: nos tarifs
+  contact: contact
+  liens: liens
+
+index:
+  oc_bienvenue: OC''AVENTURES Et Toute Son Equipe Vous Souhaite La Bienvenue
+  oc_hauteur: PRENEZ DE LA HAUTEUR
+
+  nos_parcours_accrobranche: NOS <strong> PARCOURS ACCROBRANCHE </strong>
+  ouverture_fermeture: OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %dateFermeture%
+  accroche_nos_parcours: A travers nos parcours accrobranche, découvrez de nouvelles sensations, des émotions oubliées, les odeurs de la pinède et le chant des cigales au pied du Pic Saint Loup.
+  parcours_adulte: 7 PARCOURS ADULTES
+  parcours_adulte_desc: Enchainement de 3 Tyroliennes Géantes 200m, 230m et 245m. Parcours ludiques et sportifs, pour 3h d''activité.
+  parcours_enfant: 5 PARCOURS ENFANTS (DES 4 OU 5 ANS)
+  parcours_enfant_desc: Avec une tyrolienne de 80, 100 et 135 m, pour 3h00 d''aventure en toute sécurité.
+
+  le_laser_game: LE <strong> LASER GAME </strong>
+  intro_texte_laser: Le laser game chez Oncle Aventures
+  accroche_laser: Le but de Laser Adventures est de faire partager les sensations du laser game à toujours plus de passionnés (homme, femme, et enfant). Il ne s'agit pas de faire la promotion de la guerre. Il s'agit simplement de proposer une activité d'adresse de plein air ludique et sportive.
+  lien_laser_1: Un terain de batail d'exeption specialement amenage !
+  accroche_laser_2: Le laser game n'est pas un sport de contact. C'est un sport d’équipe dans lequel on retrouve la communication, l'entente et la stratégie.
+  lien_laser_2: Dans un cadre ideal, en pleine nature.
+  chute_laser: Mais avant tout : Faite l'amour pas la guerre !
+
+  confort_title: Et pour le <strong>confort de votre accueil</strong>
+  confort_terrasse: Une buvette avec sa terrasse couverte et brumisée.
+  confort_pique_nique: Une aire de pique-nique.
+
+laser:
+  laser_game: Laser Game
+  titre_intro: Nouvelle activitee a decouvrir de toute urgence
+  titre_laser_game: Le laser game chez Oncle Aventures
+  desc_laser_game: Le but de Laser Adventures est de faire partager les sensations du laser game à toujours plus de passionnés (homme, femme, et enfant). Il ne s'agit pas de faire la promotion de la guerre. Il s'agit simplement de proposer une activité d'adresse de plein air ludique et sportive.
+  desc_laser_game_2: Le laser game n'est pas un sport de contact. C'est un sport d’équipe dans lequel on retrouve la communication, l'entente et la stratégie. Au contraire des lanceurs Paintball et armes airsoft, les fusils ne tirent pas de projectiles mais un rayon infrarouge aussi inoffensif que votre télécommande de téléviseur. Les fusils sont équipés d’une lunette de visée red dot (point rouge).
+  desc_details_laser_game: 100% Fun : Parties de 20 min, en équipe, chaque participant est équipé d'un fusil et d'un bandeau récepteur de tir.
+  message_fin: Faite l'amour pas la guerre !
+
+ouvertures:
+  titre_ouvertures: HORAIRES ET PERIODES D'OUVERTURE 2015
+  texte_ouvertures: OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %datefermeture%. LE PARC OUVRE A PARTIR DU SAMEDI %dateouverture% TOUS LES JOURS PENDANT LES VACANCES SCOLAIRES DE PAQUES (Zone académie Montpellier) UNIQUEMENT L'APRES-MIDI DE 14 H A 19H 30.<br>DERNIER DEPART 16H00.
+  titre_hors_saison: AVRIL, MAI, JUIN, SEPTEMBRE, OCTOBRE, NOVEMBRE
+  texte_hors_saison:  Tous les week-end, jours feriés et vacances scolaires de 14 H à 19H30. Dernier départ à 16H00.
+  titre_saison: JUILLET, AOUT
+  texte_saison: Tous les jours de 10 H à 13 H et de 14 H à 19 H.<br>Départ le matin de 10 H à 10 H 45. Après 10 H 45, les prochains départs sont l'après-midi à partir de 14 H et le dernier départ à 17H.
+  texte_supp: En dehors de ces périodes, nous ouvrons sur rendez-vous en semaine pour les groupes de plus de 20 personnes, collectivités scolaires, centres aérés.
+
+parcours:
+  nos_parcours: Nos parcours
+  parcours_grand_bouton: Parcours pour les plus grands
+  parcours_enfant_button: Parcours pour les enfants
+  plan_bouton: Plan du parc
+  nos_parcours_grands: Nos parcours pour les plus grands
+  parcours_pour_grands: Parcours pour les plus grands
+  desc_grands_parcours: 7 parcours aériens pour les adultes, ados, et enfants dès 8 ans (taille sup. à 1m30)
+  desc_tyro: Des sensations fortes avec l''enchainement de trois tyroliennes géantes (245m, 230m et 200m) qui traversent le vallon du Boulidou.
+  desc_details_parcours: '"La Gringole" (le lézard), "La Cega" (la cigale) et "Le Perdigal" (le perdreau) la Fourmi, le Capricorne et le Sanga Sensation offrent 70 ateliers dont un super saut de Tarzan, pour un total d''environ 3h d''activité.'
+  fin_grands_parcours: '...et une pause bien méritée !'
+  nos_parcours_enfant: 'Nos parcours pour les enfants'
+  parcours_pour_enfant: 'Parcours pour les enfants'
+  desc_parcours_enfant: '5 parcours et 50 ateliers pour les enfants à partir de 4 et 5 ans. <br> Une fois que tu as ton harnais et que tu as compris les consignes de sécurité, tu es prêt à partir pour l’aventure !'
+  les_parcours: 'Les parcours'
+  desc_details_enfant: '1e parcours "L''Astrigagne" (L''araignée) est accessible aux enfants dès 4 ans.<br> Les autres parcours : L''Aiglon, L''écureuil, "Le Choucas" (la corneille) et "La Rate penade" (la chauve-souris) proposent aux enfants dès 5 ans une trentaine d''ateliers, soit environ 3h d''activité.'
+  desc_accroche_enfant: 'Tu vas tester ton agilité, ta peur du vide. Marcher sur un tronc, franchir une passerelle.<br> Tu vas passer un filet, un pont de singe, un pont tibétain, mais le final c’est la tyrolienne :<br> Tu vas glisser le long d''un câble comme un oiseau et atterrir contre un douillet matelas.<br> Il y a même une TYROLIENNE DE 135 METRES.'
+  fin_parcours_enfant: '...Concentration ou hésitation ?'
+  plan_du_parc: 'Le plan du parc'
+
+tarifs:
+  Titre: Tarifs 2016
+  forfait1: Forfait n°1
+  age1: ans
+  parcours1:  Astrigagne et Choucas pour les enfants de %age% ans.
+  forfait2: Forfait n°2
+  age2: ans
+  parcours2: Forfait 5 Parcours*<br> Astrigagn, Choucas, l'Écureuil, l'Aiglon et Rate penade pour les enfants à partir de %age% ans et dont la taille est inférieure à 1m30
+  forfait3: Forfait n°3
+  parcours3: Forfait 5 parcours* <br>Gringole, Céga, Fourmi, Perdigal et Capricorne pour adultes, ados et enfants dont la taille est supérieur à 1m30 et %age% ans minimum.
+  age3: ans
+  forfait4: Forfait n°4
+  parcours4: Forfait 7 parcours* <br>Gringole, Céga, Fourmi, Perdigal, Capricorne et Sanga Sensation plus les trois tyroliennes géantes (245m, 230m et 200m) réservé aux plus de %poids%kg et moins de 100kg.
+  forfait_laser_1: Forfait 30 minutes
+  forfait_laser_desc_1: Sa mère-lipopette tu mettras ce que tu veux !
+  forfait_laser_desc_2: Sa mère-lipopette tu mettras ce que tu veux !
+  temps_activite: "*3h d'activité environ"
+  titre_paiement: "*Mode de paiements*"
+  mode_paiement: Chèques, espèces, Chèques Vacances : UNIQUEMENTNT

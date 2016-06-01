@@ -33,6 +33,8 @@ class TarifsTextType extends AbstractType
             ->add('parcours4')
             ->add('forfait_laser_1')
             ->add('forfait_laser_2')
+            ->add('forfait_laser_desc_1')
+            ->add('forfait_laser_desc_2')
             ->add('temps_activite')
             ->add('titre_paiement')
             ->add('mode_paiement')
