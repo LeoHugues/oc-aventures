@@ -23,6 +23,7 @@ class IndexTextType extends  AbstractType
         // input accueil (index)
         $builder->add('oc_bienvenue')
             ->add('oc_hauteur')
+
             ->add('nos_parcours_accrobranche')
             ->add('ouverture_fermeture')
             ->add('accroche_nos_parcours', 'textarea')
@@ -30,6 +31,15 @@ class IndexTextType extends  AbstractType
             ->add('parcours_adulte_desc')
             ->add('parcours_enfant')
             ->add('parcours_enfant_desc')
+
+            ->add('le_laser_game')
+            ->add('intro_texte_laser')
+            ->add('accroche_laser', 'textarea')
+            ->add('lien_laser_1')
+            ->add('accroche_laser_2')
+            ->add('lien_laser_2')
+            ->add('chute_laser')
+
             ->add('confort_title')
             ->add('confort_terrasse')
             ->add('confort_pique_nique')
