@@ -10,7 +10,6 @@ header:
 index:
   oc_bienvenue: OC''AVENTURES Et Toute Son Equipe Vous Souhaite La Bienvenue
   oc_hauteur: PRENEZ DE LA HAUTEUR
-
   nos_parcours_accrobranche: NOS <strong> PARCOURS ACCROBRANCHE </strong>
   ouverture_fermeture: OUVERT DU SAMEDI %dateOuverture% AU DIMANCHE %dateFermeture%
   accroche_nos_parcours: A travers nos parcours accrobranche, découvrez de nouvelles sensations, des émotions oubliées, les odeurs de la pinède et le chant des cigales au pied du Pic Saint Loup.
@@ -18,15 +17,6 @@ index:
   parcours_adulte_desc: Enchainement de 3 Tyroliennes Géantes 200m, 230m et 245m. Parcours ludiques et sportifs, pour 3h d''activité.
   parcours_enfant: 5 PARCOURS ENFANTS (DES 4 OU 5 ANS)
   parcours_enfant_desc: Avec une tyrolienne de 80, 100 et 135 m, pour 3h00 d''aventure en toute sécurité.
-
-  le_laser_game: LE <strong> LASER GAME </strong>
-  intro_texte_laser: Le laser game chez Oncle Aventures
-  accroche_laser: Le but de Laser Adventures est de faire partager les sensations du laser game à toujours plus de passionnés (homme, femme, et enfant). Il ne s'agit pas de faire la promotion de la guerre. Il s'agit simplement de proposer une activité d'adresse de plein air ludique et sportive.
-  lien_laser_1: Un terain de batail d'exeption specialement amenage !
-  accroche_laser_2: Le laser game n'est pas un sport de contact. C'est un sport d’équipe dans lequel on retrouve la communication, l'entente et la stratégie.
-  lien_laser_2: Dans un cadre ideal, en pleine nature.
-  chute_laser: Mais avant tout : Faite l'amour pas la guerre !
-
   confort_title: Et pour le <strong>confort de votre accueil</strong>
   confort_terrasse: Une buvette avec sa terrasse couverte et brumisée.
   confort_pique_nique: Une aire de pique-nique.
@@ -76,7 +66,8 @@ tarifs:
   parcours1:  Astrigagne et Choucas pour les enfants de %age% ans.
   forfait2: Forfait n°2
   parcours2: Forfait 5 Parcours*<br> Astrigagn, Choucas, l'Écureuil, l'Aiglon et Rate penade pour les enfants à partir de %age% ans et dont la taille est inférieure à 1m30
-  forfait3: Forfait n°3
+  forfait3: Forfait n
+3
   parcours3: Forfait 5 parcours* <br>Gringole, Céga, Fourmi, Perdigal et Capricorne pour adultes, ados et enfants dont la taille est supérieur à 1m30 et %age% ans minimum.
   forfait4: Forfait n°4
   parcours4: Forfait 7 parcours* <br>Gringole, Céga, Fourmi, Perdigal, Capricorne et Sanga Sensation plus les trois tyroliennes géantes (245m, 230m et 200m) réservé aux plus de %poids%kg et moins de 100kg.
