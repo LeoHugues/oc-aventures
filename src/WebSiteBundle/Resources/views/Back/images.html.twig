@@ -84,8 +84,8 @@
                     </div>
                     <div class="tab-pane fade" id="laser">
                         <div class="box">
-                            <label>Changer l'image parcours adulte : </label>
-                            <div class="croppic nos-parcours-croppic" id="laser"></div>
+                            <label>Changer la première image de la page "Laser Game" : </label>
+                            <div class="croppic nos-parcours-croppic" id="laser-premiere-img"></div>
                         </div>
                         <br>
                         <div class="box">
@@ -295,7 +295,7 @@
             cropData:{"slideName": 'laser', "imgName": "img-laser"},
             uploadData: {"imgName": "img-laser"}
         };
-        var cropperLaser = new Croppic('laser', croppedOptionsLaser);
+        var cropperLaser = new Croppic('laser-premiere-img', croppedOptionsLaser);
 
         var croppedOptionsLaser1 = {
             uploadUrl: '{{ path('save_to_file') }}',
