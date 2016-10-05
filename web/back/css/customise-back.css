@@ -1,14 +1,19 @@
-html {
-    background: #e58f08;
-}
-
-div.well {
-    background-color: rgba(124,0,0,0.9);
-    border-color: rgba(124,0,0,0.9);
-}
-
 div.content {
     padding-top: 80px;
+}
+
+.block-menu {
+    background-color: #ecf0f1;
+    min-height: 230px;
+}
+
+.block-flag {
+    margin-top: 20px;
+}
+
+.block-menu-top {
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
 
 div.slide-croppic {

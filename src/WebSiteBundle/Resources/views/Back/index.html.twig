@@ -3,64 +3,49 @@
     Administration
 {% endblock %}
 {% block content %}
-    <form class="form-horizontal">
-        <div class="well">
-            <h1>Administrer les images du site :</h1> <br>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Toutes les images</label>
-                <div class="col-sm-3">
-                    <a class="btn-default btn form-control" href="{{ path('admin_images') }}">Modifier les images</a>
+    <div class="col-sm-12 block-menu-top">
+        <div class="col-sm-3 block-menu">
+            <h1 class="text-center">Images</h1>
+            <div class="col-sm-12 text-center">
+                <a href="{{ path('admin_images') }}"><img src="{{ asset('back/img/image.png') }}"></a>
+            </div>
+        </div>
+        <div class="col-sm-3 block-menu col-sm-offset-1">
+            <h1 class="text-center">Partenaires</h1>
+            <div class="col-sm-12 text-center">
+                <a href="{{ path('admin_partenaires') }}"><img src="{{ asset('back/img/partnership.png') }}"></a>
+            </div>
+        </div>
+        <div class="col-sm-3 block-menu col-sm-offset-1">
+            <h1 class="text-center">Tarifs</h1>
+            <div class="col-sm-12 text-center">
+                <a href="{{ path('admin_tarifs') }}"><img src="{{ asset('back/img/euro.png') }}"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-3 block-menu">
+            <h1 class="text-center">Ouvertures</h1>
+            <div class="col-sm-12 text-center">
+                <a href="{{ path('admin_date_ouvertures') }}"><img src="{{ asset('back/img/24-hours-open.png') }}"></a>
+            </div>
+        </div>
+        <div class="col-sm-offset-1 col-sm-7 block-menu">
+            <h1 class="text-center">Textes</h1>
+            <div class="col-sm-4">
+                <img src="{{ asset('back/img/documents.png') }}">
+            </div>
+            <div class="col-sm-8 block-flag">
+                <div class="col-sm-4">
+                    <a href="{{ path('admin_text', {'lang' : 'fr'}) }}"><img src="{{ asset('back/img/france.png') }}"></a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="{{ path('admin_text', {'lang' : 'en'}) }}"><img src="{{ asset('back/img/united-kingdom.png') }}"></a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="{{ path('admin_text', {'lang' : 'de'}) }}"><img src="{{ asset('back/img/germany.png') }}"></a>
                 </div>
             </div>
         </div>
-        <div class="well">
-            <h1>Administrer les liens des partenaires :</h1> <br>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Toutes les liens</label>
-                <div class="col-sm-3">
-                    <a class="btn-default btn form-control" href="{{ path('admin_partenaires') }}">Modifier les liens</a>
-                </div>
-            </div>
-        </div>
-        <div class="well">
-            <h1>Administrer les tarifs :</h1> <br>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Les tarifs</label>
-                <div class="col-sm-3">
-                    <a class="btn-default btn form-control" href="{{ path('admin_tarifs') }}">Modifier les tarifs</a>
-                </div>
-            </div>
-        </div>
-        <div class="well">
-            <h1>Administrer les textes du site :</h1> <br>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Français</label>
-                    <div class="col-sm-3">
-                        <a class="btn-default btn form-control" href="{{ path('admin_text', {'lang' : 'fr'}) }}">Modifier les textes</a>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Anglais</label>
-                    <div class="col-sm-3">
-                        <a class="btn-default btn form-control" href="{{ path('admin_text', {'lang' : 'en'}) }}">Modifier les textes</a>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Allemend</label>
-                    <div class="col-sm-3">
-                        <a class="btn-default btn form-control" href="{{ path('admin_text', {'lang' : 'de'}) }}">Modifier les textes</a>
-                    </div>
-                </div>
-        </div>
-
-        <div class="well">
-            <h1>Date d'ouverture et de fermeture du site :</h1> <br>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Les dates</label>
-                <div class="col-sm-3">
-                    <a class="btn-default btn form-control" href="{{ path('admin_date_ouvertures') }}">Modifier les dates</a>
-                </div>
-            </div>
-        </div>
-    </form>
+    </div>
 {% endblock %}

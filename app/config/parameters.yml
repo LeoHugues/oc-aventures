@@ -8,5 +8,5 @@ parameters:
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     secret: ThisTokenIsNotSoSecretChangeIt
-    mailer_user:     "les.hauts.de.cuculles@gmail.com"
-    mailer_password: "336DTDdt"
+    mailer_user: les.hauts.de.cuculles@gmail.com
+    mailer_password: null
