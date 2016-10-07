@@ -25,6 +25,7 @@ class FrontController extends Controller {
     public function indexAction(Request $request) {
 
         $date = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Ouvertures.json'), true);
+        $image = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/accueil.json'), true);
 
         $ouverture = Carbon::createFromFormat('Y-m-d',  $date['ouverture']);
         $fermeture = Carbon::createFromFormat('Y-m-d',  $date['fermeture']);
@@ -34,7 +35,10 @@ class FrontController extends Controller {
             'fermeture' => $fermeture
         );
 
-        return $this->render('WebSiteBundle:Front:index.html.twig', array('date' => $date));
+        return $this->render('WebSiteBundle:Front:index.html.twig', array(
+            'date' => $date,
+            'image' => $image
+        ));
     }
 
     /**
@@ -42,7 +46,13 @@ class FrontController extends Controller {
      * @Route("/parcours", defaults={"_locale"="fr"}, requirements = {"_locale" = "fr|en|de"})
      */
     public function parcoursAction() {
-        return $this->render('WebSiteBundle:Front:parcours.html.twig', array());
+        $image['adult']  = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/adulte.json'), true);
+        $image['enfant'] = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/enfant.json'), true);
+        $image['plan']   = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/plan.json'), true);
+
+        return $this->render('WebSiteBundle:Front:parcours.html.twig', array(
+            'image' => $image
+        ));
     }
 
     /**
@@ -117,6 +127,8 @@ class FrontController extends Controller {
      * @param Request $request
      */
     public function laserAction(Request $request) {
-        return $this->render('WebSiteBundle:Front:laser.html.twig');
+        $image = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/laser.json'), true);
+        
+        return $this->render('WebSiteBundle:Front:laser.html.twig', array('image' => $image));
     }
 }

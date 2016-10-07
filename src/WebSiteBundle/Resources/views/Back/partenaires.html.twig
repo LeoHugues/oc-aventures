@@ -9,7 +9,9 @@
         {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
         <ul class="partenaires" data-prototype="{{ form_widget(form.partenaires.vars.prototype)|e }}">
             {% for partenaire in form.partenaires %}
-                <li class="list-unstyled">{{ form_row(partenaire) }}</li>
+                <li class="list-unstyled">
+                    {{ form_row(partenaire) }}
+                </li>
             {% endfor %}
         </ul>
     </div>

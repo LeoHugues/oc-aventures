@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -1588,11 +1589,7 @@ pre code {
         width: 970px;
     }
 }
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-}
+
 .container-fluid {
     margin-right: auto;
     margin-left: auto;

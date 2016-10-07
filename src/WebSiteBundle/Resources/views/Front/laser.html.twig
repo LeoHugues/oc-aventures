@@ -18,7 +18,7 @@
                     <h3>{{ 'laser.titre_intro'|trans }} :</h3>
                     <br>
                 </div>
-                <img class="img-responsive img-border img-left" src="{{ asset('./front/images/laser.jpeg') }}" alt="">
+                <img class="img-responsive img-border img-left" src="{{ asset('front/images/gallery/' ~ image.imgBlock1.image) }}" alt="">
                 <hr class="visible-xs">
                 <div class="row">
                     <h4 class="text-yellow">{{ 'laser.titre_laser_game'|trans }} :</h4>
@@ -50,15 +50,19 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="img-responsive img-full" src="{{ asset('front/images/laser-slide-1.jpeg') }}" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive img-full" src="{{ asset('front/images/laser-slide-2.jpeg') }}" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive img-full" src="{{ asset('front/images/laser-slide-3.jpeg') }}" alt="">
-                        </div>
+                        {% set firstIteration = true %}
+                        {% for image in image.sliders.image %}
+                            {% if firstIteration == true %}
+                                <div class="item active">
+                                    <img class="img-responsive img-full" src="{{ asset('front/images/gallery/' ~ image) }}" alt="">
+                                </div>
+                            {% else %}
+                                <div class="item">
+                                    <img class="img-responsive img-full" src="{{ asset('front/images/gallery/' ~ image) }}" alt="">
+                                </div>
+                            {% endif %}
+                            {% set firstIteration = false %}
+                        {% endfor %}
                     </div>
 
                     <!-- Controls -->

@@ -3,49 +3,66 @@
     Administration
 {% endblock %}
 {% block content %}
-    <div class="col-sm-12 block-menu-top">
-        <div class="col-sm-3 block-menu">
+    <div class="col-sm-4 block-menu-top">
+        <div class="col-sm-11 block-menu">
             <h1 class="text-center">Images</h1>
-            <div class="col-sm-12 text-center">
-                <a href="{{ path('admin_images') }}"><img src="{{ asset('back/img/image.png') }}"></a>
+            <div class="col-sm-12 text-center btn">
+                <a href="{{ path('admin_images', {'page': "accueil"}) }}"> <img class="img-btn" src="{{ asset('back/img/home.png') }}"></a>
             </div>
-        </div>
-        <div class="col-sm-3 block-menu col-sm-offset-1">
-            <h1 class="text-center">Partenaires</h1>
-            <div class="col-sm-12 text-center">
-                <a href="{{ path('admin_partenaires') }}"><img src="{{ asset('back/img/partnership.png') }}"></a>
+            <div class="col-sm-12 text-center btn">
+                <a href="{{ path('admin_images', {'page': "adulte"}) }}"> <img class="img-btn" src="{{ asset('back/img/adult.png') }}"></a>
             </div>
-        </div>
-        <div class="col-sm-3 block-menu col-sm-offset-1">
-            <h1 class="text-center">Tarifs</h1>
-            <div class="col-sm-12 text-center">
-                <a href="{{ path('admin_tarifs') }}"><img src="{{ asset('back/img/euro.png') }}"></a>
+            <div class="col-sm-12 text-center btn">
+                <a href="{{ path('admin_images', {'page': "enfant"}) }}"> <img class="img-btn" src="{{ asset('back/img/kids-couple.png') }}"></a>
+            </div>
+            <div class="col-sm-12 text-center btn">
+                <a href="{{ path('admin_images', {'page': "plan"}) }}"> <img class="img-btn" src="{{ asset('back/img/map.png') }}"></a>
+            </div>
+            <div class="col-sm-12 text-center btn">
+                <a href="{{ path('admin_images', {'page': "laser"}) }}"> <img class="img-btn" src="{{ asset('back/img/target-with-circle.png') }}"></a>
             </div>
         </div>
     </div>
-    <div class="col-sm-12">
-        <div class="col-sm-3 block-menu">
-            <h1 class="text-center">Ouvertures</h1>
+    <div class="col-sm-8 block-menu-top">
+        <div class="col-sm-5 block-menu">
+            <h1 class="text-center">Partenaires</h1>
             <div class="col-sm-12 text-center">
-                <a href="{{ path('admin_date_ouvertures') }}"><img src="{{ asset('back/img/24-hours-open.png') }}"></a>
+                <a href="{{ path('admin_partenaires') }}"> <img class="img-btn" src="{{ asset('back/img/partnership.png') }}"></a>
             </div>
         </div>
-        <div class="col-sm-offset-1 col-sm-7 block-menu">
+        <div class="col-sm-5 block-menu col-sm-offset-1">
+            <h1 class="text-center">Tarifs</h1>
+            <div class="col-sm-12 text-center">
+                <a href="{{ path('admin_tarifs') }}"> <img class="img-btn" src="{{ asset('back/img/euro.png') }}"></a>
+            </div>
+        </div>
+        <div class="col-sm-11 block-menu text-block margin-top">
             <h1 class="text-center">Textes</h1>
             <div class="col-sm-4">
                 <img src="{{ asset('back/img/documents.png') }}">
             </div>
             <div class="col-sm-8 block-flag">
                 <div class="col-sm-4">
-                    <a href="{{ path('admin_text', {'lang' : 'fr'}) }}"><img src="{{ asset('back/img/france.png') }}"></a>
+                    <a href="{{ path('admin_text', {'lang' : 'fr'}) }}"> <img class="img-btn" src="{{ asset('back/img/france.png') }}"></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="{{ path('admin_text', {'lang' : 'en'}) }}"><img src="{{ asset('back/img/united-kingdom.png') }}"></a>
+                    <a href="{{ path('admin_text', {'lang' : 'en'}) }}"> <img class="img-btn" src="{{ asset('back/img/united-kingdom.png') }}"></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="{{ path('admin_text', {'lang' : 'de'}) }}"><img src="{{ asset('back/img/germany.png') }}"></a>
+                    <a href="{{ path('admin_text', {'lang' : 'de'}) }}"> <img class="img-btn" src="{{ asset('back/img/germany.png') }}"></a>
                 </div>
             </div>
         </div>
+        <div class="col-sm-5 block-menu">
+            <h1 class="text-center">Ouvertures</h1>
+            <div class="col-sm-12 text-center">
+                <a href="{{ path('admin_date_ouvertures') }}"> <img class="img-btn" src="{{ asset('back/img/24-hours-open.png') }}"></a>
+            </div>
+        </div>
     </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+
+    </script>
 {% endblock %}

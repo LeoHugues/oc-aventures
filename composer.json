@@ -12,6 +12,7 @@
         ]
     },
     "require": {
+        "comur/image-bundle": "1.0.*@dev",
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
         "doctrine/orm": "^2.4.8",

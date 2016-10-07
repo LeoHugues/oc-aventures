@@ -1,49 +1,37 @@
 div.content {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .block-menu {
     background-color: #ecf0f1;
-    min-height: 230px;
+    min-height: 244px;
+    margin-top: 50px;
+    border-radius: 10px;
 }
 
 .block-flag {
     margin-top: 20px;
 }
 
+.img-btn:hover{
+    filter: hue-rotate(1000deg) hue-rotate(120deg) saturate(25.4);
+}
+
 .block-menu-top {
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 }
 
-div.slide-croppic {
-    width: 843px;
-    height: 403px;
+form[name=website_partenaires] div.form-group label.control-label {
+    display: none;
 }
 
-div.nos-parcours-croppic {
-    width: 550px;
-    height: 367px;
+form[name=website_partenaires] div.form-group div.col-sm-10 label.control-label {
+    display: block;
 }
 
-div.cro-plan {
-    width: 1000px;
-    height: 593px;
-}
-
-div.confort-accueil-croppic {
-    width: 300px;
-    height: 225px;
-}
-
-div.croppic {
-    background: url('../img/placeholder.png');
-    background-repeat: no-repeat;
-    background-position: center;
+form[name=website_partenaires] a.btn-danger {
     position: relative;
-    border: 1px solid #ccc;
-}
-
-div.cropImgWrapper {
-    top: 0px;
+    float: right;
+    top: -125px;
+    right: 40px;
 }

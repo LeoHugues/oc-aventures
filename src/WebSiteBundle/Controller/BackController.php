@@ -21,6 +21,9 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use WebSiteBundle\Form\Image\GalleryAccueilType;
+use WebSiteBundle\Form\Image\ParcoursType;
+use WebSiteBundle\Form\Image\PlanType;
 use WebSiteBundle\Form\PartenairesType;
 use WebSiteBundle\Form\TarifsType;
 use WebSiteBundle\Form\TextFormType;
@@ -88,11 +91,27 @@ class BackController extends Controller
     }
 
     /**
-     * @Route("/images", name="admin_images")
+     * @Route("/images/{page}", name="admin_images")
      */
-    public function imagesAction(Request $request)
+    public function imagesAction(Request $request, $page)
     {
-        return $this->render('WebSiteBundle:Back:images.html.twig');
+        $jsonPath = '../src/WebSiteBundle/Resources/JsonData/Image/' . $page .'.json';
+        $gallery = json_decode(file_get_contents($jsonPath), true);
+        if ($page == "accueil") {
+            $form = $this->createForm(new GalleryAccueilType($gallery));
+        } elseif($page == "plan") {
+            $form = $this->createForm(new PlanType($gallery));
+        } else {
+            $form = $this->createForm(new ParcoursType($gallery));
+        }
+
+        $form->handleRequest($request);
+        if ($form->isValid()) {
+            $jsonContent = json_encode($form->getData());
+            file_put_contents($jsonPath, $jsonContent);
+        }
+
+        return $this->render('WebSiteBundle:Back:images.html.twig', array('form' => $form->createView(), 'page' => $page));
     }
 
     /**
@@ -134,7 +153,7 @@ class BackController extends Controller
             file_put_contents('../src/WebSiteBundle/Resources/JsonData/Tarifs.json', $jsonContent);
             $this->addFlash(
                 'notice',
-                'Les nouveaux des tarifs ont bien étaient enregistrées !'
+                'Les nouveaux tarifs ont bien étaient enregistrées !'
             );
 
             return $this->render('WebSiteBundle:Back:index.html.twig');
@@ -149,7 +168,6 @@ class BackController extends Controller
     public function textAction(Request $request, $lang)
     {
         $yaml = new Parser();
-
         $traduction = $yaml->parse(file_get_contents('../src/WebSiteBundle/Resources/translations/traduction.' . $lang . '.yml'));
 
         $form = $this->createForm(
@@ -160,9 +178,7 @@ class BackController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-
             $traduction = $form->getData();
-
             $dumper = new Dumper();
 
             file_put_contents(
@@ -179,142 +195,5 @@ class BackController extends Controller
         }
 
         return $this->render('WebSiteBundle:Back:text.html.twig', array('form' => $form->createView(), 'lang' => $lang));
-    }
-
-    /**
-     * @Route("/saveImg", name="save_to_file")
-     */
-    public function saveToFileAction() {
-
-        $imagePath = "front/images/";
-        $allowedExts = array("gif", "jpeg", "jpg", "png", "GIF", "JPEG", "JPG", "PNG");
-        $temp = explode(".", $_FILES["img"]["name"]);
-        $extension = end($temp);
-
-        //Check write Access to Directory
-        if (!is_writable($imagePath)) {
-            $response = Array(
-                "status" => 'error',
-                "message" => 'Can`t upload File; no write Access'
-            );
-
-            return Response::create(json_encode($response), 200);
-        }
-
-        if (in_array($extension, $allowedExts)) {
-            if ($_FILES["img"]["error"] > 0) {
-                $response = array(
-                    "status" => 'error',
-                    "message" => 'ERROR Return Code: '. $_FILES["img"]["error"],
-                );
-            } else {
-                $filename = $_FILES["img"]["tmp_name"];
-                list($width, $height) = getimagesize( $filename );
-                $path = $imagePath . $_POST['imgName'] . '.jpeg';
-                move_uploaded_file($filename, $path);
-                chmod($path, 0777);
-                $response = array(
-                    "status" => 'success',
-                    "url" => $imagePath . $_POST['imgName'] . '.jpeg',
-                    "width" => $width,
-                    "height" => $height
-                );
-            }
-        } else {
-            $response = array(
-                "status" => 'error',
-                "message" => 'something went wrong, most likely file is to large for upload. check upload_max_filesize, post_max_size and memory_limit in you php.ini',
-            );
-        }
-
-        return Response::create(json_encode($response),200);
-    }
-
-    /**
-     * @Route("/cropImg", name="crop_to_file")
-     */
-    public function cropToFileAction() {
-
-        $imgUrl = $_POST['imgUrl'];
-        // original sizes
-        $imgInitW = $_POST['imgInitW'];
-        $imgInitH = $_POST['imgInitH'];
-        // resized sizes
-        $imgW = $_POST['imgW'];
-        $imgH = $_POST['imgH'];
-        // offsets
-        $imgY1 = $_POST['imgY1'];
-        $imgX1 = $_POST['imgX1'];
-        // crop box
-        $cropW = $_POST['cropW'];
-        $cropH = $_POST['cropH'];
-        // rotation angle
-        $angle = $_POST['rotation'];
-        $jpeg_quality = 100;
-
-        $output_filename = dirname($imgUrl). "/" . $_POST['slideName'];
-        $what = getimagesize($imgUrl);
-        switch(strtolower($what['mime'])) {
-            case 'image/png':
-                $img_r = imagecreatefrompng($imgUrl);
-                $source_image = imagecreatefrompng($imgUrl);
-                $type = '.png';
-                break;
-            case 'image/jpeg':
-                $img_r = imagecreatefromjpeg($imgUrl);
-                $source_image = imagecreatefromjpeg($imgUrl);
-                error_log("jpg");
-                $type = '.jpeg';
-                break;
-            case 'image/gif':
-                $img_r = imagecreatefromgif($imgUrl);
-                $source_image = imagecreatefromgif($imgUrl);
-                $type = '.gif';
-                break;
-            default: die('image type not supported');
-        }
-//Check write Access to Directory
-        if(!is_writable(dirname($output_filename))){
-            $response = Array(
-                "status" => 'error',
-                "message" => 'Can`t write cropped File'
-            );
-        } elseif (file_exists($output_filename . 'jpeg')) {
-            unlink($output_filename . 'jpeg');
-        }
-        else{           // resize the original image to size of editor
-            $resizedImage = imagecreatetruecolor($imgW, $imgH);
-            imagecopyresampled($resizedImage, $source_image, 0, 0, 0, 0, $imgW, $imgH, $imgInitW, $imgInitH);
-            // rotate the rezized image
-            $rotated_image = imagerotate($resizedImage, -$angle, 0);
-            // find new width & height of rotated image
-            $rotated_width = imagesx($rotated_image);
-            $rotated_height = imagesy($rotated_image);
-            // diff between rotated & original sizes
-            $dx = $rotated_width - $imgW;
-            $dy = $rotated_height - $imgH;
-            // crop rotated image to fit into original rezized rectangle
-            $cropped_rotated_image = imagecreatetruecolor($imgW, $imgH);
-            imagecolortransparent($cropped_rotated_image, imagecolorallocate($cropped_rotated_image, 0, 0, 0));
-            imagecopyresampled($cropped_rotated_image, $rotated_image, 0, 0, $dx / 2, $dy / 2, $imgW, $imgH, $imgW, $imgH);
-            // crop image into selected area
-            $final_image = imagecreatetruecolor($cropW, $cropH);
-            imagecolortransparent($final_image, imagecolorallocate($final_image, 0, 0, 0));
-            imagecopyresampled($final_image, $cropped_rotated_image, 0, 0, $imgX1, $imgY1, $cropW, $cropH, $cropW, $cropH);
-            // finally output png image
-            //imagepng($final_image, $output_filename.$type, $png_quality);
-
-            imagejpeg($final_image, $output_filename . '.jpeg', $jpeg_quality);
-            chmod($output_filename . '.jpeg', 0777);
-            $response = Array(
-                "status" => 'success',
-                "url" => '../'. $output_filename .'.jpeg'
-            );
-            if(file_exists($imgUrl)) {
-                unlink($imgUrl);
-            }
-        }
-
-        return Response::create(json_encode($response),200);
     }
 }

@@ -3,348 +3,55 @@
     Images
 {% endblock %}
 {% block content %}
-    <div class="well">
-        <h1>Administrer les images du site :</h1> <br>
-        <div class="bs-component live-less-editor-hovercontainer" data-relatedvars="caret-width-base,dropdown-bg,dropdown-fallback-border,dropdown-border,dropdown-divider-bg,dropdown-link-color,dropdown-link-hover-color,dropdown-link-hover-bg,dropdown-link-active-color,dropdown-link-active-bg,dropdown-link-disabled-color,dropdown-header-color,nav-link-padding,nav-link-hover-bg,nav-disabled-link-color,nav-disabled-link-hover-color,link-color,nav-tabs-border-color,nav-tabs-link-hover-border-color,nav-tabs-active-link-hover-color,nav-tabs-active-link-hover-bg,nav-tabs-active-link-hover-border-color">
-                <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                    <li class="active"><a href="#accueil" data-toggle="tab" aria-expanded="true">Images d'accueil</a></li>
-                    <li class=""><a href="#adulte" data-toggle="tab" aria-expanded="false">Parcours adulte</a></li>
-                    <li class=""><a href="#enfant" data-toggle="tab" aria-expanded="false">Parcours enfant</a></li>
-                    <li class=""><a href="#laser" data-toggle="tab" aria-expanded="false">Laser game</a></li>
-                    <li class=""><a href="#plan" data-toggle="tab" aria-expanded="false">Plan du parc</a></li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade active in bt" id="accueil">
-                        <div class="box">
-                            <label>Changer la première slide : </label>
-                            <div class="croppic slide-croppic" id="accueil-slide1"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la seconde slide : </label>
-                            <div class="croppic slide-croppic" id="accueil-slide2"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la troisième slide : </label>
-                            <div class="croppic slide-croppic" id="accueil-slide3"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer l'image du block "nos parcours accrobranche" : </label>
-                            <div class="croppic nos-parcours-croppic" id="nos-parcours"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer l'image du block "le confort de votre accueil" : </label>
-                            <div class="croppic confort-accueil-croppic" id="confort-accueil"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="adulte">
-                        <div class="box">
-                            <label>Changer l'image parcours adulte : </label>
-                            <div class="croppic nos-parcours-croppic" id="parcours-adulte"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la première slide : </label>
-                            <div class="croppic slide-croppic" id="adulte-slide1"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la seconde slide : </label>
-                            <div class="croppic slide-croppic" id="adulte-slide2"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la troisième slide : </label>
-                            <div class="croppic slide-croppic" id="adulte-slide3"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="enfant">
-                        <div class="box">
-                            <label>Changer l'image parcours enfant : </label>
-                            <div class="croppic nos-parcours-croppic" id="parcours-enfant"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la première slide : </label>
-                            <div class="croppic slide-croppic" id="enfant-slide1"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la seconde slide : </label>
-                            <div class="croppic slide-croppic" id="enfant-slide2"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la troisième slide : </label>
-                            <div class="croppic slide-croppic" id="enfant-slide3"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="laser">
-                        <div class="box">
-                            <label>Changer la première image de la page "Laser Game" : </label>
-                            <div class="croppic nos-parcours-croppic" id="laser-premiere-img"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la première slide : </label>
-                            <div class="croppic slide-croppic" id="laser-slide1"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la seconde slide : </label>
-                            <div class="croppic slide-croppic" id="laser-slide2"></div>
-                        </div>
-                        <br>
-                        <div class="box">
-                            <label>Changer la troisième slide : </label>
-                            <div class="croppic slide-croppic" id="laser-slide3"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="plan">
-                        <div class="box">
-                            <label>Changer l'image du plan :</label>
-                            <div class="croppic cro-plan" id="cro-plan"></div>
-                        </div>
-                    </div>
-                </div>
+    {% include "ComurImageBundle:Form:croppable_image_modal.html.twig"%}
+    <h1 class="text-center">Gestion images {{ page }}</h1><br><br>
+    {% if page == "accueil" %}
+        <div class="col-sm-12">
+            {{ form_start(form) }}
+            <div class="col-sm-4">
+                <label>Image du block Parcours</label>
+                {{ form_widget(form.imgBlock2) }}
+            </div>
+            <div class="col-sm-4">
+                <label>Image du block Laser-Game </label>
+                {{ form_widget(form.imgBlock3) }}
+            </div>
+            <div class="col-sm-4">
+                <label> Image du block Accueil </label>
+                {{ form_widget(form.imgBlock4) }}
+            </div>
+            <div class="col-sm-12">
+                <label> Sliders de la page d'accueil </label>
+                {{ form_widget(form.sliders) }}
+            </div>
+            {{ form_end(form) }}
         </div>
-    </div>
+    {% elseif page == "plan" %}
+        <div class="col-sm-12">
+            {{ form_start(form) }}
+            <div class="col-sm-4">
+                <label>Plan du parc</label>
+                {{ form_widget(form.plan) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+    {% else %}
+        <div class="col-sm-12">
+            {{ form_start(form) }}
+            <div class="col-sm-4">
+                <label>Image du premier block</label>
+                {{ form_widget(form.imgBlock1) }}
+            </div>
+            <div class="col-sm-12">
+                <label> Sliders </label>
+                {{ form_widget(form.sliders) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+    {% endif %}
 {% endblock %}
 
-{% block javascripts %}
-    <script src="{{ asset("back/croppic/croppic.js") }}"></script>
-    <script>
-        /*
-              <================ Initialisation cropper accueil ==================>
-         */
-        var croppedOptionsAccueil1 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{"slideName": 'accueil-slide-1', "imgName": "img-accueil-slide-1"},
-            uploadData: {"imgName": "img-accueil-slide-1"}
-        };
-        var cropperAccueil1 = new Croppic('accueil-slide1', croppedOptionsAccueil1);
-
-        var croppedOptionsAccueil2 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{
-                "slideName": 'accueil-slide-2',
-                "imgName": "img-accueil-slide-2"
-            },
-            uploadData: {"imgName": "img-accueil-slide-2"}
-
-        };
-        var cropperAccueil2 = new Croppic('accueil-slide2', croppedOptionsAccueil2);
-
-        var croppedOptionsAccueil3 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal: false,
-            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData: {
-                "slideName": 'accueil-slide-3',
-                "imgName": "img-accueil-slide-3"
-            },
-            uploadData: {"imgName": "img-accueil-slide-3"}
-        };
-        var cropperAccueil3 = new Croppic('accueil-slide3', croppedOptionsAccueil3);
-
-        var croppedOptionsAccueilParcours = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal: false,
-            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData: {
-                "slideName": 'accueil-nos-parcours',
-                "imgName": "img-accueil-nos-parcours"
-            },
-            uploadData: {"imgName": "img-accueil-nos-parcours"}
-        };
-        var cropperAccueilParcours = new Croppic('nos-parcours', croppedOptionsAccueilParcours);
-
-        var croppedOptionsAccueilConfort = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal: false,
-            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData: {
-                "slideName": 'accueil-confort',
-                "imgName": "img-accueil-confort"
-            },
-            uploadData: {"imgName": "img-accueil-confort"}
-        };
-        var cropperAccueilConfort = new Croppic('confort-accueil', croppedOptionsAccueilConfort);
-
-        /*
-         <================ Initialisation cropper parcours adulte ==================>
-         */
-        var croppedOptionsParcoursAdulte = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{"slideName": 'parcours-adulte', "imgName": "img-parcours-adulte"},
-            uploadData: {"imgName": "img-parcours-adulte"}
-        };
-        var cropperParcoursAdulte = new Croppic('parcours-adulte', croppedOptionsParcoursAdulte);
-
-        var croppedOptionsAdulte1 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{"slideName": 'adulte-slide-1', "imgName": "img-adulte-slide-1"},
-            uploadData: {"imgName": "img-adulte-slide-1"}
-        };
-        var cropperAdulte1 = new Croppic('adulte-slide1', croppedOptionsAdulte1);
-
-        var croppedOptionsAdulte2 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{
-                "slideName": 'adulte-slide-2',
-                "imgName": "img-adulte-slide-2"
-            },
-            uploadData: {"imgName": "img-adulte-slide-2"}
-
-        };
-        var cropperAdulte2 = new Croppic('adulte-slide2', croppedOptionsAdulte2);
-
-        var croppedOptionsAdulte3 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal: false,
-            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData: {
-                "slideName": 'adulte-slide-3',
-                "imgName": "img-adulte-slide-3"
-            },
-            uploadData: {"imgName": "img-adulte-slide-3"}
-        };
-        var cropperAdulte3 = new Croppic('adulte-slide3', croppedOptionsAdulte3);
-
-        /*
-         <================ Initialisation cropper parcours enfant ==================>
-         */
-
-        var croppedOptionsParcoursEnfant = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{"slideName": 'parcours-enfant', "imgName": "img-parcours-enfant"},
-            uploadData: {"imgName": "img-parcours-Enfant"}
-        };
-        var cropperParcoursEnfant = new Croppic('parcours-enfant', croppedOptionsParcoursEnfant);
-
-        var croppedOptionsEnfant1 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{"slideName": 'enfant-slide-1', "imgName": "img-enfant-slide-1"},
-            uploadData: {"imgName": "img-enfant-slide-1"}
-        };
-        var cropperEnfant1 = new Croppic('enfant-slide1', croppedOptionsEnfant1);
-
-        var croppedOptionsEnfant2 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{
-                "slideName": 'enfant-slide-2',
-                "imgName": "img-enfant-slide-2"
-            },
-            uploadData: {"imgName": "img-enfant-slide-2"}
-
-        };
-        var cropperEnfant2 = new Croppic('enfant-slide2', croppedOptionsEnfant2);
-
-        var croppedOptionsEnfant3 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal: false,
-            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData: {
-                "slideName": 'enfant-slide-3',
-                "imgName": "img-enfant-slide-3"
-            },
-            uploadData: {"imgName": "img-enfant-slide-3"}
-        };
-        var cropperEnfant3 = new Croppic('enfant-slide3', croppedOptionsEnfant3);
-
-        /*
-         <================ Initialisation cropper laser game ==================>
-         */
-        var croppedOptionsLaser = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{"slideName": 'laser', "imgName": "img-laser"},
-            uploadData: {"imgName": "img-laser"}
-        };
-        var cropperLaser = new Croppic('laser-premiere-img', croppedOptionsLaser);
-
-        var croppedOptionsLaser1 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{"slideName": 'laser-slide-1', "imgName": "img-laser-slide-1"},
-            uploadData: {"imgName": "img-laser-slide-1"}
-        };
-        var cropperLaser1 = new Croppic('laser-slide1', croppedOptionsLaser1);
-
-        var croppedOptionsLaser2 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal:false,
-            loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData:{
-                "slideName": 'laser-slide-2',
-                "imgName": "img-laser-slide-2"
-            },
-            uploadData: {"imgName": "img-laser-slide-2"}
-
-        };
-        var cropperLaser2 = new Croppic('laser-slide2', croppedOptionsLaser2);
-
-        var croppedOptionsLaser3 = {
-            uploadUrl: '{{ path('save_to_file') }}',
-            cropUrl: '{{ path('crop_to_file') }}',
-            modal: false,
-            loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-            cropData: {
-                "slideName": 'laser-slide-3',
-                "imgName": "img-laser-slide-3"
-            },
-            uploadData: {"imgName": "img-laser-slide-3"}
-        };
-        var cropperLaser3 = new Croppic('laser-slide3', croppedOptionsLaser3);
-
-        /*
-         <================ Initialisation cropper plan du parc ==================>
-         */
-
-        var croppedOptionsPlan = {
-            uploadUrl: '{{ path('save_to_file') }}',
-           // cropUrl: '{{ path('crop_to_file') }}',
-           // cropData:{"slideName": 'plan', "imgName": "plan"},
-            uploadData: {"imgName": "plan"}
-        };
-        var cropperPlan = new Croppic('cro-plan', croppedOptionsPlan);
-
-    </script>
+{% block baseJs %}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
 {% endblock %}

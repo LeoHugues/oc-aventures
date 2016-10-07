@@ -4,6 +4,7 @@
     {% endblock %}
 {% block content %}
     {% trans_default_domain "traduction" %}
+    {% set baseImgUrl = "front/images/gallery/" %}
 <div class="box tab row">
         <div class="text-center text-yellow">
             <h1 id="nav-tabs">{{ 'parcours.nos_parcours'|trans }}</h1>
@@ -22,7 +23,7 @@
                         <br>
                     </div>
                     <div class="col-lg-12">
-                        <img class="img-responsive img-border img-left" src="{{ asset('./front/images/parcours-adulte.jpeg') }}" alt="">
+                        <img class="img-responsive img-border img-left" src="{{ asset(baseImgUrl ~ image.adult.imgBlock1.image) }}" alt="">
                         <hr class="visible-xs">
                         <div class="row">
                             <h4 class="text-yellow">{{ 'parcours.parcours_pour_grands'|trans }} :</h4>
@@ -54,17 +55,20 @@
 
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="img-responsive img-full" src="{{ asset('front/images/adulte-slide-1.jpeg') }}" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="img-responsive img-full" src="{{ asset('front/images/adulte-slide-2.jpeg') }}" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="img-responsive img-full" src="{{ asset('front/images/adulte-slide-3.jpeg') }}" alt="">
-                                </div>
+                                {% set firstIteration = true %}
+                                {% for image in image.adult.sliders.image %}
+                                {% if firstIteration == true %}
+                                    <div class="item active">
+                                        <img class="img-responsive img-full" src="{{ asset('front/images/gallery/' ~ image) }}" alt="">
+                                    </div>
+                                {% else %}
+                                    <div class="item">
+                                        <img class="img-responsive img-full" src="{{ asset('front/images/gallery/' ~ image) }}" alt="">
+                                    </div>
+                                {% endif %}
+                                    {% set firstIteration = false %}
+                                {% endfor %}
                             </div>
-
                             <!-- Controls -->
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                                 <span class="icon-prev"></span>
@@ -86,7 +90,7 @@
                     <br>
                 </div>
                 <div class="col-lg-12">
-                    <img class="img-responsive img-border img-left" src="{{ asset('front/images/parcours-enfant.jpeg') }}" alt="">
+                    <img class="img-responsive img-border img-left" src="{{ asset(baseImgUrl ~ image.enfant.imgBlock1.image) }}" alt="">
                     <hr class="visible-xs">
                     <div class="row">
                             <h4 class="text-yellow">{{ 'parcours.parcours_pour_enfant'|trans }}:</h4>
@@ -116,15 +120,19 @@
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item active">
-                                <img class="img-responsive img-full" src="{{ asset('front/images/enfant-slide-1.jpeg') }}" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="{{ asset('front/images/enfant-slide-2.jpeg') }}" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="{{ asset('front/images/enfant-slide-3.jpeg') }}" alt="">
-                            </div>
+                            {% set firstIteration = true %}
+                            {% for image in image.enfant.sliders.image %}
+                            {% if firstIteration == true %}
+                                <div class="item active">
+                                    <img class="img-responsive img-full" src="{{ asset('front/images/gallery/' ~ image) }}" alt="">
+                                </div>
+                            {% else %}
+                                <div class="item">
+                                    <img class="img-responsive img-full" src="{{ asset('front/images/gallery/' ~ image) }}" alt="">
+                                </div>
+                            {% endif %}
+                                {% set firstIteration = false %}
+                                {% endfor %}
                         </div>
 
                         <!-- Controls -->
@@ -148,7 +156,7 @@
                     <br>
                 </div>
                 <div class="col-lg-12">
-                    <img class="img-responsive center-block" src="{{ asset('front/images/plan.jpeg') }}" alt="">
+                    <img class="img-responsive center-block" src="{{ asset('front/images/gallery/' ~ image.plan.plan.image) }}" alt="">
                 </div>
             </div>
         </div>
