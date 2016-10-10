@@ -98,11 +98,11 @@ class BackController extends Controller
         $jsonPath = '../src/WebSiteBundle/Resources/JsonData/Image/' . $page .'.json';
         $gallery = json_decode(file_get_contents($jsonPath), true);
         if ($page == "accueil") {
-            $form = $this->createForm(new GalleryAccueilType($gallery));
+            $form = $this->createForm(new GalleryAccueilType(), $gallery);
         } elseif($page == "plan") {
-            $form = $this->createForm(new PlanType($gallery));
+            $form = $this->createForm(new PlanType(), $gallery);
         } else {
-            $form = $this->createForm(new ParcoursType($gallery));
+            $form = $this->createForm(new ParcoursType(), $gallery);
         }
 
         $form->handleRequest($request);
