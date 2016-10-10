@@ -203,12 +203,13 @@ p.text-forfait {
     font-family: Berlin;
 }
 
-h2.text-image {
+.text-image {
     font-family: Berlin;
     color: #1c2919;
     font-size: 22px;
-    width: 42%;
-    position: absolute;
+    position: relative;
+    top: -35px;
+    text-transform: uppercase;
 }
 
 h2.text-image-oc {
@@ -290,7 +291,6 @@ span.text-image {
         float: none;
         margin: 0 auto;
         table-layout: fixed;
-        font-size: 1.0em;
     }
 }
 
@@ -323,4 +323,10 @@ img.small-img {
 h3.cb-message {
     border: solid;
     border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        font-size: 0.74em;
+    }
 }
