@@ -96,7 +96,6 @@ hr {
 }
 
 .box {
-    margin-bottom: 20px;
     padding: 30px 15px;
     background: #fff;
     background: rgba(124,0,0,0.9);
@@ -203,12 +202,11 @@ p.text-forfait {
     font-family: Berlin;
 }
 
-.text-image {
+.text-image-oc {
     font-family: Berlin;
     color: #1c2919;
-    font-size: 22px;
+    font-size: 0.7em;
     position: relative;
-    top: -35px;
     text-transform: uppercase;
 }
 
@@ -325,8 +323,64 @@ h3.cb-message {
     border-radius: 8px;
 }
 
+#arrow-rotate-down {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    z-index: 110;
+    opacity: 0.85;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+#arrow-rotate-down:hover{
+    filter: hue-rotate(1000deg) hue-rotate(120deg) saturate(25.4);
+}
+
+
+#arrow-rotate-down a {
+    width: 64px;
+    height: 64px;
+    display: block;
+    position: relative;
+    color: #111;
+    text-decoration: none;
+    text-indent: 100%;
+    font-size: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url(../img/down-arrow.png) no-repeat;
+}
+
+.intro-block {
+    background-color: #e8d069;
+    height: 400px;
+}
+
 @media (max-width: 992px) {
     .navbar-nav {
         font-size: 0.74em;
     }
+}
+
+.tarif {
+    background-color: #FFFFFF;
+    height: 500px;
+}
+
+.block-hauteur {
+    /* The image used */
+    background-image: url("../../front/img/vide-hauteur.jpg");
+    /* Set a specific height */
+    height: 70vh;
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

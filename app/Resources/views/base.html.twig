@@ -9,8 +9,12 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-    <div class="container">
-        {% block body %}{% endblock %}
+    {% block video %}
+    {% endblock %}
+    <div class="body">
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
     </div>
     {% block baseJs %}{% endblock %}
     {% block javascripts %}{% endblock %}
