@@ -5,31 +5,114 @@ $("a#circle-button").click(function() {
     return false;
 });
 
-$('.img-accrobranche').hide();
-$('.text-image-oc').hide();
+$('.accroche-enfant .red-box').css("height", $('.accroche-enfant .yellow-box').offset.top);
 
-$.jScrollability([
-    {
-        'selector': '.text-image-oc',
-        'start': 1200,
-        'trigger': true,
-        'duration': 1000,
-        'fn': function($el,pcnt) {
-            $el.show();
-            $el.addClass('magictime tinLeftIn');
-        }
-    }
-]);
+initScrollAnimation();
 
-$.jScrollability([
-    {
-        'selector': '.img-accrobranche',
-        'start': 1300,
-        'trigger': true,
-        'duration': 3000,
-        'fn': function($el,pcnt) {
-            $el.show();
-            $el.addClass('magictime spaceInUp');
+function initScrollAnimation () {
+
+    var introBlock = $('.intro-block');
+    var tyroBlock = $('.tyro');
+
+    $.jScrollability([
+        {
+            'selector': '.img-accrobranche',
+            'start': introBlock.offset().top + 200,
+            'trigger': true,
+            'duration': 1000,
+            'fn': function($el,pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime spaceInUp');
+            }
+        },
+        {
+            'selector': '.text-image-oc',
+            'start': introBlock.offset().top + 300,
+            'trigger': true,
+            'duration': 3000,
+            'fn': function($el,pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime tinLeftIn');
+            }
+        },
+        {
+            'selector': '.accrobranche-logo',
+            'start': introBlock.offset().top + 400,
+            'trigger': true,
+            'duration': 3000,
+            'fn': function($el,pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime slideLeftReturn');
+            }
+        },
+        {
+            'selector': '.accroche-hauteur',
+            'start': introBlock.offset().top + 600,
+            'trigger': true,
+            'duration': 3000,
+            'fn': function($el,pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime vanishIn');
+            }
+        },
+        {
+            'selector': '.accroche-enfant',
+            'start': $('.tyro').offset().top + 300,
+            'trigger': true,
+            'duration': 3000,
+            'fn': function($el,pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime vanishIn');
+            }
+        },
+        {
+            'selector': '#nb-tyro',
+            'start': tyroBlock.offset().top + 200,
+            'trigger': true,
+            'duration': 1000,
+            'fn': function($el,pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime twisterInUp');
+                var nbTyro = new CountUp('nb-tyro', 0, 3);
+                nbTyro.start(function () {
+                    txt = $('.block-nb-tyro .text');
+                    txt.css("visibility", "visible");
+                    txt.addClass('magictime vanishIn');
+                    equal = $('#equal');
+                    equal.css("visibility", "visible");
+                    equal.addClass('magictime tinRightIn');
+
+                    distance = $('#distance');
+                    distance.css("visibility", "visible");
+                    distance.addClass('magictime twisterInUp');
+
+                    var distance = new CountUp('distance', 0, 700);
+                    distance.start(function () {
+                        txtDistance = $('.block-distance .text');
+                        txtDistance.css("visibility", "visible");
+                        txtDistance.addClass('magictime vanishIn');
+
+                        plus = $('#plus');
+                        setTimeout(function(){
+                            plus.css("visibility", "visible");
+                            plus.addClass('magictime foolishIn');
+                        }, 600);
+
+                        hauteur = $('#hauteur');
+                        hauteur.css("visibility", "visible");
+                        hauteur.addClass('magictime twisterInUp');
+
+                        var hauteur = new CountUp('hauteur', 0, 25);
+                        hauteur.start(function () {
+                            txtHauteur = $('.block-hauteur .text');
+                            txtHauteur.css("visibility", "visible");
+                            txtHauteur.addClass('magictime vanishIn');
+                        })
+
+                    });
+                });
+                
+            }
         }
-    }
-]);
+    ]);
+};

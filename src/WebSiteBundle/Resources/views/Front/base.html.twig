@@ -21,85 +21,6 @@
     <![endif]-->
 {% endblock %}
 
-{% block stylesheets %}
-    <style>
-        .body {
-            background-color: #f3f3f3;
-        }
-
-        div.accrobranche-title {
-            vertical-align: top;
-            max-width: 62%;
-            display: inline-block;
-            margin-right: 0.75em
-        }
-
-        .img-accrobranche {
-            margin-top: 20px;
-        }
-
-        .accrobranche-logo {
-            display: inline-block;
-            max-width: 26%;
-            height: 425px;
-            float: left;
-        }
-
-        .accrobranche-logo img {
-            height: 480px;
-        }
-
-        div.laser-tab {
-            display: inline-block;
-            vertical-align: top;
-            position: relative;
-            margin-right: 10px;
-            display: inline-block;
-            height: 47px;
-            width: 47px;
-        }
-
-        div.label-laser-tab {
-            display: inline-block;
-            margin-top: 16px;
-        }
-
-        a.laser-tab {
-            padding: 19px 13px 20px 5px !important;
-            padding-top: 18px;
-            text-align: center;
-        }
-
-        * {
-            margin: 0; padding: 0;
-        }
-
-        #container {
-            overflow: hidden;
-            height: 100vh;
-            background: #edeae8;
-            position: relative;
-        }
-
-        video {
-            position: absolute;
-            width:100%;
-
-            /* Vertical and Horizontal center*/
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        @media screen and (max-device-width: 800px) {
-            html {
-                background: #000 no-repeat center center fixed;
-            }
-            #bgvid {
-                display: none;
-            }
-        }
-    </style>
-{% endblock %}
 {% block body %}
     {% trans_default_domain "traduction" %}
     <section id="content">
@@ -177,8 +98,8 @@
         <script src="{{ asset('front/js/jquery.js') }}"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('front/js/bg-video-plugin.js') }}"></script>
         <script src="{{ asset('front/js/jScrollability.min.js') }}"></script>
+        <script src="{{ asset('front/js/countUp.js') }}"></script>
         <script src="{{ asset('front/js/home-animation.js') }}"></script>
     {% endblock %}
 

@@ -3,13 +3,13 @@
         Accueil
     {% endblock %}
 {% block video %}
-    <div class="block-video" id="container">
-        <video playsinline autoplay muted loop poster="{{ asset('front/img/loader.gif') }}" id="bgvid">
+    <div class="block-video crt-parallaxvideo" id="container">
+        <video playsinline autoplay muted loop poster="{{ asset('front/img/loader.gif') }}" class="parallax" id="bgvid">
             <source src="{{ asset('front/video/bbb.mp4') }}" type="video/mp4">
             <source src="{{ asset('front/video/bbb.webm') }}" type="video/webm">
         </video>
-        <div id="arrow-rotate-down"><a id="circle-button" class="hvr-grow" href="#">Next Section</a></div>
     </div>
+    <div id="arrow-rotate-down"><a id="circle-button" class="hvr-grow" href="#">Next Section</a></div>
 {% endblock %}
 {% block content %}
     {% trans_default_domain "traduction" %}
@@ -25,23 +25,107 @@
         </div>
     </div>
     <div class="row">
-        <div class="box">
-            <div class="col-lg-12 text-center text-yellow">
+        <div class="red-box">
+            <div class="col-lg-12 text-center text-yellow accroche-hauteur accroche">
                 <h1 class="brand-name">{{ 'index.oc_hauteur'|trans }} !</h1>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="parallax block-hauteur"></div>
+        <div class="parallax block-img-hauteur"></div>
     </div>
     <div class="row">
-        <div class="tarif">
-
+        <div class="tyro text-center col-md-12">
+            <div class="info-txt-anime block-nb-tyro text-center col-md-2 col-md-offset-2">
+                <div id="nb-tyro" class="nb-info-anime">
+                    0
+                </div>
+                <div class="text"> Tyro Géantes<br>d'affilé</div>
+            </div>
+            <div class="equal math-separator text-center info-txt-anime col-md-1">
+                <div id="equal" class="math-insigne">
+                    =
+                </div>
+            </div>
+            <div class="info-txt-anime block-distance text-center col-md-2">
+                <div id="distance" class=" nb-info-anime">
+                    0
+                </div>
+                <div class="text">mètres <br> de Tyrolienne</div>
+            </div>
+            <div class="plus text-center math-separator info-txt-anime col-md-1">
+                <div id="plus" class="math-insigne">
+                    +
+                </div>
+            </div>
+            <div class="info-txt-anime block-hauteur text-center col-md-2">
+                <div id="hauteur" class=" nb-info-anime">
+                    0
+                </div>
+                <div class="text">mètres <br> de hauteur</div>
+            </div>
         </div>
     </div>
-
-
-
+    <div class="row">
+        <div class="red-box">
+            <div class="col-lg-12 text-center text-yellow accroche-enfant accroche">
+                <h1 class="brand-name"> PARTEZ A l'AVENTURE !</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="parallax block-img-enfant"></div>
+    </div>
+    <div class="row">
+        <div class="red-box text-yellow accroche-enfant accroche">
+            <div class="yellow-box col-lg-6">
+                <div class="text-center">
+                    <h1>{{ 'parcours.nos_parcours_enfant'|trans }} :</h1>
+                    <br>
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="text-yellow">{{ 'parcours.parcours_pour_enfant'|trans }}:</h4>
+                    <p>
+                        {{ 'parcours.desc_parcours_enfant'|trans|raw }}
+                    </p>
+                    <h4 class="text-yellow"> {{ 'parcours.les_parcours'|trans }} :</h4>
+                    <p>
+                        {{ 'parcours.desc_details_enfant'|trans|raw }}
+                    </p>
+                </div>
+                <div class="col-lg-12">
+                    <p>
+                        {{ 'parcours.desc_accroche_enfant'|trans|raw }}
+                    </p>
+                </div>
+            </div>
+            <div class="red-box col-lg-6">
+                <div class="text-center">
+                    <h3>{{ 'parcours.nos_parcours_grands'|trans }} :</h3>
+                    <br>
+                </div>
+                <div class="col-lg-12">
+                        <h4 class="text-yellow">{{ 'parcours.parcours_pour_grands'|trans }} :</h4>
+                        <p>
+                            <strong>
+                                {{ 'parcours.desc_grands_parcours'|trans }}
+                            </strong>
+                        </p>
+                        <p>
+                            {{ 'parcours.desc_tyro'|trans }}
+                        </p>
+                </div>
+                <div class="col-lg-12">
+                    <p>
+                        {{ 'parcours.desc_details_parcours'|trans }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="parallax block-img-laser"></div>
+    </div>
     {#
     <div class="row">
             <div class="box">

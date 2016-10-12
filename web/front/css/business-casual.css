@@ -95,14 +95,15 @@ hr {
     border-color: #999999;
 }
 
-.box {
+.red-box {
     padding: 30px 15px;
     background: #fff;
-    background: rgba(124,0,0,0.9);
+    background: rgba(124,0,0,1);
 }
 
-.box p {
+.red-box p {
     color: #ffffff;
+    padding-left: 40px;
 }
 
 .intro-text {
@@ -124,8 +125,8 @@ hr {
 }
 
 footer {
-    background: #fff;
-    background: rgba(124,0,0,0.9);
+    height: 800px;
+    background: #e8d069;
 }
 
 footer p {
@@ -208,6 +209,7 @@ p.text-forfait {
     font-size: 0.7em;
     position: relative;
     text-transform: uppercase;
+    visibility: hidden;
 }
 
 h2.text-image-oc {
@@ -292,8 +294,77 @@ span.text-image {
     }
 }
 
+.body {
+    background-color: #f3f3f3;
+}
+
+div.accrobranche-title {
+    vertical-align: top;
+    max-width: 62%;
+    display: inline-block;
+    margin-right: 0.75em
+}
+
+.img-accrobranche {
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+.accrobranche-logo {
+    display: inline-block;
+    max-width: 26%;
+    height: 425px;
+    float: left;
+    visibility: hidden;
+}
+
+.accrobranche-logo img {
+    height: 480px;
+}
+
+div.laser-tab {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+    height: 47px;
+    width: 47px;
+}
+
+div.label-laser-tab {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+a.laser-tab {
+    padding: 19px 13px 20px 5px !important;
+    padding-top: 18px;
+    text-align: center;
+}
+
+* {
+    margin: 0; padding: 0;
+}
+
+#container {
+    overflow: hidden;
+    height: 100vh;
+    background: #edeae8;
+    position: relative;
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+        background: #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}
+
 @media screen and (min-width:1200px) {
-    .box:after {
+    .red-box:after {
         content: '';
         display: table;
         clear: both;
@@ -308,6 +379,12 @@ span.text-image {
     .block-forfait {
         right: 25px;
         position: relative;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .math-separator {
+        top:-55px !important;
     }
 }
 
@@ -359,21 +436,30 @@ h3.cb-message {
     height: 400px;
 }
 
+.accroche {
+    visibility: hidden;
+
+}
+
 @media (max-width: 992px) {
     .navbar-nav {
         font-size: 0.74em;
     }
 }
 
-.tarif {
-    background-color: #FFFFFF;
-    height: 500px;
+.block-img-hauteur {
+    background-image: url("../../front/img/vide-hauteur.jpg");
+    height: 70vh;
 }
 
-.block-hauteur {
-    /* The image used */
-    background-image: url("../../front/img/vide-hauteur.jpg");
-    /* Set a specific height */
+.block-img-enfant {
+    background-image: url("../../front/img/enfant.jpg");
+    height: 70vh;
+}
+
+
+.block-img-laser {
+    background-image: url("../../front/img/laser.jpg");
     height: 70vh;
 }
 
@@ -383,4 +469,68 @@ h3.cb-message {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.crt-parallaxvideo{
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.crt-parallaxvideo video{
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top:0;
+    z-index: -100;
+}
+
+.block-video {
+    z-index: -100;
+}
+
+.tyro {
+    background-color: #e8d069;
+    padding-bottom: 25px;
+}
+
+.yellow-box {
+    background-color: #e8d069;
+    padding: 30px 15px;
+}
+
+.yellow-box h1, .yellow-box h2, .yellow-box h3, .yellow-box h4 {
+    color: rgba(124,0,0,1);
+}
+
+.yellow-box p {
+    color: #1c2919;
+    padding-left: 40px;
+}
+
+
+.nb-info-anime {
+    font-size: 4em;
+    visibility: hidden;
+}
+
+.info-txt-anime {
+    display: inline-block;
+    font-family: Berlin;
+    color: #1c2919;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 200%;
+}
+
+.math-insigne {
+    font-size: 400%;
+    visibility: hidden;
+}
+
+.math-separator {
+    top:70px;
+}
+
+.info-txt-anime .text {
+    visibility: hidden;
 }
