@@ -46,7 +46,7 @@ function initScrollAnimation () {
             }
         },
         {
-            'selector': '.accroche-hauteur',
+            'selector': '.accroche-hauteur .text',
             'start': introBlock.offset().top + 600,
             'trigger': true,
             'duration': 3000,
@@ -56,7 +56,7 @@ function initScrollAnimation () {
             }
         },
         {
-            'selector': '.accroche-enfant',
+            'selector': '.accroche-enfant .text',
             'start': $('.tyro').offset().top + 300,
             'trigger': true,
             'duration': 3000,
@@ -66,14 +66,28 @@ function initScrollAnimation () {
             }
         },
         {
+            'selector': '.section-txt-parcours',
+            'start': $('.section-txt-parcours').offset().top + 200,
+            'trigger': true,
+            'duration': 3000,
+            'fn': function($el, pcnt) {
+                txtLeft = $('.section-txt-parcours .enfant');
+                txtRight = $('.section-txt-parcours .adulte');
+
+                $('.section-txt-parcours .col-md-12').css("visibility", "visible");
+                $('.section-txt-parcours .col-md-12').addClass('magictime slideDownReturn');
+
+            }
+        },
+        {
             'selector': '#nb-tyro',
-            'start': tyroBlock.offset().top + 200,
+            'start': tyroBlock.offset().top + 100,
             'trigger': true,
             'duration': 1000,
             'fn': function($el,pcnt) {
                 $el.css("visibility", "visible");
                 $el.addClass('magictime twisterInUp');
-                var nbTyro = new CountUp('nb-tyro', 0, 3);
+                var nbTyro = new CountUp('nb-tyro', 0, 3, 0, 1);
                 nbTyro.start(function () {
                     txt = $('.block-nb-tyro .text');
                     txt.css("visibility", "visible");
@@ -102,7 +116,7 @@ function initScrollAnimation () {
                         hauteur.css("visibility", "visible");
                         hauteur.addClass('magictime twisterInUp');
 
-                        var hauteur = new CountUp('hauteur', 0, 25);
+                        var hauteur = new CountUp('hauteur', 0, 30);
                         hauteur.start(function () {
                             txtHauteur = $('.block-hauteur .text');
                             txtHauteur.css("visibility", "visible");

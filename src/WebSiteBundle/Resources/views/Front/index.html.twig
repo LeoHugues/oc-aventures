@@ -4,7 +4,7 @@
     {% endblock %}
 {% block video %}
     <div class="block-video crt-parallaxvideo" id="container">
-        <video playsinline autoplay muted loop poster="{{ asset('front/img/loader.gif') }}" class="parallax" id="bgvid">
+        <video playsinline autoplay muted loop class="parallax" id="bgvid">
             <source src="{{ asset('front/video/bbb.mp4') }}" type="video/mp4">
             <source src="{{ asset('front/video/bbb.webm') }}" type="video/webm">
         </video>
@@ -26,8 +26,8 @@
     </div>
     <div class="row">
         <div class="red-box">
-            <div class="col-lg-12 text-center text-yellow accroche-hauteur accroche">
-                <h1 class="brand-name">{{ 'index.oc_hauteur'|trans }} !</h1>
+            <div class="text-center text-yellow accroche-hauteur accroche">
+                <div class="text">{{ 'index.oc_hauteur'|trans }} !</div>
             </div>
         </div>
     </div>
@@ -67,9 +67,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="red-box">
-            <div class="col-lg-12 text-center text-yellow accroche-enfant accroche">
-                <h1 class="brand-name"> PARTEZ A l'AVENTURE !</h1>
+        <div class="red-box col-xs-12">
+            <div class="col-xs-6 col-xs-offset-3 text-center text-yellow accroche-enfant accroche">
+                <div class="text"> PARTEZ A l'AVENTURE !</div>
             </div>
         </div>
     </div>
@@ -77,54 +77,64 @@
         <div class="parallax block-img-enfant"></div>
     </div>
     <div class="row">
-        <div class="red-box text-yellow accroche-enfant accroche">
-            <div class="yellow-box col-lg-6">
-                <div class="text-center">
-                    <h1>{{ 'parcours.nos_parcours_enfant'|trans }} :</h1>
-                    <br>
-                </div>
-                <div class="col-lg-12">
-                    <h4 class="text-yellow">{{ 'parcours.parcours_pour_enfant'|trans }}:</h4>
-                    <p>
-                        {{ 'parcours.desc_parcours_enfant'|trans|raw }}
-                    </p>
-                    <h4 class="text-yellow"> {{ 'parcours.les_parcours'|trans }} :</h4>
-                    <p>
-                        {{ 'parcours.desc_details_enfant'|trans|raw }}
-                    </p>
-                </div>
-                <div class="col-lg-12">
-                    <p>
-                        {{ 'parcours.desc_accroche_enfant'|trans|raw }}
-                    </p>
+        <div class="section-txt-parcours col-xs-12">
+            <div class="yellow-box col-md-6">
+                <div class="col-md-12 enfant">
+                    <div class="text-center">
+                        <h1>{{ 'parcours.nos_parcours_enfant'|trans }} :</h1>
+                        <br>
+                    </div>
+                    <div class="col-md-12">
+                        <h4 class="text-yellow">{{ 'parcours.parcours_pour_enfant'|trans }}:</h4>
+                        <p>
+                            {{ 'parcours.desc_parcours_enfant'|trans|raw }}
+                        </p>
+                        <h4 class="text-yellow"> {{ 'parcours.les_parcours'|trans }} :</h4>
+                        <p>
+                            {{ 'parcours.desc_details_enfant'|trans|raw }}
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p>
+                            {{ 'parcours.desc_accroche_enfant'|trans|raw }}
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="red-box col-lg-6">
-                <div class="text-center">
-                    <h3>{{ 'parcours.nos_parcours_grands'|trans }} :</h3>
-                    <br>
-                </div>
-                <div class="col-lg-12">
-                        <h4 class="text-yellow">{{ 'parcours.parcours_pour_grands'|trans }} :</h4>
-                        <p>
-                            <strong>
-                                {{ 'parcours.desc_grands_parcours'|trans }}
-                            </strong>
-                        </p>
-                        <p>
-                            {{ 'parcours.desc_tyro'|trans }}
-                        </p>
-                </div>
-                <div class="col-lg-12">
-                    <p>
-                        {{ 'parcours.desc_details_parcours'|trans }}
-                    </p>
+            <div class="red-box col-md-6">
+                <div class="col-md-12">
+                    <div class="col-md-12 adulte">
+                        <div class="text-center">
+                            <h1 class="text-yellow">{{ 'parcours.nos_parcours_grands'|trans }} :</h1>
+                            <br>
+                        </div>
+                        <div class="col-md-12">
+                            <h4 class="text-yellow">{{ 'parcours.parcours_pour_grands'|trans }} :</h4>
+                            <p>
+                                <strong>
+                                    {{ 'parcours.desc_grands_parcours'|trans }}
+                                </strong>
+                            </p>
+                            <p>
+                                {{ 'parcours.desc_tyro'|trans }}
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <p>
+                                {{ 'parcours.desc_details_parcours'|trans }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="parallax block-img-laser"></div>
+        <div class="parallax block-img-laser">
+            <div class="col-xs-6 col-xs-offset-3 text-center text-yellow accroche-laser accroche">
+                <div class="text"> Decouvrez en notre nouvelle activite en exclusivite !</div>
+            </div>
+        </div>
     </div>
     {#
     <div class="row">
