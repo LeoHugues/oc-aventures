@@ -106,13 +106,6 @@ hr {
     padding-left: 40px;
 }
 
-.intro-text {
-    text-transform: uppercase;
-    font-size: 1.25em;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
 .img-border {
     float: none;
     margin: 0 auto 0;
@@ -543,4 +536,32 @@ h3.cb-message {
 
 .section-txt-parcours .col-md-12 {
     visibility: hidden;
+}
+
+.block-img-laser .intro-text {
+    visibility: hidden;
+}
+
+.block-img-laser .info-equipement {
+    visibility: hidden;
+    font-family: "Dennes-Old";
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 115%;
+}
+
+.block-img-laser .text {
+    font-size: 3.5em !important;
+}
+
+.block-img-laser .text {
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+#nb-equipement {
+    visibility: hidden;
+    font-size: 7em;
 }

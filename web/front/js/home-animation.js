@@ -80,6 +80,33 @@ function initScrollAnimation () {
             }
         },
         {
+            'selector': '.accroche-laser .intro-text',
+            'start': $('.block-img-laser').offset().top + 300,
+            'trigger': true,
+            'duration': 3000,
+            'fn': function($el, pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime slideDownReturn');
+            }
+        },
+        {
+            'selector': '#nb-equipement',
+            'start': $('.block-img-laser').offset().top + 450,
+            'trigger': true,
+            'duration': 1000,
+            'fn': function($el, pcnt) {
+                $el.css("visibility", "visible");
+                $el.addClass('magictime tinLeftIn');
+
+                var hauteur = new CountUp('nb-equipement', 0, 10, 0, 1);
+                hauteur.start(function () {
+                    txtEquipement= $('.block-img-laser .info-equipement');
+                    txtEquipement.css("visibility", "visible");
+                    txtEquipement.addClass('magictime vanishIn');
+                })
+            }
+        },
+        {
             'selector': '#nb-tyro',
             'start': tyroBlock.offset().top + 100,
             'trigger': true,
