@@ -4,15 +4,20 @@
     {% endblock %}
 {% block video %}
     <div class="block-video crt-parallaxvideo" id="container">
-        <video playsinline autoplay muted loop class="parallax" id="bgvid">
+    <div class="video-background">
+    <div class="video-foreground">
+{#        <video playsinline autoplay muted loop class="parallax" id="bgvid">
             <source src="{{ asset('front/video/bbb.mp4') }}" type="video/mp4">
             <source src="{{ asset('front/video/bbb.webm') }}" type="video/webm">
-        </video>
-    </div>
+        </video>#}
+
+        <iframe src="https://www.youtube.com/embed/YXb3shFMu3w?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1&amp;" frameborder="0" allowfullscreen></iframe>
+    </div></div></div>
     <div id="arrow-rotate-down"><a id="circle-button" class="hvr-grow" href="#">Next Section</a></div>
 {% endblock %}
 {% block content %}
     {% trans_default_domain "traduction" %}
+    {% set baseImgUrl = "front/images/gallery/" %}
     <div class="intro-block parallax">
         <div class="brand image">
             <div class="img-responsive accrobranche-logo">
@@ -32,7 +37,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="parallax block-img-hauteur"></div>
+        <div class="parallax block-img-hauteur" style='background-image: url({{ asset(baseImgUrl ~ image.imgBlock2.image) }});'></div>
     </div>
     <div class="row">
         <div class="tyro text-center col-md-12">
@@ -74,7 +79,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="parallax block-img-enfant"></div>
+        <div class="parallax block-img-enfant" style='background-image: url({{ asset(baseImgUrl ~ image.imgBlock3.image) }});'></div>
     </div>
     <div class="row">
         <div class="section-txt-parcours col-xs-12">
@@ -130,8 +135,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="parallax block-img-laser">
-            <div class="col-xs-6 col-xs-offset-3 text-center text-yellow accroche-laser accroche">
+        <div class="parallax block-img-laser" style='background-image: url({{ asset(baseImgUrl ~ image.imgBlock4.image) }});'>
+            <div class="col-xs-12 text-center text-yellow accroche-laser accroche">
                 <h1 class="text intro-text"> Decouvrez en notre nouvelle activite en exclusivite !</h1>
                 <div class="info-txt-anime text-center">
                     <div id="nb-equipement" class="text-yellow">
@@ -142,6 +147,150 @@
             </div>
         </div>
     </div>
+    <div class="row tarifs">
+        <div class="red-box col-md-12">
+            <div class="text-center text-yellow">
+                <h1> {{ 'tarifs.Titre'|trans|raw }}</h1>
+                <br>
+            </div>
+            <div class="col-lg-5 col-lg-offset-1">
+                <h3 class="text-center text-yellow">
+                    <span>Tarifs Accrobranche</span>
+                </h3><br>
+                <div class="block block-forfait">
+                    <div class="text-yellow">
+                        <label class="label-img1 text-center">
+                            {{ tarifs.F1Prix }} €
+                        </label>
+                    <span class="text-yellow text-header">
+                        {{ 'tarifs.forfait1'|trans|raw }}
+                    </span>
+                        <label class="label-img5 text-center label-age">
+                            {{ tarifs.F1Age }} {{ 'tarifs.age'|trans|raw }}
+                        </label>
+                    </div>
+                    <p class="text-forfait">
+                        {{ 'tarifs.parcours1'|trans({'%age%': tarifs.F1Age })|raw }}
+                    </p>
+                </div>
+
+                <div class="block block-forfait">
+                    <div class="text-yellow">
+                        <label class="label-img1 text-center">
+                            {{ tarifs.F2Prix }} €
+                        </label>
+                    <span class="text-yellow text-header">
+                        {{ 'tarifs.forfait2'|trans|raw }}
+                    </span>
+                        <label class="label-img5 text-center label-age">
+                            {{ tarifs.F2Age }} {{ 'tarifs.age'|trans|raw }}
+                        </label>
+                    </div>
+                    <p class="text-forfait">
+                        {{ 'tarifs.parcours2'|trans({'%age%': tarifs.F2Age })|raw }}
+                    </p>
+                </div>
+
+                <div class="block block-forfait">
+                    <div class="text-yellow">
+                        <label class="label-img1 text-center">
+                            {{ tarifs.F3Prix }} €
+                        </label>
+                    <span class="text-yellow text-header">
+                        {{ 'tarifs.forfait3'|trans|raw }}
+                    </span>
+                        <label class="label-img5 text-center label-age">
+                            {{ tarifs.F3Age }} {{ 'tarifs.age'|trans|raw }}
+                        </label>
+                    </div>
+                    <p class="text-forfait">
+                        {{ 'tarifs.parcours3'|trans({'%age%': tarifs.F3Age })|raw }}
+                    </p>
+                </div>
+
+                <div class="block block-forfait">
+                    <div class="text-yellow">
+                        <label class="label-img1 text-center">
+                            {{ tarifs.F4Prix }} €
+                        </label>
+                    <span class="text-yellow text-header">
+                         {{ 'tarifs.forfait4'|trans|raw }}
+                    </span>
+                        <label class="label-img5 text-center label-age">
+                            +{{ tarifs.F4Poids }}kg
+                        </label>
+                    </div>
+                    <p class="text-forfait">
+                        {{ 'tarifs.parcours4'|trans({'%poids%': tarifs.F4Poids })|raw }}
+                    </p>
+                </div>
+                <label class="">{{ 'tarifs.temps_activite'|trans|raw }}</label>
+            </div>
+            <div class="col-lg.-5">
+                <h3 class="text-center text-yellow">
+                    <span>Tarifs Laser Game</span>
+                </h3><br>
+                <div class="block block-forfait">
+                    <div class="text-yellow">
+                        <label class="label-img-viseur text-center">
+                            {{ tarifs.FLaser1 }} €
+                        </label>
+                    <span class="text-yellow text-header">
+                        {{ 'tarifs.forfait_laser_1'|trans|raw }}
+                    </span>
+                        <label class="label-img5 text-center label-age">
+                            {{ tarifs.FLaserAge }} {{ 'tarifs.age'|trans|raw }}
+                        </label>
+                    </div>
+                    <p class="text-forfait">
+                        {{ 'tarifs.forfait_laser_desc_1'|trans|raw }}
+                    </p>
+                </div>
+                <div class="block block-forfait">
+                    <div class="text-yellow">
+                        <label class="label-img-viseur text-center">
+                            {{ tarifs.FLaser2 }} €
+                        </label>
+                    <span class="text-yellow text-header">
+                        {{ 'tarifs.forfait_laser_2'|trans|raw }}
+                    </span>
+                        <label class="label-img5 text-center label-age">
+                            {{ tarifs.FLaserAge }} {{ 'tarifs.age'|trans|raw }}
+                        </label>
+                    </div>
+                    <p class="text-forfait">
+                        {{ 'tarifs.forfait_laser_desc_2'|trans|raw }}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="yellow-box col-xs-12">
+            <div class="col-lg-12 text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3 class="text-yellow">{{ 'tarifs.titre_paiement'|trans|raw }}</h3>
+                    <p>{{ 'tarifs.mode_paiement'|trans|raw }}</p>
+                    <div class="block">
+                        <img class="small-img" src="{{ asset('front/images/noCB.png') }}" alt="">
+                        <img class="" src="{{ asset('front/images/logo_ancv.png') }}" alt="">
+                    </div>
+                    <h3 class="text-yellow cb-message">{{ 'tarifs.pas_cb'|trans|raw }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" onClick="style.pointerEvents='none'">
+        <iframe
+                width="100%"
+                height="700px"
+                frameborder="0" style="border:0"
+                scrolling="0" marginheight="0" marginwidth="0"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d368878.9142554212!2d3.84058!3d43.7548686!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b40239cb28308b%3A0xd2c89522cf4dac40!2sOc+Aventures+-+Accrobranche!5e0!3m2!1sen!2sfr!4v1438606971056">
+        </iframe>
+    </div>
+
     {#
     <div class="row">
             <div class="box">

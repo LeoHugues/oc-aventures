@@ -91,19 +91,13 @@ class BackController extends Controller
     }
 
     /**
-     * @Route("/images/{page}", name="admin_images")
+     * @Route("/images", name="admin_images")
      */
-    public function imagesAction(Request $request, $page)
+    public function imagesAction(Request $request)
     {
-        $jsonPath = '../src/WebSiteBundle/Resources/JsonData/Image/' . $page .'.json';
+        $jsonPath = '../src/WebSiteBundle/Resources/JsonData/Image/accueil.json';
         $gallery = json_decode(file_get_contents($jsonPath), true);
-        if ($page == "accueil") {
-            $form = $this->createForm(new GalleryAccueilType(), $gallery);
-        } elseif($page == "plan") {
-            $form = $this->createForm(new PlanType(), $gallery);
-        } else {
-            $form = $this->createForm(new ParcoursType(), $gallery);
-        }
+        $form = $this->createForm(new GalleryAccueilType(), $gallery);
 
         $form->handleRequest($request);
         if ($form->isValid()) {
@@ -111,7 +105,7 @@ class BackController extends Controller
             file_put_contents($jsonPath, $jsonContent);
         }
 
-        return $this->render('WebSiteBundle:Back:images.html.twig', array('form' => $form->createView(), 'page' => $page));
+        return $this->render('WebSiteBundle:Back:images.html.twig', array('form' => $form->createView()));
     }
 
     /**

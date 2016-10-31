@@ -4,8 +4,7 @@
 {% endblock %}
 {% block content %}
     {% include "ComurImageBundle:Form:croppable_image_modal.html.twig"%}
-    <h1 class="text-center">Gestion images {{ page }}</h1><br><br>
-    {% if page == "accueil" %}
+    <h1 class="text-center">Gestion images</h1><br><br>
         <div class="col-sm-12">
             {{ form_start(form) }}
             <div class="col-sm-4">
@@ -20,35 +19,8 @@
                 <label> Image du block Accueil </label>
                 {{ form_widget(form.imgBlock4) }}
             </div>
-            <div class="col-sm-12">
-                <label> Sliders de la page d'accueil </label>
-                {{ form_widget(form.sliders) }}
-            </div>
             {{ form_end(form) }}
         </div>
-    {% elseif page == "plan" %}
-        <div class="col-sm-12">
-            {{ form_start(form) }}
-            <div class="col-sm-4">
-                <label>Plan du parc</label>
-                {{ form_widget(form.plan) }}
-            </div>
-            {{ form_end(form) }}
-        </div>
-    {% else %}
-        <div class="col-sm-12">
-            {{ form_start(form) }}
-            <div class="col-sm-4">
-                <label>Image du premier block</label>
-                {{ form_widget(form.imgBlock1) }}
-            </div>
-            <div class="col-sm-12">
-                <label> Sliders </label>
-                {{ form_widget(form.sliders) }}
-            </div>
-            {{ form_end(form) }}
-        </div>
-    {% endif %}
 {% endblock %}
 
 {% block baseJs %}
