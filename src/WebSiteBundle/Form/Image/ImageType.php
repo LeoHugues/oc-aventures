@@ -30,8 +30,8 @@ class ImageType extends AbstractType
                     'generateFilename'  => true          //optional
                 ),
                 'cropConfig' => array(
-                    'minWidth'      => 250,
-                    'minHeight'     => 250,
+                    'minWidth'      => 500,
+                    'minHeight'     => 500,
                     'aspectRatio'   => false,              //optional
                     'cropRoute'     => 'comur_api_crop',    //optional
                     'thumbs'        => array(                  //optional
