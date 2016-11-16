@@ -9,7 +9,11 @@ $('.accroche-enfant .red-box').css("height", $('.accroche-enfant .yellow-box').o
 
 initScrollAnimation();
 
-$.scrollSpeed(100, 800);
+// Tarifs
+
+$(".block-forfait label").hover(function () {
+    $(this).addClass("animated swing");
+});
 
 // Menu Hamburger
 
@@ -85,7 +89,7 @@ function initScrollAnimation () {
             'duration': 1000,
             'fn': function($el,pcnt) {
                 $el.css("visibility", "visible");
-                $el.addClass('magictime spaceInUp');
+                $el.addClass('animated fadeInLeftBig');
             }
         },
         {
@@ -95,7 +99,7 @@ function initScrollAnimation () {
             'duration': 3000,
             'fn': function($el,pcnt) {
                 $el.css("visibility", "visible");
-                $el.addClass('magictime tinLeftIn');
+                $el.addClass('animated fadeInUp');
             }
         },
         {
@@ -105,7 +109,7 @@ function initScrollAnimation () {
             'duration': 3000,
             'fn': function($el,pcnt) {
                 $el.css("visibility", "visible");
-                $el.addClass('magictime slideLeftReturn');
+                $el.addClass('animated fadeInLeft');
             }
         },
         {
@@ -115,7 +119,7 @@ function initScrollAnimation () {
             'duration': 3000,
             'fn': function($el,pcnt) {
                 $el.css("visibility", "visible");
-                $el.addClass('magictime vanishIn');
+                $el.addClass('animated rubberBand');
             }
         },
         {
@@ -128,7 +132,7 @@ function initScrollAnimation () {
                 txtRight = $('.section-txt-parcours .adulte');
 
                 $('.menu-burger').css("visibility", "visible");
-                $('.menu-burger').addClass('magictime twisterInUp');
+                $('.menu-burger').addClass('animated bounceInLeft');
 
             }
         },
@@ -139,7 +143,7 @@ function initScrollAnimation () {
             'duration': 3000,
             'fn': function($el,pcnt) {
                 $el.css("visibility", "visible");
-                $el.addClass('magictime vanishIn');
+                $el.addClass('animated rubberBand');
             }
         },
         {
@@ -152,7 +156,7 @@ function initScrollAnimation () {
                 txtRight = $('.section-txt-parcours .adulte');
 
                 $('.section-txt-parcours .col-md-12').css("visibility", "visible");
-                $('.section-txt-parcours .col-md-12').addClass('magictime slideDownReturn');
+                $('.section-txt-parcours .col-md-12').addClass('animated bounceInUp');
 
             }
         },
@@ -163,7 +167,7 @@ function initScrollAnimation () {
             'duration': 3000,
             'fn': function($el, pcnt) {
                 $el.css("visibility", "visible");
-                $el.addClass('magictime slideDownReturn');
+                $el.addClass('magictime bounceInUp');
             }
         },
         {
@@ -190,41 +194,41 @@ function initScrollAnimation () {
             'duration': 1000,
             'fn': function($el,pcnt) {
                 $el.css("visibility", "visible");
-                $el.addClass('magictime twisterInUp');
+                $el.addClass('animated bounceInDown');
                 var nbTyro = new CountUp('nb-tyro', 0, 3, 0, 1);
                 nbTyro.start(function () {
                     txt = $('.block-nb-tyro .text');
                     txt.css("visibility", "visible");
-                    txt.addClass('magictime vanishIn');
+                    txt.addClass('animated zoomIn');
                     equal = $('#equal');
                     equal.css("visibility", "visible");
-                    equal.addClass('magictime tinRightIn');
+                    equal.addClass('animated tada');
 
                     distance = $('#distance');
                     distance.css("visibility", "visible");
-                    distance.addClass('magictime twisterInUp');
+                    distance.addClass('animated bounceInDown');
 
                     var distance = new CountUp('distance', 0, 700);
                     distance.start(function () {
                         txtDistance = $('.block-distance .text');
                         txtDistance.css("visibility", "visible");
-                        txtDistance.addClass('magictime vanishIn');
+                        txtDistance.addClass('animated zoomIn');
 
                         plus = $('#plus');
                         setTimeout(function(){
                             plus.css("visibility", "visible");
-                            plus.addClass('magictime foolishIn');
+                            plus.addClass('animated tada');
                         }, 600);
 
                         hauteur = $('#hauteur');
                         hauteur.css("visibility", "visible");
-                        hauteur.addClass('magictime twisterInUp');
+                        hauteur.addClass('animated bounceInDown');
 
                         var hauteur = new CountUp('hauteur', 0, 30);
                         hauteur.start(function () {
                             txtHauteur = $('.block-hauteur .text');
                             txtHauteur.css("visibility", "visible");
-                            txtHauteur.addClass('magictime vanishIn');
+                            txtHauteur.addClass('animated zoomIn');
                         })
 
                     });
