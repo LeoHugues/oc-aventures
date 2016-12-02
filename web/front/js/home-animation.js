@@ -9,10 +9,16 @@ $('.accroche-enfant .red-box').css("height", $('.accroche-enfant .yellow-box').o
 
 initScrollAnimation();
 
-// Tarifs
+// Tarifs Animation
 
 $(".block-forfait label").hover(function () {
-    $(this).addClass("animated swing");
+    $(this).addClass("animated swing").delay( 800 );
+}, function() {
+    tmo = setTimeout(function() {
+        $(".block-forfait label").removeClass("animated swing");
+    }, 5000);
+}, function () {
+    clearTimeout(tmo);
 });
 
 // Menu Hamburger
