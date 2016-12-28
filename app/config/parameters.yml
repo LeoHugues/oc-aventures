@@ -10,7 +10,3 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
     mailer_user: les.hauts.de.cuculles@gmail.com
     mailer_password: null
-
-comur_image:
-    config:
-        jpeg_quality: 1000

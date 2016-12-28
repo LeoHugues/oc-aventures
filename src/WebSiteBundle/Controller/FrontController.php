@@ -36,7 +36,7 @@ class FrontController extends Controller {
             'fermeture' => $fermeture
         );
 
-        return $this->render('WebSiteBundle:Front:index.html.twig', array(
+        return $this->render('WebSiteBundle:Front:test-design-jordan.html.twig', array(
             'date' => $date,
             'image' => $image,
             'tarifs' => $tarifs,

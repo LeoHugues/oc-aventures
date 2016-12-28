@@ -1,0 +1,65 @@
+   <html>
+   <head>
+       <link href="{{ asset('front/css/bootstrap.min.css') }}" rel="stylesheet">
+       <style>
+           nav {
+               margin-bottom: 0px !important;
+               border: 0px !important;
+           }
+           nav div {
+               background-color: #9d261d;
+           }
+
+           a {
+               color: #e8d069 !important;
+               font-size: 25px;
+           }
+
+           @media (min-width: 768px) {
+               .navbar-nav {
+                   float: none;
+                   text-align: center;
+               }
+
+               .navbar-nav li {
+                   float: none;
+                   display: inline-block;
+               }
+           }
+       </style>
+   </head>
+   <body>
+   <img class="img-responsive header" style="width: 100%;" src="{{ asset('front/test-template-jordan/en_tete_partie_1.jpg') }}">
+   <nav class="navbar navbar-default">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <a class="navbar-brand" href="#">WebSiteName</a>
+           </div>
+           <ul class="nav navbar-nav">
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Page 1</a></li>
+               <li><a href="#">Page 2</a></li>
+               <li><a href="#">Page 3</a></li>
+           </ul>
+       </div>
+   </nav>
+   <img class="img-responsive" style="width: 100%;" src="{{ asset('front/test-template-jordan/tarfis.jpg') }}">
+   <div style="width: 100%;height: 1000px; background-color: #6b9311"></div>
+
+
+   <script src="{{ asset('front/js/jquery.js') }}"></script>
+   <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
+   <script type="text/javascript">
+       document.onscroll = function() {
+           if( $(window).scrollTop() > $('.header').height() ) {
+               $('nav').removeClass('navbar-static-top').addClass('navbar-fixed-top');
+               $('.navbar-nav').removeClass('float: none; text-align: center;')
+           }
+           else {
+               $('nav').removeClass('navbar-fixed-top').addClass('navbar-static-top');
+           }
+       };
+   </script>
+   </body>
+   </html>
+
