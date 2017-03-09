@@ -7,19 +7,13 @@
         <div class="col-sm-11 block-menu">
             <h1 class="text-center">Images</h1>
             <div class="col-sm-12 text-center btn">
-                <a href="{{ path('admin_images', {'page': "accueil"}) }}"> <img class="img-btn" src="{{ asset('back/img/home.png') }}"></a>
+                <a href="{{ path('admin_images') }}"> <img class="img-btn" src="{{ asset('back/img/image.png') }}"></a>
             </div>
-            <div class="col-sm-12 text-center btn">
-                <a href="{{ path('admin_images', {'page': "adulte"}) }}"> <img class="img-btn" src="{{ asset('back/img/adult.png') }}"></a>
-            </div>
-            <div class="col-sm-12 text-center btn">
-                <a href="{{ path('admin_images', {'page': "enfant"}) }}"> <img class="img-btn" src="{{ asset('back/img/kids-couple.png') }}"></a>
-            </div>
-            <div class="col-sm-12 text-center btn">
-                <a href="{{ path('admin_images', {'page': "plan"}) }}"> <img class="img-btn" src="{{ asset('back/img/map.png') }}"></a>
-            </div>
-            <div class="col-sm-12 text-center btn">
-                <a href="{{ path('admin_images', {'page': "laser"}) }}"> <img class="img-btn" src="{{ asset('back/img/target-with-circle.png') }}"></a>
+        </div>
+        <div class="col-sm-11 block-menu">
+            <h1 class="text-center">Ouvertures</h1>
+            <div class="col-sm-12 text-center">
+                <a href="{{ path('admin_date_ouvertures') }}"> <img class="img-btn" src="{{ asset('back/img/24-hours-open.png') }}"></a>
             </div>
         </div>
     </div>
@@ -51,12 +45,6 @@
                 <div class="col-sm-4">
                     <a href="{{ path('admin_text', {'lang' : 'de'}) }}"> <img class="img-btn" src="{{ asset('back/img/germany.png') }}"></a>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-5 block-menu">
-            <h1 class="text-center">Ouvertures</h1>
-            <div class="col-sm-12 text-center">
-                <a href="{{ path('admin_date_ouvertures') }}"> <img class="img-btn" src="{{ asset('back/img/24-hours-open.png') }}"></a>
             </div>
         </div>
     </div>

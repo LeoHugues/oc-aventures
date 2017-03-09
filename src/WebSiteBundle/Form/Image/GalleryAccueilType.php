@@ -25,10 +25,10 @@ class GalleryAccueilType extends AbstractType
             ->add('imgBlock2', new ImageType())
             ->add('imgBlock3', new ImageType())
             ->add('imgBlock4', new ImageType())
-            ->add('sliders', new GalleryType())
             ->add('enregistrer', 'submit', array(
                 'attr' => array(
-                    'class' => 'btn btn-default col-sm-4 col-sm-offset-4'
+                    'class' => 'btn btn-default col-sm-4 col-sm-offset-4',
+                    'style' => 'margin-top: 20px;',
                 )
             ))
         ;

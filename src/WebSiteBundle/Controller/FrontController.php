@@ -26,6 +26,7 @@ class FrontController extends Controller {
 
         $date = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Ouvertures.json'), true);
         $image = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/accueil.json'), true);
+        $tarifs = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Tarifs.json'), true);
 
         $ouverture = Carbon::createFromFormat('Y-m-d',  $date['ouverture']);
         $fermeture = Carbon::createFromFormat('Y-m-d',  $date['fermeture']);
@@ -35,9 +36,10 @@ class FrontController extends Controller {
             'fermeture' => $fermeture
         );
 
-        return $this->render('WebSiteBundle:Front:index.html.twig', array(
+        return $this->render('WebSiteBundle:Front:test-design-jordan.html.twig', array(
             'date' => $date,
-            'image' => $image
+            'image' => $image,
+            'tarifs' => $tarifs,
         ));
     }
 

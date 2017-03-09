@@ -6,14 +6,41 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% block head %}
         {% endblock %}
+        <style content="text/css">
+            body {
+                overflow: hidden;
+            }
+            .loader {
+                position : fixed;
+                z-index: 9999;
+                background : url('../../../front/img/loader.gif') 50% 50% no-repeat;
+                top : 0px;
+                left : 0px;
+                height : 100%;
+                width : 100%;
+                cursor : wait;
+                background-color: #e6af4b;
+            }
+        </style>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-    <div class="container">
-        {% block body %}{% endblock %}
+    <div class="loader"></div>
+    {% block video %}
+    {% endblock %}
+    <div class="body">
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
     </div>
     {% block baseJs %}{% endblock %}
     {% block javascripts %}{% endblock %}
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("1000");
+            $("body").css("overflow", "auto");
+        })
+    </script>
     </body>
 </html>
 

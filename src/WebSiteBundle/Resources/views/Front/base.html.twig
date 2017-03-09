@@ -6,10 +6,7 @@
 
     <!-- Custom CSS -->
     <link href="{{ asset('front/css/business-casual.css') }}" rel="stylesheet">
-
-    <!-- Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/css/animate.css') }}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,115 +16,12 @@
     <![endif]-->
 {% endblock %}
 
-{% block stylesheets %}
-    <style>
-        body {
-            background: url('{{ asset('front/images/bg1.jpg') }}') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        div.accrobranche-title {
-            vertical-align: top;
-            max-width: 62%;
-            display: inline-block;
-        }
-
-        .img-accrobranche {
-            margin-top: 51px;
-        }
-
-        .accrobranche-logo {
-            display: inline-block;
-            max-width: 26%;
-        }
-
-        div.laser-tab {
-            display: inline-block;
-            vertical-align: top;
-            position: relative;
-            margin-right: 10px;
-            display: inline-block;
-            height: 47px;
-            width: 47px;
-        }
-
-        div.label-laser-tab {
-            display: inline-block;
-            margin-top: 16px;
-        }
-
-        a.laser-tab {
-            padding: 19px 13px 20px 5px !important;
-            padding-top: 18px;
-            text-align: center;
-        }
-    </style>
-{% endblock %}
-
 {% block body %}
     {% trans_default_domain "traduction" %}
-    <div class="brand image">
-        <div class="img-responsive accrobranche-title">
-            <img class="img-responsive center-block img-accrobranche" src="{{ asset('front/images/font-accrobranche.png') }}" alt="">
-            <div class="text-image-oc text-image text-right"><span>OC'Aventures</span><br><span>Montpellier Nord</span></div>
-        </div>
-        <div class="img-responsive accrobranche-logo">
-            <img class="img-responsive center-block" src="{{ asset('front/images/oc-logo.png') }}" alt="">
-        </div>
-    </div>
-    <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <strong><h3 class="text-nowrap text-center">OC'AVENRURES</h3></strong>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="{{ path('website_index', {'_locale': app.request.getLocale() }) }}">{{ 'header.accueil'|trans }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}">{{ 'header.parcours'|trans }}</a>
-                    </li>
-                    <li>
-                        <a class="laser-tab" href="{{ path('website_laser', {'_locale': app.request.getLocale() }) }}">
-                            <div class="laser-tab label-img-viseur"></div>
-                            <div class="label-laser-tab">{{ 'header.laser_game'|trans }}</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ path('website_horaires', {'_locale': app.request.getLocale() }) }}">{{ 'header.horaires_dates'|trans }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('website_tarif', {'_locale': app.request.getLocale() }) }}">{{ 'header.tarifs'|trans }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('website_contact', {'_locale': app.request.getLocale() }) }}">{{ 'header.contact'|trans }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('website_lien', {'_locale': app.request.getLocale() }) }}">{{ 'header.liens'|trans }}</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <section id="content">
     {% block content %}
     {% endblock %}
-
+    </section>
     <footer>
         <div class="container">
             <div class="row">
@@ -138,17 +32,18 @@
         </div>
     </footer>
 
-    {% block javascript %}
-        <!-- jQuery -->
+    {% block baseJs %}
         <script src="{{ asset('front/js/jquery.js') }}"></script>
-        <!-- Bootstrap Core JavaScript -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
         <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
-        <script>
-            $(document).ready(function() {
-                jQuery('.carousel').carousel({
-                    interval: 5000 //changes the speed
-                })
-            });
-        </script>
+        <script src="{{ asset('front/js/jScrollability.min.js') }}"></script>
+        <script src="{{ asset('front/js/parallax.min.js') }}"></script>
+        <script src="{{ asset('front/js/countUp.js') }}"></script>
+        <script src="{{ asset('front/js/home-animation.js') }}"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?RYCHENgvaex&callback=initialize"
+                async defer></script>
     {% endblock %}
+
 {% endblock %}
