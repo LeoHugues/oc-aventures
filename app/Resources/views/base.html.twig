@@ -26,20 +26,19 @@
     </head>
     <body>
     <div class="loader"></div>
-    {% block video %}
-    {% endblock %}
-    <div class="body">
-        <div class="container">
-            {% block body %}{% endblock %}
-        </div>
-    </div>
+    {% block body %}{% endblock %}
+
     {% block baseJs %}{% endblock %}
     {% block javascripts %}{% endblock %}
     <script type="text/javascript">
         $(window).load(function() {
             $(".loader").fadeOut("1000");
             $("body").css("overflow", "auto");
-        })
+        });
+
+        var screenWidth = $('#parallax').width();
+
+        $('#parallax').css('height' , screenWidth / 1.04872622002);
     </script>
     </body>
 </html>

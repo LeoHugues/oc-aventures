@@ -1,0 +1,106 @@
+/** ============== Parallax =====================*/
+
+/* PARALLAX1 */
+
+.keyart, .keyart_layer {
+    padding-top: 100%
+}
+
+#parallax {
+    position: relative;
+    z-index: 10;
+}
+#nonparallax {
+    display: block;
+    display: none
+}
+
+#nonparallax {
+    background-image: url('../images/parralax1/Plan5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.keyart {
+    position: relative;
+    z-index: 10;
+}
+
+.keyart_layer {
+    background-repeat:no-repeat;
+    background-size:cover;
+    width: 100%;
+    position: absolute;
+}
+.keyart_layer.parallax {
+    position: fixed;
+}
+
+#keyart-6 {
+    background-image: url('../images/parralax1/Plan1.png');
+}
+#keyart-5 {
+    background-image: url('../images/parralax1/Plan2.png');
+}
+#keyart-4 {
+    background-image: url('../images/parralax1/Plan3.png');
+}
+#keyart-3 {
+    background-image: url('../images/parralax1/Plan4.png');
+}
+#keyart-2 {
+    background-image: url('../images/parralax1/Plan5.png');
+}
+#keyart-1 {
+    background-image: url('../images/parralax1/Plan6.png');
+}
+#keyart-0 {
+    background-image: url('../images/parralax1/Plan7.png');
+    background-color: #c3a41e;
+}
+#keyart-scrim {
+    background-color: #ffaf00;
+    opacity: 0;
+}
+
+
+/* MAIN STRUCTURE */
+
+.toprule {
+    background-color: #a34300;
+    height: 37px;
+    position: absolute;
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    .toprule {
+        display: none;
+    }
+
+    .pax #maincontain {
+        top: 0px !important;
+    }
+}
+
+#maincontain {
+    background-color: #210002;
+    position: relative;
+    z-index: 98;
+}
+
+.pax #maincontain {
+    top: 140px;
+}
+
+
+#main {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+    position: relative;
+    background-color: #c3a41e;
+}
