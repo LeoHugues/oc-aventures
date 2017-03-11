@@ -13,19 +13,24 @@
 
 {% block body %}
     {% trans_default_domain "traduction" %}
-   <!-- <ul class="navbar-top">
-        <li id="nav-company"><a href="http://www.camposanto.com"><strong>Campo Santo</strong></a></li>
-        <li id="nav-review"><a href="{{ path('website_index', {'_locale': app.request.getLocale() }) }}"><strong><span class="collapse">{{ 'header.accueil'|trans }}</span><</strong></a></li>
-        <li id="nav-store"><a href="{{ path('website_parcours', {'_locale': app.request.getLocale() }) }}"><strong><span class="collapse">{{ 'header.parcours'|trans }}</a></li>
-        <li id="nav-blog"><a href="{{ path('website_laser', {'_locale': app.request.getLocale() }) }}"><strong><span class="collapse">{{ 'header.laser_game'|trans }} </span></strong></a></li>
-        <li id="nav-game" class=" current"><a href="http://www.firewatchgame.com"><span class="collapse">Our Game: </span><strong>Firewatch</strong></a></li>
-    </ul> --!>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Parcours</a></li>
+                <li><a href="#">Forfait</a></li>
+                <li><a href="#">Plan du parc</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     {% block content %}
     {% endblock %}
 
     {% block javascript %}
         <!-- jQuery -->
         <script src="{{ asset('./front/js/jquery.js') }}"></script>
+        <script src="{{ asset('./front/js/bootstrap.js') }}"></script>
         <script src="{{ asset('./front/js/jquery-migrate.js') }}"></script>
         <script src="{{ asset('./front/js/magnifique.js') }}"></script>
         <script src="{{ asset('./front/js/mouse.wheel.js') }}"></script>
