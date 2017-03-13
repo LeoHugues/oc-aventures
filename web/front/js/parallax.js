@@ -1,29 +1,33 @@
 function castParallax() {
 
   var parallaxContainers = $('.parallax-container');
+  var heightContainers = [parallaxContainers[0].offsetHeight, parallaxContainers[1].offsetHeight];
 
   window.addEventListener("scroll", function(event){
 
     for (var j = 0; j < parallaxContainers.length; j++) {
-      var topParallaxContainer = this.pageYOffset - parallaxContainers[j].offsetTop;
+      var offsetTop = this.pageYOffset - parallaxContainers[j].offsetTop - 1000;
 
-      var heightContainer = parallaxContainers[j].offsetHeight;
-      if (topParallaxContainer >= 0 && topParallaxContainer < heightContainer) {
-        var layers = document.getElementsByClassName("parallax".concat((j+1).toString()));
-        var layer, speed, yPos;
-        for (var i = 0; i < layers.length; i++) {
-          layer = layers[i];
-          speed = layer.getAttribute('data-speed');
-          yPos = -(topParallaxContainer * speed / 100);
-          layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-          layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-        }
-        parallaxContainers[j].style.transform = 'translate3d(0px, ' + heightContainer - topParallaxContainer + 'px, 0px)';
+      var heightContainer = heightContainers[j];
+      if (j == 0 && this.pageYOffset < heightContainer) {
+        moveLayers(this.pageYOffset, j);
+      } else if (j == 1 && this.pageYOffset >= parallaxContainers[j].offsetTop - 200 && offsetTop < heightContainer) {
+        moveLayers(this.pageYOffset - parallaxContainers[j].offsetTop, j);
       }
     }
   });
+}
 
-
+function moveLayers(pageYOffset, numParallax) {
+  var layers = document.getElementsByClassName("parallax".concat((numParallax+1).toString()));
+  var layer, speed, yPos;
+  for (var i = 0; i < layers.length; i++) {
+    layer = layers[i];
+    speed = layer.getAttribute('data-speed');
+    yPos = -(pageYOffset * speed / 100);
+    layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+    layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+  }
 }
 
 function dispelParallax() {
@@ -39,10 +43,7 @@ function castSmoothScroll() {
   });
 }
 
-
-
 function startSite() {
-
   var platform = navigator.platform.toLowerCase();
   var userAgent = navigator.userAgent.toLowerCase();
 

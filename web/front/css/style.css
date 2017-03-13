@@ -2,6 +2,9 @@
 
 /* PARALLAX1 */
 
+.parallax-container {
+    height: 100vh;
+}
 .keyart, .keyart_layer {
     padding-top: 100%
 }
@@ -16,7 +19,7 @@
 }
 
 #nonparallax {
-    background-image: url('../images/parralax1/Plan5.png');
+    background-image: url('../images/parallax1/Plan5.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -37,28 +40,54 @@
     position: fixed;
 }
 
+/* Parallax 2*/
+#keyart2-6 {
+    background-image: url('../images/parallax2/Plan1.png');
+}
+#keyart2-5 {
+    background-image: url('../images/parallax2/Plan2.png');
+}
+#keyart2-4 {
+    background-image: url('../images/parallax2/Plan3.png');
+}
+#keyart2-3 {
+    background-image: url('../images/parallax2/Plan4.png');
+}
+#keyart2-2 {
+    background-image: url('../images/parallax2/Plan5.png');
+}
+#keyart2-1 {
+    background-image: url('../images/parallax2/Plan6.png');
+}
+#keyart2-0 {
+    background-image: url('../images/parallax2/Plan7.png');
+    background-color: #9ed8b0;
+}
+
+/* Parallax 1*/
 #keyart-6 {
-    background-image: url('../images/parralax1/Plan1.png');
+    background-image: url('../images/parallax1/Plan1.png');
 }
 #keyart-5 {
-    background-image: url('../images/parralax1/Plan2.png');
+    background-image: url('../images/parallax1/Plan2.png');
 }
 #keyart-4 {
-    background-image: url('../images/parralax1/Plan3.png');
+    background-image: url('../images/parallax1/Plan3.png');
 }
 #keyart-3 {
-    background-image: url('../images/parralax1/Plan4.png');
+    background-image: url('../images/parallax1/Plan4.png');
 }
 #keyart-2 {
-    background-image: url('../images/parralax1/Plan5.png');
+    background-image: url('../images/parallax1/Plan5.png');
 }
 #keyart-1 {
-    background-image: url('../images/parralax1/Plan6.png');
+    background-image: url('../images/parallax1/Plan6.png');
 }
 #keyart-0 {
-    background-image: url('../images/parralax1/Plan7.png');
-    background-color: #eddeab;
+    background-image: url('../images/parallax1/Plan7.png');
+    background-color: #000;
 }
+
 #keyart-scrim {
     background-color: #ffaf00;
     opacity: 0;
@@ -131,9 +160,15 @@ ul.navbar-nav li a{
 
 .header-block {
     background-color: #87200c;
-    font-size: 2.5em;
-    bottom: 4em;
+    font-size: 166%;
     color: #eddeab;
+    padding: 45px;
+    top: -127px;
+    position: absolute;
+}
+
+.block-parcours {
+    margin-top: 100px;
 }
 
 .parcours p {
@@ -149,11 +184,10 @@ ul.navbar-nav li a{
 }
 
 .btn-galery {
-    padding: 20px;
+    padding: 30px 30px;
     margin-top: 100px;
-    margin-bottom: 100px;
     background-color: #87200c;
-    font-size: 4em;
+    font-size: 3em;
     color: #eddeab;
 }
 .iframe-youtube iframe {
@@ -169,3 +203,6 @@ h2 {
     font-size: 45px;
 }
 
+.tarif-container {
+    background-color: #87200c;
+}
