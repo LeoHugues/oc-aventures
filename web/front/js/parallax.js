@@ -6,19 +6,21 @@ function castParallax() {
   window.addEventListener("scroll", function(event){
 
     for (var j = 0; j < parallaxContainers.length; j++) {
-      var offsetTop = this.pageYOffset - parallaxContainers[j].offsetTop - 1000;
-
       var heightContainer = heightContainers[j];
+      
+      // Si c'est le premier parallax et si on est toujours sur lui
       if (j == 0 && this.pageYOffset < heightContainer) {
-        moveLayers(this.pageYOffset, j);
-      } else if (j == 1 && this.pageYOffset >= parallaxContainers[j].offsetTop - 200 && offsetTop < heightContainer) {
-        moveLayers(this.pageYOffset - parallaxContainers[j].offsetTop, j);
+        effetParallax(this.pageYOffset, j);
+      } else if (j == 1 &&
+          this.pageYOffset >= parallaxContainers[j].offsetTop - 500 &&
+          this.pageYOffset < parallaxContainers[j].offsetTop + heightContainer - 200) {
+        effetParallax(this.pageYOffset - parallaxContainers[j].offsetTop, j);
       }
     }
   });
 }
 
-function moveLayers(pageYOffset, numParallax) {
+function effetParallax(pageYOffset, numParallax) {
   var layers = document.getElementsByClassName("parallax".concat((numParallax+1).toString()));
   var layer, speed, yPos;
   for (var i = 0; i < layers.length; i++) {
