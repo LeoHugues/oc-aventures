@@ -254,7 +254,7 @@ h2 {
     width: 102px;
     padding-top: 11px;
     font-size: 20px;
-    font-family: Dennes-Old;
+    font-family: 'Raleway', serif !important;
     top: 14px;
     position: relative;
 }
@@ -268,7 +268,7 @@ h2 {
     width: 102px;
     padding-top: 10px;
     font-size: 19px;
-    font-family: Berlin;
+    font-family: 'Raleway', serif !important;
     position: relative;
     bottom: 15px;
     right: 8px;
@@ -283,15 +283,15 @@ h2 {
     width: 102px;
     padding-top: 10px;
     font-size: 19px;
-    font-family: Berlin;
+    font-family: 'Raleway', serif !important;
 }
 
 .text-header {
-    font-size: 20px;
+    font-size: 2em;
 }
 
 .text-yellow {
-    color: #e8d069;
+    color: #eddeab;
 }
 
 p.text-forfait {
@@ -301,6 +301,8 @@ p.text-forfait {
     bottom: 20px;
     width: 80%;
     padding-right: 20px;
+    padding-top: 20px;
+    color: #eddeab;
 }
 
 img.small-img {
@@ -314,15 +316,27 @@ h3.cb-message {
 }
 
 .mode-paiment {
-
     margin-bottom: 120px;
+    margin-top: 50px;
 }
 
+.mode-paiment p {
+    color: #eddeab;
+    font-size: 1.5em;
+}
 
 /** Plan du parc **/
 .section-plan {
     background-color: #EDDEAB;
-    height: 100vh;
+    padding-bottom: 75px;
+}
+
+.section-plan img {
+    margin-bottom: 75px;
+}
+
+.section-plan p {
+    font-size: 1.5em;
 }
 
 .title-plan {
@@ -333,14 +347,40 @@ h3.cb-message {
     bottom: 5em;
 }
 
+/** section contact **/
+
 .section-contact {
     background-image: url(../../front/images/illu3.png);
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
     width: 100%;
-    height: 100vh;
+    min-height: 1620px;
+    position: relative;
+    background-color: #9ED8B0;
+}
+
+#nuage-top {
+    background-image: url(../../front/images/nuages-contacts.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    width: 100%;
+    min-height: 1620px;
+    bottom: 1px;
     position: relative;
 }
+
+.title-contact {
+    margin-top: 95px;
+}
+
+.contact-content {
+    margin-top: 50px;
+}
+
+
+/** media query **/
 
 @media screen and (min-aspect-ratio: 16/9) {
     #parallax2 {
@@ -370,6 +410,14 @@ h3.cb-message {
     #parallax1 {
         height: 60vh;
     }
+
+    .section-contact {
+        min-height: 1500px;
+    }
+
+    #nuage-top {
+        min-height: 1500px;
+    }
 }
 
 
@@ -380,5 +428,13 @@ h3.cb-message {
 
     #parallax1 {
         height: 45vh;
+    }
+
+    .section-contact {
+        min-height: 1500px;
+    }
+
+    #nuage-top {
+        min-height: 1500px;
     }
 }
