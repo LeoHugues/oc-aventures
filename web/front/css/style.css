@@ -101,7 +101,7 @@ body {
 }
 #keyart-0 {
     background-image: url('../images/parallax1/Plan7.png');
-    background-color: #000;
+    background-color: #210002;
 }
 
 #keyart-scrim {
@@ -227,7 +227,9 @@ li.contact {
     font-size: 2em;
     color: #eddeab;
     font-weight: bold;
+    text-transform: uppercase;
 }
+
 .iframe-youtube iframe {
     width: 100%;
     height: 20em;
@@ -367,6 +369,26 @@ h3.cb-message {
     background-color: #9ED8B0;
 }
 
+.section-contact p {
+    font-size: 1.2em;
+}
+
+.section-contact h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-contact h3 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.info-ouverture {
+    top: -55px;
+}
+
 #nuage-top {
     background-image: url(../../front/images/nuages-contacts.png);
     background-repeat: no-repeat;
@@ -441,7 +463,13 @@ h3.cb-message {
     }
 
     #nuage-top {
-        min-height: 1500px;
+        min-height: 1655px;
+    }
+}
+
+@media screen and (max-aspect-ratio: 9/11) {
+    #nuage-top {
+        min-height: 1875px;
     }
 }
 
@@ -460,6 +488,6 @@ h3.cb-message {
     }
 
     #nuage-top {
-        min-height: 1500px;
+        min-height: 2065px
     }
 }

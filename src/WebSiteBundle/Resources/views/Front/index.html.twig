@@ -11,7 +11,9 @@
             <div class="keyart_layer parallax1" id="keyart-1" data-speed="12.5"></div>	<!-- 12.5 -->
             <div class="keyart_layer parallax1" id="keyart-2" data-speed="25"></div>		<!-- 25.0 -->
             <div class="keyart_layer parallax1" id="keyart-3" data-speed="37.5">
-                <div class="text-ouverture text-center"><b>Ouvert à partir du Samedi 2 AVRIL 2017 jusqu’au Lundi 31 OCTOBRE 2017</b></div>
+                <div class="text-ouverture text-center">
+                    {{ 'index.texte_ouvertures'|trans|raw }}
+                </div>
             </div>	<!-- 37.5 -->
             <div class="keyart_layer parallax1" id="keyart-4" data-speed="50.0"></div>		<!-- 50.0 -->
             <div class="keyart_layer" id="keyart-scrim"></div>
@@ -23,37 +25,22 @@
                 <div class="section parcours container">
                     <div class="section-header col-sm-12">
                         <div class="header-block col-sm-8 col-sm-offset-2 text-center">
-                            Dans un espace naturel au pied du Pic St Loup,
-                            découvrez nos tyroliennes géantes mais aussi nos
-                            parcours ludiques et sportifs !
-                            Une activité qui fait le plaisir des petits et des grands !
+                            {{ 'index.accroche_accueil'|trans|raw }}
                         </div>
                     </div>
                     <div id="section-parcours" class="col-md-12 block-parcours">
-                        <h1 class="text-center">Parcours</h1>
+                        <h1 class="text-center">{{ 'parcours.nos_parcours'|trans|raw }}</h1>
                         <div class="parcours-enfant col-md-6 parcours-block">
-                            <h2 class="text-center"> Parcours enfant</h2>
+                            <h2 class="text-center"> {{ 'parcours.titre_parcours_enfant'|trans|raw }}</h2>
                             <p>
-                                Tu vas tester ton agilité, ta peur du
-                                vide. Marcher sur un tronc, franchir
-                                une passerelle, passer un fi�let, un
-                                pont de singe, un pont tibétain,
-                                et le grand �final c’est la tyrolienne :
-                                tu vas glisser le long d'un câble
-                                comme un oiseau et atterrir contre
-                                un douillet matelas.
+                                {{ 'parcours.description_parcours_enfant'|trans|raw }}
                             </p>
 
                         </div>
                         <div class="parcours-adult col-md-6 parcours-block">
-                            <h2 class="text-center">Parcours adulte</h2>
+                            <h2 class="text-center">{{ 'parcours.titre_parcours_adulte'|trans|raw }}</h2>
                             <p>
-                                Tu vas vivre des sensations fortes
-                                avec l'enchaînement de trois tyroliennes
-                                géantes qui traversent le
-                                vallon du Boulidou, et faire un
-                                super saut de Tarzan dans ses parcours
-                                aériens.
+                                {{ 'parcours.description_parcours_adulte'|trans|raw }}
                             </p>
                         </div>
                     </div>
@@ -68,20 +55,15 @@
 
                     <div class="col-md-12 block-laser">
                         <div class="col-md-10 col-md-offset-1">
-                            <h1 class="text-center">Laser Game</h1>
+                            <h1 class="text-center">{{ 'parcours.titre_laser_game'|trans|raw }}</h1>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                {{ 'parcours.description_laser_game'|trans|raw }}
                             </p>
                         </div>
                     </div>
 
                     <div class="btn btn-galery col-sm-6 col-sm-offset-3">
-                        VOIR LA GALLERIE PHOTO
+                        {{ 'parcours.intitule_bouton_galerie'|trans|raw }}
                     </div>
                 </div>
             </div>
@@ -103,9 +85,9 @@
                     <h1> {{ 'tarifs.Titre'|trans|raw }}</h1>
                     <br>
                 </div>
-                <div class="col-md-6 col-sm-8 col-sm-offset-2 col-md-offset-0">
+                <div class="col-md-6 col-sm-12">
                     <h3 class="text-center text-yellow">
-                        <span>Tarifs Accrobranche</span>
+                        <span>{{ 'tarifs.titre_tarif_accrobrache'|trans|raw }}</span>
                     </h3><br>
                     <div class="block block-forfait">
                         <div class="text-yellow">
@@ -175,9 +157,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-8 col-sm-offset-2 col-md-offset-0">
+                <div class="col-md-6 col-sm-12">
                     <h3 class="text-center text-yellow">
-                        <span>Tarifs Laser Game</span>
+                        <span>{{ 'tarifs.titre_tarif_laser_game'|trans|raw }}</span>
                     </h3><br>
                     <div class="block block-forfait">
                         <div class="text-yellow">
@@ -212,7 +194,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center ">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 text-center ">
                     <div class="mode-paiment">
                         <label class="text-yellow">{{ 'tarifs.temps_activite'|trans|raw }}</label>
                         <h3 class="text-yellow">{{ 'tarifs.titre_paiement'|trans|raw }}</h3>
@@ -229,19 +211,14 @@
         <div class="section-plan">
             <div class="container">
                 <div id="section-plan" class="col-sm-6 col-sm-offset-3 text-center title-plan">
-                    <h1>PLAN DU PARC</h1>
+                    <h1>{{ 'plan_parc.titre_section_plan_parc'|trans|raw }}</h1>
                 </div>
                 <div class="col-sm-12<">
                     <img class="img-responsive" src="{{ asset('front/images/plan-du-parc.png') }}">
                 </div>
-                <div class="col-sm-6 col-sm-offset-3 text-center">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 text-center">
                     <p>
-                        Le parc dispose aussi d’une buvette
-                        avec terrasse couverte et brumisée,
-                        d’une aire de pique-nique,
-                        et d’un laser game en plein air.
-                        Vêtements de sport, chaussures
-                        fermées et gants sont conseillés.
+                        {{ 'plan_parc.information_complementaire_parc'|trans|raw }}
                     </p>
                 </div>
             </div>
@@ -251,30 +228,26 @@
                 <div class="container">
                     <div class="col-sm-12 block-contact">
                         <div class="col-sm-4 col-sm-offset-4 text-center title-contact">
-                            <h1>CONTACT</h1>
+                            <h1>{{ 'contact.titre_section_contact'|trans|raw }}</h1>
                         </div>
                         <div class="col-sm-12 contact-content iframe-youtube">
-                            <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
+                            <div class="col-md-4 col-sm-12 info-ouverture">
                                 <p>
-                                    Lieu Dit Le Boulidou
-                                    34270 St Jean de Cuculles
-                                    06 19 89 53 86
-                                    info@oc-aventures.com
-                                    HORAIRES
-                                    JUILLET, AOÛT
-                                    Tous les jours de 10 H à 13 H - 14 H à 20 H
-                                    Départs : le matin entre 10H et 10 H 45
-                                    - l'après-midi entre 14h et 17H
-                                    En dehors de ces périodes, nous ouvrons
-                                    sur rendez-vous en semaine pour les groupes
-                                    de plus de 20 personnes,
-                                    collectivités scolaires, centres aérés.
-                                    LE RESTE DE L’ANNÉE
-                                    Week-end, jours feriés et vacances scolaires
-                                    de 14 H à 19H30 (DERNIER DÉPART À 16H00)
+                                    {{ 'contact.adresse'|trans|raw }}<br>
+                                    {{ 'contact.num_tel'|trans|raw }}<br>
+                                    {{ 'contact.mail'|trans|raw }}<br>
+                                </p>
+                                    <h4> {{ 'contact.titre_horaire'|trans|raw }}</h4>
+                                    <h3>{{ 'contact.juillet_aout'|trans|raw }}</h3>
+                                <p>
+                                    {{ 'contact.horaire_juillet_aout'|trans|raw }}
+                                </p>
+                                    <h3>{{ 'contact.reste_annee'|trans|raw }}</h3>
+                                <p>
+                                    {{ 'contact.horaire_reste_annee'|trans|raw }}
                                 </p>
                             </div>
-                            <div class="col-md-7 col-md-offset-1 col-sm-8 col-sm-offset-2">
+                            <div class="col-md-7 col-md-offset-1 col-sm-12">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190064.8672190061!2d3.7990623569725797!3d43.7212385634483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b40239cb28308b%3A0xd2c89522cf4dac40!2sOc&#39;aventures!5e0!3m2!1sen!2sfr!4v1489600278051" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                         </div>

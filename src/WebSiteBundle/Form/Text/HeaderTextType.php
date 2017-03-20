@@ -23,10 +23,9 @@ class HeaderTextType extends AbstractType
         // Input menu
         $builder->add('accueil')
             ->add('parcours')
-            ->add('horaires_dates')
-            ->add('tarifs')
+            ->add('forfait')
+            ->add('plan_parc')
             ->add('contact')
-            ->add('liens')
         ;
     }
 

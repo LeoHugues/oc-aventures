@@ -12,136 +12,133 @@
                 <li class="active"><a href="#header" data-toggle="tab" aria-expanded="true">Textes menu</a></li>
                 <li class=""><a href="#index" data-toggle="tab" aria-expanded="false">Textes accueil</a></li>
                 <li class=""><a href="#parcours" data-toggle="tab" aria-expanded="false">Textes parcours</a></li>
-                <li class=""><a href="#laser" data-toggle="tab" aria-expanded="false">Textes laser game</a></li>
-                <li class=""><a href="#ouvertures" data-toggle="tab" aria-expanded="false">Textes ouvertures</a></li>
                 <li class=""><a href="#tarifs" data-toggle="tab" aria-expanded="false">Textes tarifs</a></li>
+                <li class=""><a href="#plan-parc" data-toggle="tab" aria-expanded="false">Textes plan du parc</a></li>
+                <li class=""><a href="#contact" data-toggle="tab" aria-expanded="false">Textes contact</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="header">
                     <div class="col-lg-10">
                         {{ form_row(form.header.accueil) }}
                         {{ form_row(form.header.parcours) }}
-                        {{ form_row(form.header.horaires_dates) }}
-                        {{ form_row(form.header.tarifs) }}
+                        {{ form_row(form.header.forfait) }}
+                        {{ form_row(form.header.plan_parc) }}
                         {{ form_row(form.header.contact) }}
-                        {{ form_row(form.header.liens) }}
                     </div>
                 </div>
                 <div class="tab-pane fade" id="index">
                     <div class="col-lg-10">
-                        {{ form_row(form.index.oc_bienvenue) }}
-                        {{ form_row(form.index.oc_hauteur) }}
                         <h4 class="col-lg-offset-2 ">
-                            Changer les textes du bloc "Nos parcours"
+                            Changer le texte qui donne les date d'ouvertures :
                         </h4><br>
-                        {{ form_row(form.index.nos_parcours_accrobranche) }}
-                        {{ form_row(form.index.ouverture_fermeture) }}
-                        {{ form_row(form.index.accroche_nos_parcours) }}
-                        {{ form_row(form.index.parcours_adulte) }}
-                        {{ form_row(form.index.parcours_adulte_desc) }}
-                        {{ form_row(form.index.parcours_enfant) }}
-                        {{ form_row(form.index.parcours_enfant_desc) }}
+                        {{ form_row(form.index.texte_ouvertures) }}
                         <h4 class="col-lg-offset-2 ">
-                            Changer les textes du bloc "Nos Laser Game"
+                            Changer le texte d'accroche sous le premier "Parallax" :
                         </h4><br>
-                        {{ form_row(form.index.le_laser_game) }}
-                        {{ form_row(form.index.intro_texte_laser) }}
-                        {{ form_row(form.index.accroche_laser) }}
-                        {{ form_row(form.index.lien_laser_1) }}
-                        {{ form_row(form.index.accroche_laser_2) }}
-                        {{ form_row(form.index.lien_laser_2) }}
-                        {{ form_row(form.index.chute_laser) }}
-                        <h4 class="col-lg-offset-2 ">
-                            Changer les textes du bloc "pour votre confort"
-                        </h4><br>
-                        {{ form_row(form.index.confort_title) }}
-                        {{ form_row(form.index.confort_terrasse) }}
-                        {{ form_row(form.index.confort_pique_nique) }}
+                        {{ form_row(form.index.accroche_accueil) }}
                     </div>
                 </div>
                 <div class="tab-pane fade" id="parcours">
                     <div class="col-lg-10">
                         <h4 class="col-lg-offset-2 ">
-                            Changer le titre de la page
+                            Changer le titre de la section parcours
                         </h4><br>
                         {{ form_row(form.parcours.nos_parcours) }}
                         <h4 class="col-lg-offset-2 ">
-                            Changer l'intitulé des onglets
+                            Partie enfant
                         </h4><br>
-                        {{ form_row(form.parcours.parcours_grand_bouton) }}
-                        {{ form_row(form.parcours.parcours_enfant_button) }}
-                        {{ form_row(form.parcours.plan_bouton) }}
+                        {{ form_row(form.parcours.titre_parcours_enfant) }}
+                        {{ form_row(form.parcours.description_parcours_enfant) }}
 
                         <h4 class="col-lg-offset-2 ">
-                            Changer l'intitulé des titres des onglets
+                            Partie adulte
                         </h4><br>
-                        {{ form_row(form.parcours.nos_parcours_grands) }}
-                        {{ form_row(form.parcours.parcours_pour_grands) }}
-                        {{ form_row(form.parcours.plan_du_parc) }}
-                        <h4 class="col-lg-offset-2 ">
-                            Changer les textes de l'onglets "parcours adulte"
-                        </h4><br>
-                        {{ form_row(form.parcours.desc_grands_parcours) }}
-                        {{ form_row(form.parcours.desc_tyro) }}
-                        {{ form_row(form.parcours.desc_details_parcours) }}
-                        {{ form_row(form.parcours.fin_grands_parcours) }}
-                        <h4 class="col-lg-offset-2 ">
-                            Changer les textes de l'onglets "parcours enfant"
-                        </h4><br>
-                        {{ form_row(form.parcours.nos_parcours_enfant) }}
-                        {{ form_row(form.parcours.parcours_pour_enfant) }}
-                        {{ form_row(form.parcours.desc_parcours_enfant) }}
-                        {{ form_row(form.parcours.les_parcours) }}
-                        {{ form_row(form.parcours.desc_details_enfant) }}
-                        {{ form_row(form.parcours.desc_accroche_enfant) }}
-                        {{ form_row(form.parcours.fin_parcours_enfant) }}
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="laser">
-                    <div class="col-lg-10">
-                        {{ form_row(form.laser.laser_game) }}
-                        {{ form_row(form.laser.titre_intro) }}
-                        {{ form_row(form.laser.titre_laser_game) }}
-                        {{ form_row(form.laser.desc_laser_game) }}
-                        {{ form_row(form.laser.desc_laser_game_2) }}
-                        {{ form_row(form.laser.desc_details_laser_game) }}
-                        {{ form_row(form.laser.message_fin) }}
+                        {{ form_row(form.parcours.titre_parcours_adulte) }}
+                        {{ form_row(form.parcours.description_parcours_adulte) }}
 
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="ouvertures">
-                    <div class="col-lg-10">
-                        {{ form_row(form.ouvertures.titre_ouvertures) }}
-                        {{ form_row(form.ouvertures.texte_ouvertures) }}
-                        {{ form_row(form.ouvertures.titre_hors_saison) }}
-                        {{ form_row(form.ouvertures.texte_hors_saison) }}
-                        {{ form_row(form.ouvertures.titre_saison) }}
-                        {{ form_row(form.ouvertures.texte_saison) }}
-                        {{ form_row(form.ouvertures.texte_supp) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Partie laser game
+                        </h4><br>
+                        {{ form_row(form.parcours.titre_laser_game) }}
+                        {{ form_row(form.parcours.description_laser_game) }}
 
+                        <h4 class="col-lg-offset-2 ">
+                            Changer l'intitulé du bouton pour afficher la gallerie photo
+                        </h4><br>
+                        {{ form_row(form.parcours.intitule_bouton_galerie) }}
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tarifs">
                     <div class="col-lg-10">
+                        <h4 class="col-lg-offset-2 ">
+                            Changer le titre de la section tarif
+                        </h4><br>
                         {{ form_row(form.tarifs.Titre) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Changer le titre tarifs accrobranche
+                        </h4><br>
+                        {{ form_row(form.tarifs.titre_tarif_accrobrache) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Forfait 1
+                        </h4><br>
                         {{ form_row(form.tarifs.forfait1) }}
-                        {{ form_row(form.tarifs.age) }}
                         {{ form_row(form.tarifs.parcours1) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Forfait 2
+                        </h4><br>
                         {{ form_row(form.tarifs.forfait2) }}
                         {{ form_row(form.tarifs.parcours2) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Forfait 3
+                        </h4><br>
                         {{ form_row(form.tarifs.forfait3) }}
                         {{ form_row(form.tarifs.parcours3) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Forfait 4
+                        </h4><br>
                         {{ form_row(form.tarifs.forfait4) }}
                         {{ form_row(form.tarifs.parcours4) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Changer le titre tarifs laser game
+                        </h4><br>
+                        {{ form_row(form.tarifs.titre_tarif_laser_game) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Forfait laser game 1
+                        </h4><br>
                         {{ form_row(form.tarifs.forfait_laser_1) }}
-                        {{ form_row(form.tarifs.forfait_laser_2) }}
                         {{ form_row(form.tarifs.forfait_laser_desc_1) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Forfait lasergame 2
+                        </h4><br>
+                        {{ form_row(form.tarifs.forfait_laser_2) }}
                         {{ form_row(form.tarifs.forfait_laser_desc_2) }}
+                        <h4 class="col-lg-offset-2 ">
+                            Informations complémentaire
+                        </h4><br>
                         {{ form_row(form.tarifs.temps_activite) }}
                         {{ form_row(form.tarifs.titre_paiement) }}
                         {{ form_row(form.tarifs.mode_paiement) }}
                         {{ form_row(form.tarifs.pas_cb) }}
 
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="plan-parc">
+                    <div class="col-lg-10">
+                        {{ form_row(form.plan_parc.titre_section_plan_parc) }}
+                        {{ form_row(form.plan_parc.information_complementaire_parc) }}
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact">
+                    <div class="col-lg-10">
+                        {{ form_row(form.contact.titre_section_contact) }}
+                        {{ form_row(form.contact.adresse) }}
+                        {{ form_row(form.contact.num_tel) }}
+                        {{ form_row(form.contact.mail) }}
+                        {{ form_row(form.contact.titre_horaire) }}
+                        {{ form_row(form.contact.juillet_aout) }}
+                        {{ form_row(form.contact.horaire_juillet_aout) }}
+                        {{ form_row(form.contact.reste_annee) }}
+                        {{ form_row(form.contact.horaire_reste_annee) }}
                     </div>
                 </div>
             </div>

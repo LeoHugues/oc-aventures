@@ -11,11 +11,13 @@ namespace WebSiteBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use WebSiteBundle\Form\Text\ContactTextType;
 use WebSiteBundle\Form\Text\HeaderTextType;
 use WebSiteBundle\Form\Text\IndexTextType;
 use WebSiteBundle\Form\Text\LaserTextType;
 use WebSiteBundle\Form\Text\OuverturesTextType;
 use WebSiteBundle\Form\Text\ParcoursTextType;
+use WebSiteBundle\Form\Text\PlanParcTextType;
 use WebSiteBundle\Form\Text\TarifsTextType;
 
 class TextFormType extends AbstractType
@@ -28,11 +30,11 @@ class TextFormType extends AbstractType
     {
         // Input menu
         $builder->add('header', new HeaderTextType($options['header']))
-            ->add('index', new IndexTextType($options['index']))
-            ->add('parcours', new ParcoursTextType($options['parcours']))
-            ->add('laser', new LaserTextType($options['laser']))
-            ->add('ouvertures', new OuverturesTextType($options['ouvertures']))
-            ->add('tarifs', new TarifsTextType($options['tarifs']))
+            ->add('index',      new IndexTextType($options['index']))
+            ->add('parcours',   new ParcoursTextType($options['parcours']))
+            ->add('tarifs',     new TarifsTextType($options['tarifs']))
+            ->add('plan_parc',  new PlanParcTextType($options['plan_parc']))
+            ->add('contact',    new ContactTextType($options['contact']))
             ->add('valider', 'submit')
         ;
     }
