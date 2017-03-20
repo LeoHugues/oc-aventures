@@ -25,7 +25,7 @@
                 </ul>
             </div>
         </div>
-    <div class="content">
+    <div class="content container">
         {% for flash_message in app.session.flashbag.get('notice') %}
             <div class="alert alert-dismissable alert-info">
                 {{ flash_message }}

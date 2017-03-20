@@ -10,6 +10,7 @@ namespace WebSiteBundle\Form;
 
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class PartenaireType extends AbstractType
@@ -18,7 +19,7 @@ class PartenaireType extends AbstractType
     {
             $builder
                 ->add('address','text')
-                ->add('desc','textarea')
+                ->add('img', 'text')
             ;
     }
 

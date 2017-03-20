@@ -386,6 +386,18 @@ h3.cb-message {
     margin-top: 50px;
 }
 
+.block-partenaire {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 6%;
+}
+
+.img-partenaire {
+    margin: 15px;
+    max-width: 13%;
+    display: inline-block;
+}
+
 
 /** media query **/
 

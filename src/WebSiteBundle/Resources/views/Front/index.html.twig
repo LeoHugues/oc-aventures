@@ -281,6 +281,13 @@
                     </div>
                 </div>
             </div>
+            <div class="container block-partenaire col-sm-8 col-sm-offset-2">
+                {% for partenaire in partenaires %}
+                    <a target="_blank" href="{{ partenaire.address }}">
+                        <img class="img-responsive img-partenaire" src="{{ partenaire.img }}">
+                    </a>
+                {% endfor %}
+            </div>
         </div>
       </div>
 {% endblock %}
