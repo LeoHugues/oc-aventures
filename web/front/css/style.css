@@ -61,6 +61,13 @@ body {
 }
 #keyart2-3 {
     background-image: url('../images/parallax2/Plan4.png');
+    transform: translate3d(-1363.4px, -60px, 0px);
+    position: fixed;
+    background-repeat: no-repeat;
+    top: 0px;
+    width: 100%;
+    height: inherit;
+    background-size: cover;
 }
 #keyart2-2 {
     background-image: url('../images/parallax2/Plan5.png');
@@ -372,7 +379,7 @@ h3.cb-message {
 }
 
 .title-contact {
-    margin-top: 95px;
+    margin-top: 150px;
 }
 
 .contact-content {
@@ -385,6 +392,12 @@ h3.cb-message {
 @media screen and (min-aspect-ratio: 16/9) {
     #parallax2 {
         height: 145vh;
+    }
+}
+
+@media screen and (min-aspect-ratio: 17/14) {
+    .section-contact {
+        min-height: 1847px;
     }
 }
 

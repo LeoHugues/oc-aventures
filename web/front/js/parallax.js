@@ -14,6 +14,7 @@ function castParallax() {
       } else if (j == 1 &&
           this.pageYOffset >= parallaxContainers[j].offsetTop - 500 &&
           this.pageYOffset < parallaxContainers[j].offsetTop + heightContainer - 200) {
+
         effetParallax(this.pageYOffset - parallaxContainers[j].offsetTop, j);
       }
     }
@@ -27,9 +28,18 @@ function effetParallax(pageYOffset, numParallax) {
     layer = layers[i];
     speed = layer.getAttribute('data-speed');
     yPos = -(pageYOffset * speed / 100);
-    layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-    layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+    if (layer.id == 'keyart2-3') {
+      var xPos = yPos*15;
+      yPos = Math.round(yPos*0.3);
+      layer.setAttribute('style', 'transform: translate3d(' + xPos + 'px, 0px, 0px)');
+    } else {
+      layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+    }
   }
+}
+
+function descenteTyro() {
+
 }
 
 function dispelParallax() {
