@@ -32,8 +32,8 @@ class GalleryType extends AbstractType
                     'generateFilename'  => true          //optional
                 ),
                 'cropConfig' => array(
-                    'minWidth'      => 840,
-                    'minHeight'     => 400,
+                    'minWidth'      => 0,
+                    'minHeight'     => 0,
                     'aspectRatio'   => true,              //optional
                     'cropRoute'     => 'comur_api_crop',    //optional
                     'forceResize'   => false,             //optional

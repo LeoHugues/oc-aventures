@@ -66,13 +66,19 @@ class BackController extends Controller
      */
     public function imagesAction(Request $request)
     {
-        $jsonPath = '../src/WebSiteBundle/Resources/JsonData/Image/accueil.json';
+        $jsonPath = '../src/WebSiteBundle/Resources/JsonData/Image/gallery.json';
         $gallery = json_decode(file_get_contents($jsonPath), true);
         $form = $this->createForm(new GalleryAccueilType(), $gallery);
 
         $form->handleRequest($request);
         if ($form->isValid()) {
-            $jsonContent = json_encode($form->getData());
+
+            $data = $form->getData();
+            $images = array();
+            foreach ($data['imgGallery']['image'] as $image) {
+                $images[] = "front/images/gallery/" . $image;
+            }
+            $jsonContent = json_encode($images);
             file_put_contents($jsonPath, $jsonContent);
         }
 

@@ -22,9 +22,7 @@ class GalleryAccueilType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('imgBlock2', new ImageType())
-            ->add('imgBlock3', new ImageType())
-            ->add('imgBlock4', new ImageType())
+            ->add('imgGallery', new GalleryType())
             ->add('enregistrer', 'submit', array(
                 'attr' => array(
                     'class' => 'btn btn-default col-sm-4 col-sm-offset-4',
