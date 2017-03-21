@@ -35,3 +35,7 @@ form[name=website_partenaires] a.btn-danger {
     top: -125px;
     right: 40px;
 }
+
+.navbar p {
+    margin-top : 10px;
+}

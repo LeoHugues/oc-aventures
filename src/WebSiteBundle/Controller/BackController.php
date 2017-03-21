@@ -42,52 +42,23 @@ class BackController extends Controller
     }
 
     /**
-     * @Route("/ouvertures", name="admin_date_ouvertures")
+     * @Route("/vider-le-cache", name="admin_clear_cache")
      */
     public function dateOuverturesAction(Request $request)
     {
-        $date = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Ouvertures.json'), true);
-
-        $form = $this->createForm(
-            new DateOuvertureType(),
-            array(
-                'ouverture' => Carbon::createFromFormat('Y-m-d', $date['ouverture']),
-                'fermeture' => Carbon::createFromFormat('Y-m-d', $date['fermeture']),
-            )
-        );
-
-        $form->handleRequest($request);
-
-        if ($form->isValid()) {
-
-            $serializer = new Serializer(
-                array(
-                    new ObjectNormalizer(),
-                ),
-                array(
-                    new JsonEncoder(),
-                )
-            );
-
-            $jsonContent = $serializer->serialize(
-                array(
-                    'ouverture' => $form->getData()['ouverture']->format('Y-m-d'),
-                    'fermeture' => $form->getData()['fermeture']->format('Y-m-d')
-                ),
-                'json'
-            );
-
-            file_put_contents('../src/WebSiteBundle/Resources/JsonData/Ouvertures.json', $jsonContent);
-
-            $this->addFlash(
-                'notice',
-                'Les dates d\'ouvertures ont bien étaient enregistrées !'
-            );
-
-            return $this->render('WebSiteBundle:Back:index.html.twig');
+        $kernel = $this->get('kernel');
+        $application = new \Symfony\Bundle\FrameworkBundle\Console\Application($kernel);
+        $application->setAutoExit(false);
+        $options = array('command' => 'cache:clear',"--env" => 'prod', '--no-warmup' => true);
+        $code =$application->run(new \Symfony\Component\Console\Input\ArrayInput($options));
+       
+        if ($code == 0) {
+            $this->addFlash('notice', 'Le cache a bien été vidé');
+        } else {
+            $this->addFlash('notice', 'Un problème est survenue lors du vidage du cache');
         }
 
-        return $this->render('WebSiteBundle:Back:ouvertures.html.twig', array('form' => $form->createView()));
+        return $this->render('WebSiteBundle:Back:index.html.twig', array());
     }
 
     /**
