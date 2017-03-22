@@ -22,19 +22,28 @@ class TarifsTextType extends AbstractType
     {
         // Input menu
         $builder->add('Titre')
+            
+            ->add('titre_tarif_accrobrache')
+            
             ->add('forfait1')
-            ->add('age')
             ->add('parcours1')
+            
             ->add('forfait2')
             ->add('parcours2')
+            
             ->add('forfait3')
             ->add('parcours3')
+            
             ->add('forfait4')
             ->add('parcours4')
+            
+            ->add('titre_tarif_laser_game')
+
             ->add('forfait_laser_1')
             ->add('forfait_laser_2')
             ->add('forfait_laser_desc_1')
             ->add('forfait_laser_desc_2')
+            
             ->add('temps_activite')
             ->add('titre_paiement')
             ->add('mode_paiement')

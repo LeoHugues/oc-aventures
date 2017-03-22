@@ -19,7 +19,6 @@ class PartenairesType extends AbstractType
         $builder->add('partenaires', 'collection', array(
             'type' => new PartenaireType(),
             'allow_add' => true,
-           // 'by_reference' => false,
             'allow_delete' => true,
         ));
         $builder->add('valider', 'submit');

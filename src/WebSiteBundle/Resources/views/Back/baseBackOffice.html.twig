@@ -11,21 +11,13 @@
                     <a href="{{ path("admin_index") }}" target="_top" class="navbar-brand">OC'Aventures - Back Office</a>
                 </div>
                 <ul class="nav navbar-nav pull-right">
-                    <li><a href="#">Modifier les dates d'ouvertures</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Gestion des liens <span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="download">
-                            <li><a href="#">Ajouter un lien</a></li>
-                            <li><a href="#">Gérer les liens</a></li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <p class="btn-logout"><a href="{{ logout_path() }}" class="btn btn-default btn-md" role="button">Déconnection</a></p>
                     </li>
                 </ul>
             </div>
         </div>
-    <div class="content">
+    <div class="content container">
         {% for flash_message in app.session.flashbag.get('notice') %}
             <div class="alert alert-dismissable alert-info">
                 {{ flash_message }}
@@ -36,4 +28,5 @@
 {% endblock body %}
 {% block baseJs %}
     <script src="{{ asset("front/js/jquery.js") }}"></script>
+    <script src="{{ asset('./front/js/bootstrap.js') }}"></script>
 {% endblock %}

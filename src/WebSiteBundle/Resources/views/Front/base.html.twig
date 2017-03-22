@@ -29,11 +29,11 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#parallax1">Accueil</a></li>
-                <li><a href="#section-parcours">Parcours</a></li>
-                <li><a href="#section-parcours">Forfait</a></li>
-                <li><a href="#section-plan">Plan du parc</a></li>
-                <li class="contact"><a href="#section-contact">Contact <br><small class="num-contact">0619895386</small></a></li>
+                <li><a href="#parallax1">{{ 'header.accueil'|trans }}</a></li>
+                <li><a href="#section-parcours">{{ 'header.parcours'|trans }}</a></li>
+                <li><a href="#section-tarif">{{ 'header.forfait'|trans }}</a></li>
+                <li><a href="#section-plan">{{ 'header.plan_parc'|trans }}</a></li>
+                <li class="contact"><a href="#section-contact">{{ 'header.contact'|trans }} <br><small class="num-contact">0619895386</small></a></li>
             </ul>
         </div>
     </nav>
@@ -43,7 +43,7 @@
     {% block javascript %}
         <!-- jQuery -->
         <script src="{{ asset('./front/js/jquery.js') }}"></script>
-        <script src="{{ asset('./front/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('./front/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('./front/js/jquery-migrate.js') }}"></script>
         <script src="{{ asset('./front/js/magnifique.js') }}"></script>
         <script src="{{ asset('./front/js/mouse.wheel.js') }}"></script>
@@ -52,30 +52,6 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
         {% block script %}
-            <script type="text/javascript">
-
-                $(document).ready(function(){
-                    $('.thumbnails').magnificPopup({
-                        delegate: 'li a',
-                        type:'image',
-                        gallery: {
-                            enabled: true,
-                            preload: [1,1]
-                        },
-                        mainClass: 'mfp-with-zoom',
-                        zoom: {
-                            enabled: true,
-                            duration: 300,
-                            easing: 'ease-in-out',
-                            opener: function(openerElement) {
-                                return openerElement.is('img') ? openerElement : openerElement.find('img');
-                            }
-                        }
-                    });
-
-                    $("#year").text((new Date).getFullYear());
-                });
-            </script>
         {% endblock script %}
     {% endblock %}
 {% endblock %}

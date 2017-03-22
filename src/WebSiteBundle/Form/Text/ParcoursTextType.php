@@ -22,23 +22,13 @@ class ParcoursTextType extends AbstractType
     {
         //input nos parcours
         $builder->add('nos_parcours')
-            ->add('parcours_grand_bouton')
-            ->add('parcours_enfant_button')
-            ->add('plan_bouton')
-            ->add('nos_parcours_grands')
-            ->add('parcours_pour_grands')
-            ->add('desc_grands_parcours')
-            ->add('desc_tyro', 'textarea')
-            ->add('desc_details_parcours', 'textarea')
-            ->add('fin_grands_parcours')
-            ->add('nos_parcours_enfant')
-            ->add('parcours_pour_enfant')
-            ->add('desc_parcours_enfant', 'textarea')
-            ->add('les_parcours')
-            ->add('desc_details_enfant', 'textarea')
-            ->add('desc_accroche_enfant', 'textarea')
-            ->add('fin_parcours_enfant')
-            ->add('plan_du_parc')
+            ->add('titre_parcours_enfant')
+            ->add('description_parcours_enfant', 'textarea')
+            ->add('titre_parcours_adulte')
+            ->add('description_parcours_adulte', 'textarea')
+            ->add('titre_laser_game')
+            ->add('description_laser_game', 'textarea')
+            ->add('intitule_bouton_galerie')
         ;
     }
 

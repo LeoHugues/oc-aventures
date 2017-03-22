@@ -61,6 +61,13 @@ body {
 }
 #keyart2-3 {
     background-image: url('../images/parallax2/Plan4.png');
+    transform: translate3d(-1363.4px, -60px, 0px);
+    position: fixed;
+    background-repeat: no-repeat;
+    top: 0px;
+    width: 100%;
+    height: inherit;
+    background-size: cover;
 }
 #keyart2-2 {
     background-image: url('../images/parallax2/Plan5.png');
@@ -94,7 +101,7 @@ body {
 }
 #keyart-0 {
     background-image: url('../images/parallax1/Plan7.png');
-    background-color: #000;
+    background-color: #210002;
 }
 
 #keyart-scrim {
@@ -220,10 +227,69 @@ li.contact {
     font-size: 2em;
     color: #eddeab;
     font-weight: bold;
+    text-transform: uppercase;
 }
-.iframe-youtube iframe {
+
+/** ===========Youtub ifram ============ **/
+
+/*.iframe-youtube iframe {
     width: 100%;
     height: 20em;
+}*/
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+.youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;
 }
 
 h1 {
@@ -360,6 +426,26 @@ h3.cb-message {
     background-color: #9ED8B0;
 }
 
+.section-contact p {
+    font-size: 1.2em;
+}
+
+.section-contact h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-contact h3 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.info-ouverture {
+    top: -55px;
+}
+
 #nuage-top {
     background-image: url(../../front/images/nuages-contacts.png);
     background-repeat: no-repeat;
@@ -372,11 +458,23 @@ h3.cb-message {
 }
 
 .title-contact {
-    margin-top: 95px;
+    margin-top: 150px;
 }
 
 .contact-content {
     margin-top: 50px;
+}
+
+.block-partenaire {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 6%;
+}
+
+.img-partenaire {
+    margin: 15px;
+    max-width: 13%;
+    display: inline-block;
 }
 
 
@@ -385,6 +483,12 @@ h3.cb-message {
 @media screen and (min-aspect-ratio: 16/9) {
     #parallax2 {
         height: 145vh;
+    }
+}
+
+@media screen and (min-aspect-ratio: 17/14) {
+    .section-contact {
+        min-height: 1847px;
     }
 }
 
@@ -416,7 +520,13 @@ h3.cb-message {
     }
 
     #nuage-top {
-        min-height: 1500px;
+        min-height: 1655px;
+    }
+}
+
+@media screen and (max-aspect-ratio: 9/11) {
+    #nuage-top {
+        min-height: 1875px;
     }
 }
 
@@ -435,6 +545,6 @@ h3.cb-message {
     }
 
     #nuage-top {
-        min-height: 1500px;
+        min-height: 2065px
     }
 }

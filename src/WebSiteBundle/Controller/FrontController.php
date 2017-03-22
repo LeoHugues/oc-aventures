@@ -24,22 +24,14 @@ class FrontController extends Controller {
      */
     public function indexAction(Request $request) {
 
-        $date = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Ouvertures.json'), true);
-        $image = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/accueil.json'), true);
+      //  $image = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Image/gallery.json'), true);
         $tarifs = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Tarifs.json'), true);
-
-        $ouverture = Carbon::createFromFormat('Y-m-d',  $date['ouverture']);
-        $fermeture = Carbon::createFromFormat('Y-m-d',  $date['fermeture']);
-
-        $date = array(
-            'ouverture' => $ouverture,
-            'fermeture' => $fermeture
-        );
-
+        $partenaires = json_decode(file_get_contents('../src/WebSiteBundle/Resources/JsonData/Partenaires.json'), true);
+        
         return $this->render('WebSiteBundle:Front:index.html.twig', array(
-            'date' => $date,
-            'image' => $image,
-            'tarifs' => $tarifs,
+          //  'image'         => $image,
+            'tarifs'        => $tarifs,
+            'partenaires'   => $partenaires,
         ));
     }
 
