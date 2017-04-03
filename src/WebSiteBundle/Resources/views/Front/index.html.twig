@@ -5,7 +5,6 @@
 {% block content %}
     {% trans_default_domain "traduction" %}
     <div class="page">
-        <div class="keyart" id="nonparallax"></div>
         <div id="parallax1" class="parallax-container">
             <div class="keyart_layer parallax1" id="keyart-0" data-speed="2"></div>		<!-- 00.0 -->
             <div class="keyart_layer parallax1" id="keyart-1" data-speed="12.5"></div>	<!-- 12.5 -->
@@ -62,10 +61,24 @@
                         </div>
                     </div>
 
-                    <div class="btn btn-galery col-sm-6 col-sm-offset-3">
+                    <div class="btn btn-galery col-sm-6 col-sm-offset-3"  data-toggle="modal" data-target=".bs-example-modal-lg">
                         {{ 'parcours.intitule_bouton_galerie'|trans|raw }}
                     </div>
-                </div>
+
+
+                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h3 class="modal-title">Heading</h3>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
             </div>
         </div>
         <div id="parallax2" class="parallax-container">
@@ -266,3 +279,15 @@
         </div>
       </div>
 {% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+        $('.thumbnail').click(function(){
+            $('.modal-body').empty();
+            var title = $(this).attr("title");
+            $('.modal-title').html(title);
+            $(this.innerHTML).appendTo('.modal-body');
+            $('#myModal').modal({show:true});
+        });
+    </script>
+{% endblock script %}
