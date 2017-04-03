@@ -25,12 +25,14 @@ body {
     display: none
 }
 
+/*
 #nonparallax {
     background-image: url('../images/parallax1/Plan5.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
 }
+*/
 
 .keyart {
     position: relative;
