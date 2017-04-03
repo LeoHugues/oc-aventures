@@ -44,7 +44,7 @@ class BackController extends Controller
     /**
      * @Route("/vider-le-cache", name="admin_clear_cache")
      */
-    public function dateOuverturesAction(Request $request)
+    public function clearCacheAction(Request $request)
     {
         $kernel = $this->get('kernel');
         $application = new \Symfony\Bundle\FrameworkBundle\Console\Application($kernel);
@@ -58,7 +58,7 @@ class BackController extends Controller
             $this->addFlash('notice', 'Un problème est survenue lors du vidage du cache');
         }
 
-        return $this->render('WebSiteBundle:Back:index.html.twig', array());
+        return $this->redirectToRoute('admin_index');
     }
 
     /**

@@ -391,6 +391,14 @@ h3.cb-message {
     font-size: 1.5em;
 }
 
+.block-info-groupe {
+    padding: 40px 25px;
+    font-size: 2em;
+    border: 2px solid #eddeab;
+    border-radius: 9px;
+    margin-top: 70px;
+}
+
 /** Plan du parc **/
 .section-plan {
     background-color: #EDDEAB;
