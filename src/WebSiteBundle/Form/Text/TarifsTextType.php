@@ -46,7 +46,6 @@ class TarifsTextType extends AbstractType
             
             ->add('texte_groupe')
             
-            ->add('temps_activite')
             ->add('titre_paiement')
             ->add('mode_paiement')
             ->add('pas_cb')
