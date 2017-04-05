@@ -72,13 +72,7 @@ class BackController extends Controller
 
         $form->handleRequest($request);
         if ($form->isValid()) {
-
-            $data = $form->getData();
-            $images = array();
-            foreach ($data['imgGallery']['image'] as $image) {
-                $images[] = "front/images/gallery/" . $image;
-            }
-            $jsonContent = json_encode($images);
+            $jsonContent = json_encode($form->getData());
             file_put_contents($jsonPath, $jsonContent);
         }
 
