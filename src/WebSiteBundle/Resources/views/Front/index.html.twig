@@ -297,6 +297,7 @@
             photos.push("{{ photo }}");
         {% endfor %}
 
+        displayNavBtn(0, photos.length);
         var numPhoto = 0;
         $('#btn-next').click(function() {
             numPhoto++;
