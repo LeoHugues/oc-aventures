@@ -64,6 +64,9 @@ body {
 }
 #keyart2-3 {
     background-image: url('../images/parallax2/Plan4.png');
+}
+
+.keyartTyro {
     transform: translate3d(-1363.4px, -60px, 0px);
     position: fixed;
     background-repeat: no-repeat;
@@ -72,6 +75,15 @@ body {
     height: inherit;
     background-size: cover;
 }
+
+.keyartTyroForIOSDevice {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    padding-top: 100%;
+}
+
 #keyart2-2 {
     background-image: url('../images/parallax2/Plan5.png');
 }
@@ -120,6 +132,7 @@ body {
     background-color: #ffaf00;
     opacity: 0;
 }
+
 
 .text-ouverture {
     height: 50px;

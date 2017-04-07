@@ -1,5 +1,5 @@
 function castParallax() {
-
+  changerLesClassPourAnimerLaTyro();
   var parallaxContainers = $('.parallax-container');
   var heightContainers = [parallaxContainers[0].offsetHeight, parallaxContainers[1].offsetHeight];
 
@@ -105,6 +105,11 @@ function castSmoothScroll() {
       });
     } // End if
   });
+}
+
+function changerLesClassPourAnimerLaTyro() {
+  $('#keyart2-3').removeClass('keyartTyroForIOSDevice');
+  $('#keyart2-3').addClass('keyartTyro');
 }
 
 function startSite() {
