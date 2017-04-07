@@ -271,14 +271,15 @@
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title col-sm-4">Galerie photo</h4>
-            <button type="button" class="btn btn-success" id="btn-next">suivant</button>
             <button type="button" class="btn btn-info disabled" id="btn-befor">précédent</button>
+            <button type="button" class="btn btn-success" id="btn-next">suivant</button>
           </div>
           <div class="modal-body">
               {% if image.imgGallery.image is empty %}
                 <p>La galerie photo sera bientôt disponible !</p>
               {% else %}
-                   <img src="front/images/gallery/{{ image.imgGallery.image[0] }}" class="img-responsive" id="img-modal">
+                   <img src="front/images/gallery/{{ image.imgGallery.image[0] }}" class="img-responsive img-gallery center-block" id="img-modal">
+                   <img src="{{ asset('front/img/loader.gif') }}" id="gallery-loader">
               {% endif %}
           </div>
           <div class="modal-footer">
@@ -300,6 +301,8 @@
         displayNavBtn(0, photos.length);
         var numPhoto = 0;
         $('#btn-next').click(function() {
+            $('#img-modal').hide();
+            $('#gallery-loader').show();
             numPhoto++;
             displayNavBtn(numPhoto, photos.length);
             var imgUrl = "front/images/gallery/" + photos[numPhoto];
@@ -307,10 +310,17 @@
         });
 
         $('#btn-befor').click(function() {
+            $('#img-modal').hide();
+            $('#gallery-loader').show();
             numPhoto--;
             displayNavBtn(numPhoto, photos.length);
             var imgUrl = "front/images/gallery/" + photos[numPhoto];
             $('#img-modal').attr('src', imgUrl);
+        });
+
+        $('.img-gallery').load(function() {
+            $('#gallery-loader').hide();
+            $('#img-modal').show();
         });
 
         function displayNavBtn(numPhoto, nbPhoto) {

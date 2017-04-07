@@ -488,7 +488,13 @@ h3.cb-message {
     display: inline-block;
 }
 
+#gallery-loader {
+    display: none;
+}
 
+.modal-body {
+    text-align:center;
+}
 /** media query **/
 
 @media screen and (min-aspect-ratio: 16/9) {
