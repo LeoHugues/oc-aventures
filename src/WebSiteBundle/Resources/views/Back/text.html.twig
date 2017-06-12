@@ -9,12 +9,13 @@
         {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
         <div class="bs-component live-less-editor-hovercontainer" data-relatedvars="caret-width-base,dropdown-bg,dropdown-fallback-border,dropdown-border,dropdown-divider-bg,dropdown-link-color,dropdown-link-hover-color,dropdown-link-hover-bg,dropdown-link-active-color,dropdown-link-active-bg,dropdown-link-disabled-color,dropdown-header-color,nav-link-padding,nav-link-hover-bg,nav-disabled-link-color,nav-disabled-link-hover-color,link-color,nav-tabs-border-color,nav-tabs-link-hover-border-color,nav-tabs-active-link-hover-color,nav-tabs-active-link-hover-bg,nav-tabs-active-link-hover-border-color">
             <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                <li class="active"><a href="#header" data-toggle="tab" aria-expanded="true">Textes menu</a></li>
-                <li class=""><a href="#index" data-toggle="tab" aria-expanded="false">Textes accueil</a></li>
-                <li class=""><a href="#parcours" data-toggle="tab" aria-expanded="false">Textes parcours</a></li>
-                <li class=""><a href="#tarifs" data-toggle="tab" aria-expanded="false">Textes tarifs</a></li>
-                <li class=""><a href="#plan-parc" data-toggle="tab" aria-expanded="false">Textes plan du parc</a></li>
-                <li class=""><a href="#contact" data-toggle="tab" aria-expanded="false">Textes contact</a></li>
+                <li class="active"><a href="#header" data-toggle="tab" aria-expanded="true">menu</a></li>
+                <li class=""><a href="#index" data-toggle="tab" aria-expanded="false">accueil</a></li>
+                <li class=""><a href="#parcours" data-toggle="tab" aria-expanded="false">parcours</a></li>
+                <li class=""><a href="#tarifs" data-toggle="tab" aria-expanded="false">tarifs</a></li>
+                <li class=""><a href="#plan-parc" data-toggle="tab" aria-expanded="false">plan du parc</a></li>
+                <li class=""><a href="#contact" data-toggle="tab" aria-expanded="false">contact</a></li>
+                <li class=""><a href="#galerie" data-toggle="tab" aria-expanded="false">galerie</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="header">
@@ -142,6 +143,14 @@
                         {{ form_row(form.contact.horaire_juillet_aout) }}
                         {{ form_row(form.contact.reste_annee) }}
                         {{ form_row(form.contact.horaire_reste_annee) }}
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="galerie">
+                    <div class="col-lg-10">
+                        {{ form_row(form.galerie.titre) }}
+                        {{ form_row(form.galerie.suivant) }}
+                        {{ form_row(form.galerie.precedent) }}
+                        {{ form_row(form.galerie.fermer) }}
                     </div>
                 </div>
             </div>

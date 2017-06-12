@@ -286,9 +286,9 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title col-sm-4">Galerie photo</h4>
-            <button type="button" class="btn btn-info disabled" id="btn-befor">précédent</button>
-            <button type="button" class="btn btn-success" id="btn-next">suivant</button>
+            <h4 class="modal-title col-sm-4">{{ 'galerie.titre'|trans }}</h4>
+            <button type="button" class="btn btn-info disabled" id="btn-befor">{{ 'galerie.precedent'|trans }}</button>
+            <button type="button" class="btn btn-success" id="btn-next">{{ 'galerie.suivant'|trans }}</button>
           </div>
           <div class="modal-body">
               {% if image.imgGallery.image is empty %}
@@ -299,7 +299,7 @@
               {% endif %}
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">{{ 'galerie.fermer'|trans|raw }}</button>
           </div>
         </div>
       </div>

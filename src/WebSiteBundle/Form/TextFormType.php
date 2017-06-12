@@ -12,6 +12,7 @@ namespace WebSiteBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use WebSiteBundle\Form\Text\ContactTextType;
+use WebSiteBundle\Form\Text\GalerieTextType;
 use WebSiteBundle\Form\Text\HeaderTextType;
 use WebSiteBundle\Form\Text\IndexTextType;
 use WebSiteBundle\Form\Text\LaserTextType;
@@ -35,6 +36,7 @@ class TextFormType extends AbstractType
             ->add('tarifs',     new TarifsTextType($options['tarifs']))
             ->add('plan_parc',  new PlanParcTextType($options['plan_parc']))
             ->add('contact',    new ContactTextType($options['contact']))
+            ->add('galerie',    new GalerieTextType($options['galerie']))
             ->add('valider', 'submit')
         ;
     }

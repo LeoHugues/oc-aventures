@@ -124,10 +124,7 @@ function startSite() {
   else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
   {
     castParallax();
-    if ($.browser.webkit)
-    {
-      castSmoothScroll();
-    }
+    castSmoothScroll();
   }
 
   else
